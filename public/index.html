@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magic Prompt — Gerador de prompts para criação de sites</title>
+  <meta name="description" content="Sistema que gera prompts detalhados para criação de sites de clientes, com base em modelos por segmento." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- ---------------------------- SIDEBAR ---------------------------- -->
+    <aside class="sidebar">
+      <div class="marca">
+        <span class="marca-icone">✨</span>
+        <div>
+          <strong>Magic Prompt</strong>
+          <small>prompts para sites de clientes</small>
+        </div>
+      </div>
+
+      <button id="btn-novo" class="btn btn-primario btn-bloco">+ Novo projeto</button>
+
+      <div class="busca">
+        <input type="search" id="busca" placeholder="Buscar cliente ou empresa…" aria-label="Buscar projeto" />
+      </div>
+
+      <div class="subtitulo-lista">
+        <span>Histórico de clientes</span>
+        <span id="contador-projetos" class="badge">0</span>
+      </div>
+
+      <nav id="lista-projetos" class="lista-projetos" aria-label="Projetos salvos"></nav>
+
+      <div class="sidebar-rodape">
+        <a href="#" id="link-segmentos">Modelos por segmento</a>
+        <span id="info-versao">v1.0</span>
+      </div>
+    </aside>
+
+    <!-- ---------------------------- CONTEÚDO ---------------------------- -->
+    <main class="conteudo">
+      <header class="topbar">
+        <div class="topbar-titulo">
+          <h1 id="titulo-projeto">Nenhum projeto aberto</h1>
+          <p id="subtitulo-projeto">Crie um projeto escolhendo o segmento do cliente para começar.</p>
+        </div>
+        <div class="topbar-acoes">
+          <span id="status-salvo" class="status"></span>
+          <button id="btn-sugerir" class="btn btn-secundario" disabled title="Preenche os campos com os textos de exemplo do segmento">Sugerir preenchimento</button>
+          <button id="btn-gerar" class="btn btn-primario" disabled>⚡ Gerar prompt</button>
+        </div>
+      </header>
+
+      <nav id="stepper" class="stepper" aria-label="Etapas do cadastro"></nav>
+
+      <div class="workspace">
+        <section id="formulario" class="formulario" aria-live="polite">
+          <div class="vazio">
+            <h2>Bem-vindo ao Magic Prompt</h2>
+            <p>
+              Este sistema gera prompts detalhados para a criação de sites, a partir de modelos
+              pré-definidos por segmento (estética, salão, barbearia, pet shop e veterinária).
+            </p>
+            <ol class="passos-intro">
+              <li>Escolha o segmento do cliente e o objetivo do site.</li>
+              <li>Preencha os dados da empresa, redes, identidade visual e conteúdo.</li>
+              <li>Envie logo, imagens e vídeos (opcional, mas recomendado).</li>
+              <li>Revise o prompt gerado, edite se quiser e baixe a pasta completa do cliente.</li>
+            </ol>
+            <button class="btn btn-primario" onclick="document.getElementById('btn-novo').click()">Criar o primeiro projeto</button>
+          </div>
+        </section>
+
+        <aside id="painel-prompt" class="painel-prompt" aria-label="Prompt gerado"></aside>
+      </div>
+    </main>
+  </div>
+
+  <!-- ---------------------------- MODAIS ---------------------------- -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-conteudo" id="modal-conteudo"></div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

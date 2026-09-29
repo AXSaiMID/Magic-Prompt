@@ -1,0 +1,14 @@
+- Crie o site de "Barbearia Tradição" (Belo Horizonte, Centro) — barbearia.
+- Descrição: barbearia com atendimento por hora marcada, especializada em cortes masculinos e barba na navalha.
+- Público-alvo: Homens de 20 a 45 anos da região central que valorizam atendimento sem fila.
+- Objetivo do site: Agendamento online.
+- Serviços: Corte social, Degradê, Barba na navalha, Corte + barba.
+- Páginas: Home, Serviços e Preços, Clube de Assinatura, Barbeiros, Galeria, Sobre, Agendamento, Depoimentos, Perguntas Frequentes (FAQ), Contato, Política de Privacidade.
+- Funcionalidades: Agendamento online por barbeiro e serviço, Botão de WhatsApp flutuante e "ligar agora", Tabela de preços e combos, Galeria de trabalhos, Google Maps com horários por dia, Dados estruturados LocalBusiness/HairSalon.
+- Tom de voz: Direto e confiante, Descontraído, com humor leve, Comunidade e tradição de barbearia, Sem frescura.
+- Estilo visual: Dark clássico (Dark clássico (barbershop), Industrial moderno, Rústico vintage).
+- Cores: #111111, #C8A24A.
+- Não há mídias enviadas: use placeholders elegantes e liste o que precisa ser fotografado.
+- SEO local: title "Barbearia Tradição | Barbearia em Belo Horizonte — Agende seu Horário Online", palavras-chave com foco em "barbearia em Belo Horizonte" e dados estruturados LocalBusiness.
+- Contato: (31) 97777-6666 | contato@barbeariatradicao.com.br | https://instagram.com/barbeariatradicao.
+- Não invente informações, preços, avaliações ou depoimentos.

@@ -1,0 +1,14 @@
+- Crie o site de "Clínica Vida Animal" (Curitiba, Vila Nova) — clínica veterinária.
+- Descrição: clínica veterinária com atendimento clínico, exames de imagem e laboratório próprio, além de urgências no horário estendido.
+- Público-alvo: Tutores de cães e gatos de 25 a 60 anos que buscam atendimento de confiança e orçamento transparente.
+- Objetivo do site: Agendamento online + e-commerce.
+- Serviços: Consulta clínica geral, Vacinação, Ultrassonografia, Castração.
+- Páginas: Home, Especialidades, Agendamento, Equipe, Estrutura e Serviços Complementares, Urgência e Emergência, Planos e Convênios, Perguntas Frequentes (FAQ), Depoimentos, Blog / Dicas, Contato, Política de Privacidade, Loja.
+- Funcionalidades: Agendamento online por especialidade e profissional, Página de urgência otimizada para celular com botão de ligar, Formulário de contato com upload de exames, Equipe com CRMV visível e responsável técnico, Catálogo de produtos (loja) com carrinho e checkout, Google Maps na home e na página de contato, Dados estruturados VeterinaryCare + LocalBusiness + FAQPage, Blog com artigos assinados por veterinários, carrinho e checkout com Pix, cartão e frete por CEP.
+- Tom de voz: Acolhedor e humano, Profissional e confiável, Claro na comunicação sobre preço e conduta, Disponível em urgência.
+- Estilo visual: Clínico acolhedor (Clínico moderno, Acolhedor e humano, Premium com foco em confiança).
+- Cores: #14395C, #2E7BB8, #3E9E7C.
+- Não há mídias enviadas: use placeholders elegantes e liste o que precisa ser fotografado.
+- SEO local: title "Clínica Vida Animal | Clínica Veterinária em Curitiba — Consultas, Exames e Urgência", palavras-chave com foco em "clínica veterinária Curitiba" e dados estruturados LocalBusiness.
+- Contato: (41) 3333-4444 | contato@vidaanimal.com.br | https://instagram.com/vidaanimal.
+- Não invente informações, preços, avaliações ou depoimentos.

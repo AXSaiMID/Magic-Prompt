@@ -1,0 +1,668 @@
+# PROMPT PARA CRIAÇÃO DO SITE
+## Bella Estética — São Paulo | Centro de Estética e Beleza
+
+> Documento gerado pelo sistema Magic Prompt a partir do modelo "Centro de Estética e Beleza" (estetica) e dos dados preenchidos para este cliente.
+> **Objetivo declarado do site:** Agendamento online + loja online.
+> Cole este prompt integralmente na ferramenta de IA de criação de sites e anexe a pasta `maria-souza_bella-estetica/` com as mídias e o conteúdo.
+
+---
+
+## FICHA DO PROJETO
+
+**Cliente:** Maria Souza
+**Empresa:** Bella Estética
+**Razão social:** Bella Estética LTDA
+**CNPJ:** 12.345.678/0001-90
+**Segmento:** Centro de Estética e Beleza (com loja online)
+**Localização:** Rua das Flores, 123 — Sala 4, Jardim Europa • São Paulo/SP • CEP 01234-000
+
+**Projeto:** maria-souza_bella-estetica
+**Modelo base:** estetica v1.0
+**Gerado em:** 29/09/2026 às 03h20
+
+## 1. PAPEL E MISSÃO
+
+Você é um **designer e desenvolvedor web sênior**, especializado em sites para o setor de estética, com forte domínio de SEO local, conversão, acessibilidade e performance.
+
+Sua missão: **criar (ou reformular) o site de "Bella Estética", em São Paulo**, um centro de estética e beleza, entregando estrutura, conteúdo e design prontos para publicação.
+
+**Entregáveis esperados nesta rodada**
+1. Mapa do site e wireframe textual de cada página (seções na ordem em que aparecem).
+2. Textos finais aplicados, prontos para copiar — sem placeholders.
+3. Direção visual: paleta aplicada, tipografia, componentes e estados de interação.
+4. Código responsivo e acessível, com os dados estruturados e o SEO on-page configurados.
+5. Lista do que ficou pendente de material do cliente.
+
+**Como responder**
+- Antes de produzir, apresente em até 10 linhas o seu plano de execução (estrutura + direção visual) para validação.
+- Depois, entregue na ordem: wireframe → textos → design → código.
+- Quando faltar informação, use a decisão mais coerente com o segmento e **sinalize a suposição** no final, na lista de pendências. Nunca invente dados factuais.
+
+## 2. ARQUIVOS DE APOIO DO PROJETO
+
+Este projeto acompanha uma pasta com todos os materiais do cliente. Considere os arquivos abaixo como a **fonte oficial** de conteúdo — não invente produtos, endereços, telefones ou imagens.
+
+maria-souza_bella-estetica/
+├── prompt_site.txt        (este documento)
+├── midias/                (imagens e vídeos para o site)
+├── branding/              (logo, paleta de cores, fontes e referências)
+└── conteudo/              (textos, depoimentos, FAQ e demais documentos)
+
+**Arquivos disponíveis**
+- Mídias (midias/): banner-fachada.jpg, antes-depois-01.jpg, antes-depois-02.jpg, equipe.jpg, institucional.mp4
+- Branding (branding/): logo-principal.png
+- Conteúdo (conteudo/): textos-sobre.docx
+- Total de imagens: 4
+- Total de vídeos: 1
+
+## 3. DESCRIÇÃO DO NEGÓCIO
+
+**Bella Estética** é centro de estética especializado em tratamentos faciais e corporais, com protocolos personalizados definidos após avaliação individual.
+
+Atua em **São Paulo/SP** (bairro Jardim Europa), atendendo presencialmente com o seguinte horário de funcionamento: Segunda a sexta, 9h às 19h; sábado, 9h às 14h. Fechado em feriados..
+
+**Principais serviços/produtos**
+- Limpeza de pele profunda — Higienização com extração e máscara calmante (60 min) Valor: a partir de R$ 180
+- Peeling de diamante — Renovação da pele com microdermoabrasão (50 min) Valor: a partir de R$ 220
+- Drenagem linfática — Massagem manual para retenção de líquidos (60 min) Valor: a partir de R$ 150
+- Microagulhamento — Indução de colágeno com ativos (70 min) Valor: a partir de R$ 350
+
+**Diferenciais / proposta de valor**
+- Avaliação individual antes de qualquer aplicação, com protocolo montado para o seu caso
+- Equipe com formação em estética avançada e atualização anual
+- Ambiente reservado e atendimento com hora marcada, sem espera
+
+## 4. PÚBLICO-ALVO
+
+Mulheres de 30 a 50 anos, moradoras do Jardim Europa e região, que buscam prevenção de rugas, tratamento de manchas e autocuidado. Chegam pelo Instagram e por indicação, valorizam explicação clara do procedimento e ambiente reservado.
+
+Considere este público em todas as decisões de conteúdo e design:
+- **Dispositivo principal:** celular. Projete mobile-first e teste em telas pequenas antes da versão desktop.
+- **Região de influência:** São Paulo/SP e cidades vizinhas. Priorize buscas com intenção local ("perto de mim", "em [cidade]").
+
+## 5. OBJETIVO DO SITE
+
+**Objetivo principal do site:** Agendamento online — O cliente marca horário/serviço sozinho pelo site.
+
+**Diretriz de conversão da loja**
+- O caminho até o "pagamento concluído" deve ter no máximo 3 passos a partir da home.
+- Ofereça sempre duas rotas: finalizar a compra no site **ou** enviar o pedido pelo WhatsApp (muito usado por este público).
+- Exiba o prazo de entrega estimado por região antes do checkout, não depois.
+
+**O que conta como sucesso (métricas a instrumentar já no lançamento)**
+- Cliques no botão "Agendar" (eventos de conversão configurados)
+- Agendamentos concluídos por semana
+- Origem dos agendamentos (orgânico, anúncio, Instagram, Google Meu Negócio)
+- Taxa de no-show em relação aos agendamentos feitos pelo site
+
+Configure as conversões no Google Analytics 4 e no Meta Pixel desde a publicação da primeira versão. Sem medição, nenhuma otimização posterior é possível.
+
+## 6. ESTRUTURA DE PÁGINAS E SEÇÕES
+
+A estrutura abaixo vem do modelo **Centro de Estética e Beleza**, já ajustada para este cliente. Mantenha a ordem, os rótulos do menu e adapte os textos ao contexto real do negócio.
+
+**Menu principal sugerido:** Home | Procedimentos | Resultados | Sobre | Agendamento | Galeria | Contato | Política de Privacidade | Loja
+O menu deve ser fixo (sticky) no topo, com o botão de contato/destaque sempre visível no canto direito.
+
+#### 1. Home — OBRIGATÓRIA
+*Objetivo da página:* Gerar desejo e encaminhar para o agendamento em poucos segundos.
+Seções, na ordem:
+1. Banner principal (hero) com foto de pele/ambiente + título de benefício + CTA "Agendar avaliação"
+2. Faixa de prova social: nota no Google, nº de clientes, anos de atuação
+3. Procedimentos em destaque (6 cards com ícone/foto, nome, duração e "saiba mais")
+4. Como funciona: avaliação → protocolo personalizado → acompanhamento (3 passos)
+5. Diferenciais / por que escolher (4 a 6 itens curtos)
+6. Antes e depois (carrossel com comparador de arrastar)
+7. Depoimentos em carrossel
+8. Profissionais em destaque
+9. Perguntas frequentes resumidas (6 itens)
+10. Bloco final de CTA com WhatsApp + mapa + horários
+11. Rodapé com NAP completo, redes sociais e política de privacidade
+> Orientação específica: CTA principal no primeiro scroll; botão de WhatsApp flutuante fixo em todas as telas.
+
+#### 2. Procedimentos — OBRIGATÓRIA
+*Objetivo da página:* Detalhar cada serviço e qualificar o agendamento.
+Seções, na ordem:
+1. Cabeçalho com categorias: Facial, Corporal, Depilação, Injetáveis, Sobrancelhas
+2. Cards de procedimento com nome, indicação, duração, nº de sessões e valor "a partir de"
+3. Página/seção individual por procedimento: o que é, para quem é, como é a sessão, cuidados pós, retorno
+4. Aviso de que a indicação depende de avaliação profissional
+5. CTA de agendamento em cada bloco
+> Orientação específica: Se preço não for divulgado, usar "consulte valores" e manter o CTA de avaliação gratuita.
+
+#### 3. Resultados — OBRIGATÓRIA
+*Objetivo da página:* Prova visual — o conteúdo mais consultado nesse segmento.
+Seções, na ordem:
+1. Grade de antes/depois com filtro por procedimento
+2. Comparador interativo (arrastar para revelar)
+3. Legenda com procedimento, nº de sessões e intervalo
+4. Selo "resultados variam conforme cada organismo"
+5. Depoimento textual associado a cada caso
+> Orientação específica: Só publicar imagens com termo de autorização de uso de imagem assinado.
+
+#### 4. Sobre — OBRIGATÓRIA
+*Objetivo da página:* Gerar confiança e mostrar quem está por trás da empresa, desde quando atua e o que a torna diferente.
+Seções, na ordem:
+1. História da empresa (ano de fundação, trajetória, missão) em 2 a 3 parágrafos
+2. Apresentação do(a) responsável / fundadores com foto
+3. Missão, visão e valores em cards curtos
+4. Números de credibilidade (anos de mercado, clientes atendidos, profissionais)
+5. Estrutura física / ambiente em fotos
+6. Selos e certificações relevantes do segmento
+> Orientação específica: Mencionar formação/registro dos profissionais e protocolos exclusivos.
+
+#### 5. Equipe — OPCIONAL (recomendada)
+*Objetivo da página:* Humanizar a marca e valorizar a qualificação técnica dos profissionais.
+Seções, na ordem:
+1. Cards com foto, nome, cargo, especialidades e tempo de experiência
+2. Formação, cursos e certificações de cada profissional
+3. Botão "agendar com [profissional]"
+4. Link para o Instagram profissional, quando houver
+5. Especialidades por profissional (ex.: estética facial, corporal, laser)
+6. Registro profissional quando aplicável (ex.: biomédica esteta, farmacêutica)
+> Orientação específica: Se o cliente não tiver fotos, orientar sessão fotográfica ou usar imagens em tratamento neutro.
+
+#### 6. Depoimentos — OPCIONAL (recomendada)
+*Objetivo da página:* Prova social: reduzir a hesitação de quem está decidindo.
+Seções, na ordem:
+1. Grade de depoimentos com nome, foto (opcional), nota e texto curto
+2. Avaliações do Google (embed/prints)
+3. Nota média em destaque e link "Avaliar no Google"
+4. Carrossel de prints de conversas do WhatsApp (com autorização)
+5. Vídeos curtos de clientes (opcional)
+> Orientação específica: Depoimento sem nome próprio e sem contexto perde força. Prefira poucos e verdadeiros.
+
+#### 7. Agendamento — OBRIGATÓRIA
+*Objetivo da página:* Coletar a marcação com os dados mínimos para confirmar.
+Seções, na ordem:
+1. Escolha do procedimento (com duração estimada)
+2. Escolha de profissional (opcional) e unidade
+3. Calendário com horários livres
+4. Campos: nome, WhatsApp, e-mail, observações, como conheceu a clínica
+5. Checkbox de consentimento LGPD e política de cancelamento (24h)
+6. Confirmação imediata por WhatsApp com instruções de preparo
+7. Formulário de anamnese pré-atendimento (desejável): alergias, gestação, medicamentos, procedimentos recentes
+> Orientação específica: Enviar lembrete automático 24h antes para reduzir faltas (no-show).
+
+#### 8. Perguntas Frequentes (FAQ) — OPCIONAL (recomendada)
+*Objetivo da página:* Reduzir o volume de dúvidas repetidas no atendimento e melhorar o SEO.
+Seções, na ordem:
+1. Acordeão com 8 a 12 perguntas mais comuns
+2. Cada resposta em até 3 frases, com CTA quando fizer sentido
+3. Marcação de dados estruturados FAQPage (schema.org)
+4. As sessões doem?
+5. Preciso de avaliação antes de fechar?
+6. Quantas sessões vou precisar?
+7. Posso fazer em qualquer época do ano?
+> Orientação específica: Escreva as perguntas como o cliente perguntaria no WhatsApp: "quanto custa?", "dói?".
+
+#### 9. Galeria — OBRIGATÓRIA
+*Objetivo da página:* Mostrar trabalhos reais — o principal fator de decisão do segmento.
+Seções, na ordem:
+1. Grade de fotos em alta resolução com filtro por categoria
+2. Lightbox com navegação e legenda
+3. Vídeos curtos (Reels/YouTube) incorporados
+4. CTA fixo ao final da galeria ("agende seu horário")
+5. Fotos de ambiente, recepção e cabines
+> Orientação específica: Usar somente imagens próprias e nítidas. Otimizar para WebP e incluir texto alternativo descritivo para SEO.
+
+#### 10. Blog / Dicas — OPCIONAL (recomendada)
+*Objetivo da página:* Atrair tráfego orgânico de longo prazo e educar o público.
+Seções, na ordem:
+1. Listagem de posts com imagem, título, resumo e data
+2. Página de artigo com índice, imagens e CTA ao final
+3. Categorias ligadas aos serviços principais
+4. Bloco "posts relacionados" e compartilhamento social
+5. Pautas: "como preparar a pele antes de um evento", "mitos sobre peeling", "o que é microagulhamento"
+> Orientação específica: Sugerir 6 pautas iniciais já otimizadas para busca local. Ex.: "quanto custa [serviço] em [cidade]".
+
+#### 11. Contato — OBRIGATÓRIA
+*Objetivo da página:* Transformar visita em conversa, com o menor atrito possível.
+Seções, na ordem:
+1. Telefone e WhatsApp com links clicáveis (wa.me e tel:)
+2. Formulário de contato curto (nome, telefone/e-mail, mensagem) com aviso de privacidade (LGPD)
+3. Endereço completo com Google Maps incorporado
+4. Horário de atendimento por dia da semana (destacando feriados e plantões)
+5. E-mail e redes sociais
+6. Bloco "como chegar" com referências de pontos conhecidos e opções de transporte/estacionamento
+7. WhatsApp com resposta automática de horário de atendimento
+> Orientação específica: O formulário deve enviar e-mail e/ou WhatsApp automaticamente e ter proteção anti-spam.
+
+#### 12. Política de Privacidade — OBRIGATÓRIA
+*Objetivo da página:* Conformidade com a LGPD e com políticas de anúncios/análise.
+Seções, na ordem:
+1. Quais dados são coletados (formulários, cookies, analytics)
+2. Finalidade do tratamento e base legal
+3. Compartilhamento com terceiros (WhatsApp, Google, ferramentas de agendamento)
+4. Direitos do titular e canal de contato do encarregado
+5. Política de cookies com banner de consentimento
+> Orientação específica: Incluir link no rodapé de todas as páginas e no rodapé do formulário.
+
+#### 13. Loja — OBRIGATÓRIA
+*Objetivo da página:* Vender produtos online com o mínimo de fricção, integrado ao restante do site.
+Seções, na ordem:
+1. Home da loja com vitrines: mais vendidos, lançamentos, kits e promoções
+2. Listagem com filtros (categoria, preço, marca, porte/tamanho) e ordenação
+3. Página de produto com galeria, variações, avaliações, descrição e frete calculado
+4. Carrinho lateral e página de checkout com Pix, cartão e boleto
+5. Página de obrigado / pedido confirmado, com próximos passos e link de rastreio
+6. Central de ajuda: entregas, prazos, trocas, devoluções e formas de pagamento
+7. Categorias: skincare, kits de tratamento, suplementos, cartão-presente (voucher de sessão)
+> Orientação específica: Estética: cadastrar de 20 a 40 produtos-semente para a loja não nascer vazia, com fotos em fundo neutro.
+
+**Regras transversais de navegação e layout**
+- Cabeçalho com logo à esquerda, menu ao centro/direita e botão de ação destacado.
+- Rodapé completo com NAP (nome, endereço, telefone), horários, redes sociais, formas de pagamento, mapa e link da Política de Privacidade.
+- Breadcrumbs em páginas internas e destaque da página atual no menu.
+- Botão de WhatsApp e/ou agendar fixo (flutuante) em todas as páginas.
+- Página 404 personalizada com atalhos para Serviços, Contato e Agendamento.
+- Título e descrição únicos por página (SEO), sem repetições.
+
+## 7. FUNCIONALIDADES E INTEGRAÇÕES
+
+**Obrigatórias (sem elas o site não entra no ar)**
+- Agendamento online com integração de calendário e confirmação automática
+- Botão flutuante de WhatsApp com mensagem pré-preenchida por página
+- Formulário de captação com consentimento LGPD
+- Google Maps incorporado + botão "traçar rota"
+- Galeria de antes/depois com comparador
+- Feed do Instagram (últimas 6 a 9 publicações)
+- Painel simples de horários e bloqueio de agenda
+- SEO local + dados estruturados LocalBusiness
+- Carrinho e checkout completos, com cálculo de frete por CEP
+- Cadastro/login do cliente com histórico de pedidos
+- E-mails e mensagens automáticas de confirmação de pedido e status de envio
+
+**Desejáveis (fase 2)**
+- Pré-anamnese digital salva por cliente
+- Pacotes e assinaturas (ex.: 4 sessões de drenagem por mês)
+- Programa de indicação ("indique uma amiga e ganhe")
+- Cartão-presente / voucher digital
+- Lembretes automáticos por WhatsApp 24h antes
+- Blog com conteúdo de autocuidado
+- Venda de vouchers/cartões-presente com validade e resgate na unidade
+- Kits de tratamento com desconto progressivo
+- Seleção de produtos recomendados pelo profissional após a avaliação
+- Assinatura mensal de dermocosméticos
+
+**Integrações a prever no projeto**
+- Google Analytics 4 + Google Ads
+- Meta Pixel
+- Google Calendar
+- Ferramenta de agendamento (ex.: Cielo/Beleza na Web/Booki/Calendly)
+- Gateway de pagamento para sinal
+
+### Loja online — especificação
+Categorias a montar: Skincare, Kits e protocolos, Cartão-presente, Suplementos, Acessórios.
+
+**Fluxo de compra**
+1. Vitrine → página de produto → adicionar ao carrinho → carrinho lateral com resumo e frete → checkout → obrigado.
+2. Checkout em página única, com campos mínimos: nome, CPF/CNPJ (opcional), e-mail, telefone, endereço com busca por CEP e forma de pagamento.
+3. Ofereça Pix (com desconto opcional), cartão de crédito (parcelamento) e boleto; e sempre a alternativa "finalizar pelo WhatsApp".
+4. Confirmação imediata na tela + e-mail/WhatsApp com número do pedido e prazo estimado.
+5. Página de acompanhamento de pedido por código.
+
+**Regras comerciais a implementar**
+- Exibir preço, parcelamento estimado e disponibilidade de estoque em todo card de produto.
+- Cálculo de frete por CEP no carrinho; frete grátis acima do valor definido pelo cliente.
+- Cupom de primeira compra e cupom de recuperação de carrinho abandonado.
+- Aviso "últimas unidades" apenas quando for verdadeiro.
+- Recuperação de carrinho por e-mail e WhatsApp em 2 toques (24h e 72h).
+
+**Catálogo inicial**
+- Cadastrar entre 20 e 40 itens no lançamento, cobrindo Skincare, Kits e protocolos, Cartão-presente, Suplementos e Acessórios.
+- Fotos em fundo neutro, 1:1, com no mínimo 3 ângulos por produto.
+- Descrições com benefício + especificação técnica + modo de uso.
+- Variações (tamanho, peso, cor) com estoque próprio por variação.
+
+**Atenção específica do segmento**
+- Produtos com restrição (injetáveis) não devem ser vendidos na loja online
+- Mostrar composição e recomendação de uso em cada produto
+
+## 8. CONTEÚDO E COPY SUGERIDA
+
+**Textos enviados pelo cliente (usar como base e ajustar apenas para clareza e SEO)**
+A Bella Estética nasceu em 2015 com a proposta de oferecer tratamentos personalizados. Nossa equipe é formada por três profissionais especializadas em estética facial e corporal.
+
+**Estrutura de textos a produzir por página**
+1. Home: headline (máx. 8 palavras), subheadline (1 frase), chamadas de cada bloco e CTAs.
+2. Serviços: um texto curto por serviço com o que é, para quem é, como acontece e o que está incluso.
+3. Sobre: história, propósito, equipe e números de credibilidade.
+4. Contato: instruções de chegada e orientação de atendimento.
+5. Rodapé: descrição curta da empresa em 1 frase (até 25 palavras).
+
+**Sugestão de serviços/produtos para esta página (base do modelo)**
+- Limpeza de pele profunda *(confirmado pelo cliente)*
+- Peeling de diamante *(confirmado pelo cliente)*
+- Microagulhamento
+- Toxina botulínica
+- Preenchimento labial
+- Harmonização facial
+- Drenagem linfática
+- Massagem modeladora
+- Criolipólise
+- Depilação a laser
+- Design de sobrancelhas
+- Extensão de cílios
+
+**Depoimentos**
+- "Desde a primeira avaliação explicaram tudo com calma. Minha pele melhorou muito depois de três sessões." — Ana Paula
+- "Ambiente impecável e pontualidade absoluta. Recomendo de olhos fechados." — Juliana M.
+
+**FAQ**
+- Preciso fazer avaliação antes de fechar o tratamento? → Sim. A avaliação é gratuita e serve para indicar o protocolo adequado ao seu objetivo e ao seu tipo de pele.
+- Quais as formas de pagamento? → Aceitamos Pix, débito, crédito em até 6x e pacotes com desconto.
+
+## 9. TOM DE VOZ E COMUNICAÇÃO
+
+**Personalidade da marca:** Sofisticado, mas acessível · Seguro e técnico sem ser frio · Acolhedor e empático · Focado em resultado
+
+**Como escrever (regras práticas)**
+- Explicar o benefício antes de citar a técnica ("pele uniforme" antes de "peeling de diamante")
+- Evitar promessas absolutas de resultado e comparações com concorrentes
+- Usar "você" e linguagem de cuidado; nunca infantilizar
+- Sempre sinalizar avaliação profissional prévia quando o procedimento exigir
+- Preferir frases curtas e respiros de leitura em vez de blocos densos
+
+**Evitar**
+- Termos alarmistas ("rejuvenesça 20 anos")
+- Promessa de resultado garantido (risco ético/legal)
+- Jargão clínico sem explicação
+- Excesso de emojis e caps lock
+
+**Exemplos de referência para copiar o padrão**
+- Título de home: "Estética que respeita o seu tempo e a sua pele"
+- Subtítulo: "Protocolos personalizados para pele, corpo e autoestima — em São Paulo."
+- CTA: "Agendar avaliação" / "Falar com uma especialista"
+
+**Boas práticas de redação para web (aplicar em todo o site)**
+- Frases curtas (até 20 palavras) e parágrafos de no máximo 4 linhas.
+- Um CTA por bloco, com verbo no infinitivo ou imperativo ("Agendar", "Falar no WhatsApp").
+- Títulos que falem do benefício, não do recurso.
+- Zero "clique aqui", "saiba mais" solto ou "bem-vindo ao nosso site".
+- Revisar ortografia e remover repetições de "qualidade", "excelência" e "compromisso".
+
+## 10. ESTILO VISUAL E IDENTIDADE DA MARCA
+
+**Estilo desejado pelo cliente:** Sofisticado e minimalista
+**Direções adequadas ao segmento:** Sofisticado / Minimalista clean / Clean-clínico com toques quentes
+
+**Paleta de cores a usar**
+- **#EFE6DD** (informada pelo cliente)
+- **#C98B8B** (informada pelo cliente)
+- **#3B3B3B** (informada pelo cliente)
+
+**Cor de destaque/CTA:** usar o tom mais saturado da paleta nos botões de ação, com contraste mínimo de 4.5:1 contra o fundo (WCAG AA).
+**Neutros:** definir uma escala de cinzas/off-white para fundos e divisores a partir da paleta acima; evitar preto puro (#000) em grandes áreas.
+
+**Tipografia**
+- Títulos: Serifada elegante (Cormorant Garamond, Playfair Display) ou sans humanista (Poppins)
+- Corpo do texto: Sans-serif leve e legível (Inter, Lato, Montserrat) em 16–18px com bom espaçamento
+- Escala sugerida: H1 40–56px (24–30px no mobile), H2 28–36px, corpo 16–18px, legenda 14px.
+- No máximo **duas famílias tipográficas**. Carregar com `display=swap` e apenas os pesos usados.
+- Fontes informadas pelo cliente (priorizar se houver arquivo em branding/): Títulos em serifada elegante; corpo em sans-serif leve
+
+**Diretrizes visuais específicas do segmento**
+- Muito espaço em branco — o layout não pode parecer "cheio"
+- Fotos de pele e rostos em luz natural suave, sem filtros pesados
+- Ícones de linha fina, nunca ícones infantis
+- Botões com cantos suavemente arredondados e sombra discreta
+- Nada de cores saturadas de fundo que atrapalhem a percepção da pele
+
+**Imagens e vídeos adequados (usar os arquivos do cliente quando existirem)**
+- Antes/depois autorizados (com aviso de que os resultados variam)
+- Close de pele, aplicação de produto, ambiente de sala
+- Retrato da especialista em contexto de atendimento
+- Detalhes: toalhas, ativos, equipamentos, aroma
+
+**Evitar neste segmento**
+- Estoque com imagens genéricas de banco de imagens
+- Montagens exageradas
+- Fundo preto pesado
+
+**Sistema de design a entregar**
+- Tokens em CSS custom properties (cores, espaçamentos, raios, sombras e tipografia).
+- Componentes reutilizáveis: botão (primário/secundário/texto), card, badge, acordeão, carrossel, formulário e modal.
+- Sombras discretas, raio de borda entre 8px e 16px e espaçamento em múltiplos de 8px.
+- Ícones de linha consistentes (mesma família e espessura) — nada de misturar estilos.
+- Microinterações discretas (200–300ms) em hover, foco e abertura de acordeão; respeitar `prefers-reduced-motion`.
+
+**Sites de referência enviados pelo cliente (inspiração de layout, nunca cópia de conteúdo)**
+- https://exemplo-de-referencia.com
+- https://outro-exemplo.com
+
+## 11. USO DAS IMAGENS E VÍDEOS ANEXADOS
+
+**Pasta do projeto**
+maria-souza_bella-estetica/midias/ — imagens; maria-souza_bella-estetica/branding/ — logo e identidade; maria-souza_bella-estetica/conteudo/ — textos e documentos.
+
+**Como usar cada arquivo**
+- **Logo:** usar `logo-principal.png` no cabeçalho (versão principal) e no rodapé. Gerar favicon a partir dele e manter área de respiro equivalente à altura da letra. Se houver versão clara e escura, usar a versão que garantir contraste no fundo do cabeçalho.
+- **Banner principal (hero):** usar `banner-fachada.jpg` como imagem de fundo, com sobreposição escura (40–60%) ou gradiente para garantir legibilidade do título. Usar `object-fit: cover` e posicionamento que preserve o assunto da foto no mobile.
+- **Vídeos:** `institucional.mp4`. Usar no hero (autoplay, `muted`, `loop`, `playsinline`, com poster estático) ou em bloco próprio com botão de play. Nunca iniciar com som ligado.
+- **Antes e depois / resultados:** usar `antes-depois-01.jpg`, `antes-depois-02.jpg` na seção de resultados, em pares, com legenda indicando procedimento, número de sessões e o aviso de que os resultados variam. Publicar somente com autorização de uso de imagem assinada.
+- **Galeria / portfólio:** usar `antes-depois-01.jpg`, `antes-depois-02.jpg`, `equipe.jpg` em grade com lightbox, legendas curtas e filtro por categoria quando houver mais de 8 itens.
+- **Cards de serviço e seções internas:** reaproveitar imagens do conjunto enviado, recortadas em 4:3, mantendo consistência de cor e luminosidade.
+- **Otimização obrigatória:** converter para WebP, gerar `srcset` (640/1024/1600px), aplicar `loading="lazy"` (exceto na imagem do hero) e `width`/`height` definidos para não haver salto de layout. Meta de peso: até 200 KB por imagem.
+- **Documentos de conteúdo:** `textos-sobre.docx` — ler integralmente antes de escrever qualquer texto do site e respeitar as informações ali contidas.
+
+**Regras gerais de imagem**
+- Nunca usar imagens de banco de imagens quando houver material próprio do cliente disponível.
+- Toda imagem precisa de `alt` descritivo e contextualizado (ex.: "corte de cabelo feminino em camadas no salão X"), nunca "imagem1.jpg".
+- Manter proporções consistentes por seção: hero 16:9, cards 4:3, produtos 1:1, retratos 3:4.
+- Não distorcer nem esticar fotos; usar recorte centralizado inteligente.
+- Comprimir antes de subir e manter os arquivos originais em `midias/` intactos.
+- Vídeos: máximo 30s, com legenda embutida (a maioria assiste sem som).
+
+**Tratamento quando faltar material**
+- Sinalizar no site, com comentário no código ou bloco marcado, exatamente onde cada foto deve entrar.
+- Nunca publicar placeholder genérico visível ao visitante final.
+- Entregar a lista "Materiais a solicitar ao cliente" junto com o site (logo vetorial, fotos de ambiente, fotos de equipe, fotos de produto).
+
+## 12. LINKS, REDES SOCIAIS E DADOS DE CONTATO
+
+**Dados de contato que devem aparecer no rodapé e na página de contato (idênticos em todo o site)**
+- Telefone fixo: (11) 3456-7890
+- WhatsApp: (11) 98888-7777
+- Link de WhatsApp a usar em todos os botões: https://wa.me/5511988887777 — com mensagem pré-preenchida e contextualizada por página (ex.: na home "Olá! Vim pelo site e gostaria de mais informações"; na página de Limpeza de pele profunda "Olá! Vim pelo site e gostaria de informações sobre Limpeza de pele profunda")
+- E-mail: contato@bellaestetica.com.br
+- Endereço: Rua das Flores, 123 — Sala 4, Jardim Europa • São Paulo/SP • CEP 01234-000
+- Horário de atendimento: Segunda a sexta, 9h às 19h; sábado, 9h às 14h. Fechado em feriados.
+- Razão social (para rodapé e políticas): Bella Estética LTDA
+- CNPJ: 12.345.678/0001-90
+
+**Redes sociais e links**
+- Google Maps: https://maps.app.goo.gl/exemplo-bella-estetica
+- Instagram: https://instagram.com/bellaestetica
+- Facebook: https://facebook.com/bellaestetica
+- TikTok: https://tiktok.com/@bellaestetica
+
+**Regras de aplicação dos links**
+- Abrir links externos com `target="_blank"` e `rel="noopener noreferrer"`.
+- Não usar placeholders do tipo `#` em links publicados — se o canal não existir, o ícone não aparece.
+- Incorporar o Google Maps em `iframe` com `loading="lazy"` e `title` descritivo; oferecer também o botão "Traçar rota".
+- Manter o mesmo NAP (nome, endereço, telefone) do Google Meu Negócio, do Instagram e do site — divergência prejudica o SEO local.
+- Formulário de contato: enviar para contato@bellaestetica.com.br e replicar no WhatsApp; incluir checkbox de consentimento LGPD com link para a política.
+
+**Links adicionais informados** (exibir onde fizer sentido: rodapé, página de contato ou página específica)
+- TikTok → https://tiktok.com/@bellaestetica
+
+## 13. SEO BÁSICO E LOCAL
+
+**SEO local — aplicar obrigatoriamente**
+
+**Título e descrição da home**
+- Title (até 60 caracteres): `Bella Estética | Clínica de Estética em São Paulo — Agende sua Avaliação`
+- Meta description (até 155 caracteres): `Tratamentos faciais e corporais com protocolos personalizados em São Paulo. Agende sua avaliação e conheça o plano ideal para você.`
+- H1 único da home: variação do title com a cidade, sem repetir palavra-chave em excesso.
+
+**Titles sugeridos para as páginas internas** (padrão: `[Página] | [Nome] em [Cidade]`)
+- Home: `Home | Bella Estética em São Paulo`
+- Procedimentos: `Procedimentos | Bella Estética em São Paulo`
+- Resultados: `Resultados | Bella Estética em São Paulo`
+- Sobre: `Sobre | Bella Estética em São Paulo`
+- Agendamento: `Agendamento | Bella Estética em São Paulo`
+- Galeria: `Galeria | Bella Estética em São Paulo`
+- Contato: `Contato | Bella Estética em São Paulo`
+- Política de Privacidade: `Política de Privacidade | Bella Estética em São Paulo`
+- Loja: `Loja | Bella Estética em São Paulo`
+
+**Palavras-chave a trabalhar** (uma principal por página, as demais como secundárias no corpo do texto)
+- clínica de estética Jardim Europa
+- limpeza de pele São Paulo
+- clínica de estética em São Paulo
+- harmonização facial São Paulo
+- botox São Paulo
+- depilação a laser São Paulo
+- drenagem linfática Jardim Europa
+
+**Palavras-chave por serviço** (usar na página de serviços e nos textos individuais)
+- limpeza de pele profunda em São Paulo
+- peeling de diamante em São Paulo
+- drenagem linfática em São Paulo
+- microagulhamento em São Paulo
+
+**Palavras-chave de cauda longa** (blog e FAQ)
+- quanto custa limpeza de pele profunda em São Paulo
+- onde fazer peeling de diamante perto de Jardim Europa
+- melhor centro de estética e beleza em Jardim Europa
+- horário de funcionamento de centro de estética e beleza em São Paulo
+
+**Dados estruturados (JSON-LD) a implementar**
+- `LocalBusiness` (subtipo mais específico: BeautySalon) com nome, endereço, telefone, geo, horário (openingHoursSpecification), preço e `aggregateRating` apenas se houver avaliações reais.
+- `FAQPage` na página de perguntas frequentes.
+- `BreadcrumbList` nas páginas internas.
+- `Product` e `Offer` na loja, com preço, disponibilidade e avaliações.
+- `Organization` com logo e perfis sociais (`sameAs`).
+
+**Google Meu Negócio**
+- Reivindicar e padronizar o perfil com o mesmo nome, endereço e telefone do site.
+- Publicar fotos reais da fachada, interior, equipe e serviços (o perfil é a principal fonte de cliques locais).
+- Pedir avaliação por link curto após cada atendimento e responder todas as avaliações.
+- Incluir UTM nos botões do site que levam ao perfil para medir o retorno.
+
+**Arquivos e configurações técnicas**
+- `sitemap.xml` e `robots.txt` gerados e enviados no Google Search Console.
+- URLs amigáveis com a palavra-chave (ex.: /servicos/limpeza-de-pele, nunca /?p=123).
+- Canonical em todas as páginas, `lang` correto e `hreflang` apenas se houver versão em outro idioma.
+- Open Graph e Twitter Card configurados para compartilhamento bonito no WhatsApp e no Instagram.
+- HTTPS, redirecionamento de www e de http para a versão canônica.
+- Página 404 com retorno de status correto e links úteis.
+
+## 14. REQUISITOS TÉCNICOS, LGPD E ACESSIBILIDADE
+
+**Requisitos técnicos do site**
+
+**Desempenho (metas objetivas)**
+- Nota mínima de 90 no Lighthouse em Desktop e 80 em Mobile para Performance, Acessibilidade e SEO.
+- LCP abaixo de 2,5s e CLS abaixo de 0,1 em conexão 4G.
+- Lazy loading em imagens/vídeos, compactação de assets e CDN para arquivos estáticos.
+- CSS crítico inline no topo e carregamento assíncrono do restante.
+
+**Acessibilidade (WCAG 2.1 AA)**
+- Contraste mínimo de 4.5:1 em texto e 3:1 em elementos de interface.
+- Todos os campos de formulário com `label` visível e mensagens de erro claras.
+- Navegação completa por teclado, com foco visível e link "pular para o conteúdo".
+- Textos alternativos em todas as imagens informativas e legendas nos vídeos.
+- Não usar cor como único indicador de estado.
+
+**Estrutura técnica recomendada**
+- Site responsivo com breakpoints em 480, 768, 1024 e 1440px.
+- Páginas renderizadas no servidor ou pré-renderizadas (bom para SEO local).
+- CMS simples para o cliente editar textos, serviços, preços, horários, posts e produtos.
+- Formulário com proteção anti-spam (honeypot + reCAPTCHA invisível) e envio por e-mail + WhatsApp.
+- Painel administrativo protegido com 2FA e backups automáticos semanais.
+- Ambiente de homologação separado da produção.
+
+**Conformidade**
+- LGPD: política de privacidade, banner de cookies, consentimento explícito nos formulários e dados sensíveis com tratamento restrito.
+- Termos de uso quando houver venda online ou área do cliente.
+- Rodapé com razão social e CNPJ quando exigido pelo segmento.
+- Conteúdo em conformidade com as regras publicitárias da profissão (ver seção de cuidados).
+
+**Integrações obrigatórias no lançamento**
+- Google Analytics 4 com eventos de conversão
+- Google Search Console
+- Google Meu Negócio
+- Meta Pixel
+- WhatsApp Business (link e resposta rápida configurados)
+
+**Idioma do site:** pt-BR
+
+## 15. CUIDADOS ESPECÍFICOS DO SEGMENTO
+
+**Regras de comunicação e conformidade deste segmento — não violar**
+- Não prometer resultados garantidos nem prazos exatos — risco de propaganda enganosa (CDC/CONAR)
+- Sinalizar sempre a necessidade de avaliação prévia e contraindicações
+- Uso de imagem de clientes somente com termo de autorização assinado
+- Publicar registro dos profissionais que exercem profissões regulamentadas
+
+## 16. O QUE EVITAR
+
+**O que NÃO fazer em nenhum caso**
+- Não inventar informações: telefone, endereço, preços, prazos, certificações, prêmios, número de clientes ou depoimentos.
+- Não usar textos genéricos de "empresa séria e comprometida com a qualidade" — escreva o que a empresa realmente faz.
+- Não copiar layout, textos ou imagens de sites de concorrentes.
+- Não usar banco de imagens quando houver material próprio; nunca usar imagem com marca d'água.
+- Não colocar carrossel automático no topo que troca de slide rápido (ruim para conversão e acessibilidade).
+- Não esconder informações essenciais (preço, endereço, horário) atrás de menus distantes.
+- Não usar CAPS LOCK em títulos, nem fontes decorativas no corpo do texto.
+- Não publicar o site com links `href="#"`, formulários não testados ou página 404 genérica do servidor.
+- Não deixar o site dependente de um único canal (só Instagram não basta — o objetivo do site é ser a base própria do negócio).
+- Não exceder duas famílias tipográficas nem mais de 5 cores principais.
+- Não esconder o frete ou o prazo até a última etapa do checkout.
+- Não deixar o cadastro obrigatório antes de o cliente ver o preço final.
+
+## 17. CRITÉRIOS DE ACEITE E MATERIAIS PENDENTES
+
+**Checklist de aceite — o trabalho só é considerado entregue quando todos os itens estiverem marcados**
+- Todas as páginas obrigatórias implementadas e acessíveis pelo menu: Home, Procedimentos, Resultados, Sobre, Equipe, Depoimentos, Agendamento, Perguntas Frequentes (FAQ), Galeria, Blog / Dicas, Contato, Política de Privacidade, Loja.
+- Nenhum texto placeholder, "lorem ipsum" ou imagem de exemplo publicada.
+- NAP (nome, endereço, telefone) idêntico em todas as páginas e igual ao Google Meu Negócio.
+- Links de WhatsApp e telefone testados em Android e iPhone.
+- Fluxo de compra testado com pedido real de baixo valor: carrinho, frete, pagamento, confirmação e rastreio.
+- Formulários testados de ponta a ponta, com mensagem de sucesso e de erro.
+- SEO: title, description, H1 único, alt em imagens, sitemap e robots publicados.
+- Dados estruturados validados no Rich Results Test, sem erros.
+- Lighthouse com as notas mínimas definidas na seção técnica.
+- Testado nos navegadores Chrome, Safari e Firefox (últimas 2 versões) e em telas de 360px a 1920px.
+- Política de privacidade publicada e linkada no rodapé e nos formulários.
+- GA4 e Pixel disparando os eventos de conversão configurados.
+- Backup, acesso ao CMS e treinamento de uso entregues ao cliente.
+
+**Materiais a solicitar ao cliente, caso ainda não estejam na pasta**
+- Logo em vetor (SVG/AI/PDF) — se o cliente só tiver PNG, solicitar o vetor.
+- Fotos próprias em alta resolução (mínimo 1600px de largura): fachada, ambiente, equipe e serviços/produtos.
+- Vídeos curtos (opcional), em boa luz e sem áudio obrigatório.
+- Depoimentos reais com nome e autorização de uso.
+- Lista de preços atualizada (ou definição de "consultar valores").
+- Acesso ao perfil do Google Meu Negócio e às redes sociais.
+- Dados para nota fiscal e política de trocas, no caso da loja.
+
+**Entregue junto com o site**
+- Documento de orientação para o cliente (como editar textos, produtos e horários no CMS).
+- Relatório de SEO inicial: palavras-chave, title/description aplicados e checklist do Google Meu Negócio.
+- Acessos e credenciais organizados e entregues em local seguro (nunca por WhatsApp ou e-mail em texto aberto).
+- Recomendação de rotina de manutenção: publicar 1 a 2 conteúdos por mês e revisar preços a cada trimestre.
+
+## 18. OBSERVAÇÕES DO OPERADOR
+
+Cliente pediu entrega antes do dia 15. Priorizar mobile, pois 80% do tráfego vem do Instagram.
+
+---
+
+## RESUMO PARA COLAR NO CHAT (versão curta)
+- Crie o site de "Bella Estética" (São Paulo, Jardim Europa) — centro de estética e beleza.
+- Descrição: centro de estética especializado em tratamentos faciais e corporais, com protocolos personalizados definidos após avaliação individual.
+- Público-alvo: Mulheres de 30 a 50 anos, moradoras do Jardim Europa e região, que buscam prevenção de rugas, tratamento de manchas e autocuidado.
+- Objetivo do site: Agendamento online + e-commerce.
+- Serviços: Limpeza de pele profunda, Peeling de diamante, Drenagem linfática, Microagulhamento.
+- Páginas: Home, Procedimentos, Resultados, Sobre, Equipe, Depoimentos, Agendamento, Perguntas Frequentes (FAQ), Galeria, Blog / Dicas, Contato, Política de Privacidade, Loja.
+- Funcionalidades: Agendamento online com integração de calendário e confirmação automática, Botão flutuante de WhatsApp com mensagem pré-preenchida por página, Formulário de captação com consentimento LGPD, Google Maps incorporado + botão "traçar rota", Galeria de antes/depois com comparador, Feed do Instagram (últimas 6 a 9 publicações), Painel simples de horários e bloqueio de agenda, SEO local + dados estruturados LocalBusiness, carrinho e checkout com Pix, cartão e frete por CEP.
+- Tom de voz: Sofisticado, mas acessível, Seguro e técnico sem ser frio, Acolhedor e empático, Focado em resultado.
+- Estilo visual: Sofisticado e minimalista (Sofisticado, Minimalista clean, Clean-clínico com toques quentes).
+- Cores: #EFE6DD, #C98B8B, #3B3B3B.
+- Use os arquivos da pasta maria-souza_bella-estetica/ (logo em branding/, imagens e vídeos em midias/, textos em conteudo/) — não invente mídias nem dados.
+- SEO local: title "Bella Estética | Clínica de Estética em São Paulo — Agende sua Avaliação", palavras-chave com foco em "clínica de estética em São Paulo" e dados estruturados LocalBusiness.
+- Contato: (11) 3456-7890 | contato@bellaestetica.com.br | https://instagram.com/bellaestetica.
+- Não invente informações, preços, avaliações ou depoimentos.

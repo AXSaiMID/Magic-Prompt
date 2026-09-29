@@ -1,0 +1,577 @@
+# PROMPT PARA CRIAÇÃO DO SITE
+## Barbearia Tradição — Belo Horizonte | Barbearia
+
+> Documento gerado pelo sistema Magic Prompt a partir do modelo "Barbearia" (barbearia) e dos dados preenchidos para este cliente.
+> **Objetivo declarado do site:** Agendamento online.
+> Cole este prompt integralmente na ferramenta de IA de criação de sites e anexe a pasta `carlos-mendes_barbearia-tradicao/` com as mídias e o conteúdo.
+
+---
+
+## FICHA DO PROJETO
+
+**Cliente:** Carlos Mendes
+**Empresa:** Barbearia Tradição
+
+
+**Segmento:** Barbearia
+**Localização:** Av. Central, 900, Centro • Belo Horizonte/MG • CEP 30110-000
+
+**Projeto:** carlos-mendes_barbearia-tradicao
+**Modelo base:** barbearia v1.0
+**Gerado em:** 29/09/2026 às 03h20
+
+## 1. PAPEL E MISSÃO
+
+Você é um **designer e desenvolvedor web sênior**, especializado em sites para o setor de beleza, com forte domínio de SEO local, conversão, acessibilidade e performance.
+
+Sua missão: **criar (ou reformular) o site de "Barbearia Tradição", em Belo Horizonte**, um barbearia, entregando estrutura, conteúdo e design prontos para publicação.
+
+**Entregáveis esperados nesta rodada**
+1. Mapa do site e wireframe textual de cada página (seções na ordem em que aparecem).
+2. Textos finais aplicados, prontos para copiar — sem placeholders.
+3. Direção visual: paleta aplicada, tipografia, componentes e estados de interação.
+4. Código responsivo e acessível, com os dados estruturados e o SEO on-page configurados.
+5. Lista do que ficou pendente de material do cliente.
+
+**Como responder**
+- Antes de produzir, apresente em até 10 linhas o seu plano de execução (estrutura + direção visual) para validação.
+- Depois, entregue na ordem: wireframe → textos → design → código.
+- Quando faltar informação, use a decisão mais coerente com o segmento e **sinalize a suposição** no final, na lista de pendências. Nunca invente dados factuais.
+
+## 2. ARQUIVOS DE APOIO DO PROJETO
+
+Este projeto acompanha uma pasta com todos os materiais do cliente. Considere os arquivos abaixo como a **fonte oficial** de conteúdo — não invente produtos, endereços, telefones ou imagens.
+
+carlos-mendes_barbearia-tradicao/
+├── prompt_site.txt        (este documento)
+├── midias/                (imagens e vídeos para o site)
+├── branding/              (logo, paleta de cores, fontes e referências)
+└── conteudo/              (textos, depoimentos, FAQ e demais documentos)
+
+**Arquivos disponíveis**
+- Nenhum arquivo foi enviado ainda. Trabalhe com placeholders elegantes e mantenha a estrutura pronta para receber as mídias.
+
+## 3. DESCRIÇÃO DO NEGÓCIO
+
+**Barbearia Tradição** é barbearia com atendimento por hora marcada, especializada em cortes masculinos e barba na navalha.
+
+Atua em **Belo Horizonte/MG** (bairro Centro), atendendo presencialmente com o seguinte horário de funcionamento: Terça a sábado, 9h às 20h.
+
+**Principais serviços/produtos**
+- Corte social
+- Degradê
+- Barba na navalha
+- Corte + barba
+
+**Diferenciais / proposta de valor**
+- Zero fila: só atendemos com hora marcada
+- Toalha quente e finalização inclusas
+
+## 4. PÚBLICO-ALVO
+
+Homens de 20 a 45 anos da região central que valorizam atendimento sem fila
+
+Considere este público em todas as decisões de conteúdo e design:
+- **Dispositivo principal:** celular. Projete mobile-first e teste em telas pequenas antes da versão desktop.
+- **Região de influência:** Belo Horizonte/MG e cidades vizinhas. Priorize buscas com intenção local ("perto de mim", "em [cidade]").
+
+## 5. OBJETIVO DO SITE
+
+**Objetivo principal do site:** Agendamento online — O cliente marca horário/serviço sozinho pelo site.
+
+**O que conta como sucesso (métricas a instrumentar já no lançamento)**
+- Cliques no botão "Agendar" (eventos de conversão configurados)
+- Agendamentos concluídos por semana
+- Origem dos agendamentos (orgânico, anúncio, Instagram, Google Meu Negócio)
+- Taxa de no-show em relação aos agendamentos feitos pelo site
+
+Configure as conversões no Google Analytics 4 e no Meta Pixel desde a publicação da primeira versão. Sem medição, nenhuma otimização posterior é possível.
+
+## 6. ESTRUTURA DE PÁGINAS E SEÇÕES
+
+A estrutura abaixo vem do modelo **Barbearia**, já ajustada para este cliente. Mantenha a ordem, os rótulos do menu e adapte os textos ao contexto real do negócio.
+
+**Menu principal sugerido:** Home | Serviços e Preços | Barbeiros | Galeria | Sobre | Agendamento | Contato | Política de Privacidade
+O menu deve ser fixo (sticky) no topo, com o botão de contato/destaque sempre visível no canto direito.
+
+> **Sem loja online nesta versão:** onde as seções abaixo citarem produtos ou prateleira, trate como **catálogo/vitrine** com pedido pelo WhatsApp ou retirada no balcão. Não implemente carrinho nem checkout.
+
+#### 1. Home — OBRIGATÓRIA
+*Objetivo da página:* Vender a experiência da barbearia e converter em agendamento.
+Seções, na ordem:
+1. Hero com foto forte + "Marque seu horário" e link de WhatsApp
+2. Barra de destaque: "Atendimento por hora marcada • Sem fila"
+3. Serviços em cards com preço (corte, barba, combo, sobrancelha, kids)
+4. Clube de assinatura em destaque (planos mensais)
+5. Galeria de cortes em grade
+6. Equipe/barbeiros com agenda individual
+7. Depoimentos e nota do Google
+8. Localização com mapa, estacionamento e horários
+9. Vitrine de produtos em destaque com pedido pelo WhatsApp (sem carrinho)
+> Orientação específica: Preço visível na home aumenta a taxa de agendamento nesse segmento.
+
+#### 2. Serviços e Preços — OBRIGATÓRIA
+*Objetivo da página:* Deixar custo e tempo claros para o cliente decidir antes de agendar.
+Seções, na ordem:
+1. Tabela: corte, corte + barba, barba, navalhado, sobrancelha, pigmentação, hidratação, corte infantil
+2. Duração média de cada serviço
+3. Combos com desconto e "primeira visita"
+4. Explicação do que está incluso (toalha quente, massagem, finalização, bebida)
+5. CTA de agendamento em cada linha
+> Orientação específica: Mostrar "tempo de cadeira" evita reclamação de atraso no dia cheio.
+
+#### 3. Clube de Assinatura — OPCIONAL (recomendada)
+*Objetivo da página:* Gerar receita recorrente e previsibilidade de agenda.
+Seções, na ordem:
+1. Comparativo de planos (ex.: 2 cortes/mês, 4 cortes/mês, ilimitado)
+2. Benefícios: desconto em produtos, reserva prioritária, brinde
+3. Como funciona o pagamento recorrente e o cancelamento
+4. Botão de assinatura online com cartão/Pix recorrente
+> Orientação específica: Explicar a economia mensal em reais para o cliente — converte muito mais.
+
+#### 4. Barbeiros — OBRIGATÓRIA
+*Objetivo da página:* Permitir a escolha do profissional e valorizar o time.
+Seções, na ordem:
+1. Cards com foto, apelido, especialidade, tempo de casa e horários
+2. Galeria de trabalhos por barbeiro
+3. Botão "agendar com [nome]" apontando para a agenda individual
+4. Link do Instagram de cada profissional
+> Orientação específica: Se o cliente não tiver fotos do time, orientar sessão fotográfica com uniforme da casa.
+
+#### 5. Galeria — OBRIGATÓRIA
+*Objetivo da página:* Mostrar trabalhos reais — o principal fator de decisão do segmento.
+Seções, na ordem:
+1. Grade de fotos em alta resolução com filtro por categoria
+2. Lightbox com navegação e legenda
+3. Vídeos curtos (Reels/YouTube) incorporados
+4. CTA fixo ao final da galeria ("agende seu horário")
+5. Antes/depois de transformações mais fortes
+6. Vídeos de barba feita com navalha
+> Orientação específica: Usar somente imagens próprias e nítidas. Otimizar para WebP e incluir texto alternativo descritivo para SEO.
+
+#### 6. Sobre — OBRIGATÓRIA
+*Objetivo da página:* Gerar confiança e mostrar quem está por trás da empresa, desde quando atua e o que a torna diferente.
+Seções, na ordem:
+1. História da empresa (ano de fundação, trajetória, missão) em 2 a 3 parágrafos
+2. Apresentação do(a) responsável / fundadores com foto
+3. Missão, visão e valores em cards curtos
+4. Números de credibilidade (anos de mercado, clientes atendidos, profissionais)
+5. Estrutura física / ambiente em fotos
+6. Selos e certificações relevantes do segmento
+7. História da barbearia, inspirações e cultura da casa
+8. Maisons e tradições seguidas
+> Orientação específica: Use linguagem humana em primeira pessoa do plural ("nós cuidamos"). Evite texto genérico de "empresa que preza pela qualidade".
+
+#### 7. Agendamento — OBRIGATÓRIA
+*Objetivo da página:* Permitir que o cliente marque horário sozinho, 24 horas por dia.
+Seções, na ordem:
+1. Seleção de serviço (com duração e valor)
+2. Seleção de profissional (quando o cliente exigir)
+3. Calendário com horários disponíveis em tempo real
+4. Formulário com nome, WhatsApp e observações
+5. Resumo antes de confirmar e confirmação imediata por WhatsApp/e-mail
+6. Instruções de preparo/chegada e política de cancelamento
+7. Seleção de barbeiro + serviço
+8. Bloqueio automático de horários já ocupados
+9. Confirmação por WhatsApp e lembrete 2h antes
+10. Fila de espera para sábados lotados
+> Orientação específica: Deixar always-visible um botão "Agendar agora" no topo e um botão flutuante de WhatsApp em todas as páginas.
+
+#### 8. Depoimentos — OPCIONAL (recomendada)
+*Objetivo da página:* Prova social: reduzir a hesitação de quem está decidindo.
+Seções, na ordem:
+1. Grade de depoimentos com nome, foto (opcional), nota e texto curto
+2. Avaliações do Google (embed/prints)
+3. Nota média em destaque e link "Avaliar no Google"
+4. Carrossel de prints de conversas do WhatsApp (com autorização)
+> Orientação específica: Depoimento sem nome próprio e sem contexto perde força. Prefira poucos e verdadeiros.
+
+#### 9. Perguntas Frequentes (FAQ) — OPCIONAL (recomendada)
+*Objetivo da página:* Reduzir o volume de dúvidas repetidas no atendimento e melhorar o SEO.
+Seções, na ordem:
+1. Acordeão com 8 a 12 perguntas mais comuns
+2. Cada resposta em até 3 frases, com CTA quando fizer sentido
+3. Marcação de dados estruturados FAQPage (schema.org)
+4. Posso chegar sem agendar?
+5. Quanto tempo leva o corte?
+6. Vocês atendem crianças?
+7. Aceitam cartão?
+> Orientação específica: Escreva as perguntas como o cliente perguntaria no WhatsApp: "quanto custa?", "dói?".
+
+#### 10. Contato — OBRIGATÓRIA
+*Objetivo da página:* Transformar visita em conversa, com o menor atrito possível.
+Seções, na ordem:
+1. Telefone e WhatsApp com links clicáveis (wa.me e tel:)
+2. Formulário de contato curto (nome, telefone/e-mail, mensagem) com aviso de privacidade (LGPD)
+3. Endereço completo com Google Maps incorporado
+4. Horário de atendimento por dia da semana (destacando feriados e plantões)
+5. E-mail e redes sociais
+6. Bloco "como chegar" com referências de pontos conhecidos e opções de transporte/estacionamento
+7. Estacionamento e referências de referência do bairro
+> Orientação específica: O formulário deve enviar e-mail e/ou WhatsApp automaticamente e ter proteção anti-spam.
+
+#### 11. Política de Privacidade — OBRIGATÓRIA
+*Objetivo da página:* Conformidade com a LGPD e com políticas de anúncios/análise.
+Seções, na ordem:
+1. Quais dados são coletados (formulários, cookies, analytics)
+2. Finalidade do tratamento e base legal
+3. Compartilhamento com terceiros (WhatsApp, Google, ferramentas de agendamento)
+4. Direitos do titular e canal de contato do encarregado
+5. Política de cookies com banner de consentimento
+> Orientação específica: Incluir link no rodapé de todas as páginas e no rodapé do formulário.
+
+**Regras transversais de navegação e layout**
+- Cabeçalho com logo à esquerda, menu ao centro/direita e botão de ação destacado.
+- Rodapé completo com NAP (nome, endereço, telefone), horários, redes sociais, formas de pagamento, mapa e link da Política de Privacidade.
+- Breadcrumbs em páginas internas e destaque da página atual no menu.
+- Botão de WhatsApp e/ou agendar fixo (flutuante) em todas as páginas.
+- Página 404 personalizada com atalhos para Serviços, Contato e Agendamento.
+- Título e descrição únicos por página (SEO), sem repetições.
+
+## 7. FUNCIONALIDADES E INTEGRAÇÕES
+
+**Obrigatórias (sem elas o site não entra no ar)**
+- Agendamento online por barbeiro e serviço
+- Botão de WhatsApp flutuante e "ligar agora"
+- Tabela de preços e combos
+- Galeria de trabalhos
+- Google Maps com horários por dia
+- Dados estruturados LocalBusiness/HairSalon
+
+**Desejáveis (fase 2, se houver prazo ou orçamento)**
+- Clube de assinatura com cobrança recorrente
+- Clube de fidelidade com pontos
+- Gift card digital
+- Painel de fila/lotação em tempo real ("agora: 15 min de espera")
+- Perfil do cliente com histórico de cortes
+- Lista de espera para sábado
+
+**Integrações a prever no projeto**
+- Google Analytics 4 + Google Ads
+- Meta Pixel
+- Instagram (agendamento pelo perfil)
+- Pagamento recorrente (assinatura)
+
+> Este cliente **não vendeu online** nesta contratação. Não crie carrinho, checkout ou catálogo de produtos. Se o cliente optar por vender depois, a estrutura deve permitir acoplar uma loja sem refazer o site (deixe o menu e o CSS preparados).
+
+## 8. CONTEÚDO E COPY SUGERIDA
+
+O cliente não enviou textos prontos. **Redija o conteúdo** seguindo a estrutura sugerida abaixo e o tom de voz definido neste prompt. Entregue os textos na pasta `conteudo/` em `.md` além de aplicá-los no site.
+
+**Estrutura de textos a produzir por página**
+1. Home: headline (máx. 8 palavras), subheadline (1 frase), chamadas de cada bloco e CTAs.
+2. Serviços: um texto curto por serviço com o que é, para quem é, como acontece e o que está incluso.
+3. Sobre: história, propósito, equipe e números de credibilidade.
+4. Contato: instruções de chegada e orientação de atendimento.
+5. Rodapé: descrição curta da empresa em 1 frase (até 25 palavras).
+
+**Sugestão de serviços/produtos para esta página (base do modelo)**
+- Corte social *(confirmado pelo cliente)*
+- Degradê / fade
+- Corte navalhado
+- Barba na navalha
+- Corte + barba (combo)
+- Sobrancelha masculina
+- Pigmentação de barba
+- Platinado / descoloração masculina
+- Hidratação e tratamento capilar masculino
+- Limpeza de pele masculina
+- Corte infantil
+- Depilação de orelha e nariz
+
+**Depoimentos**
+O cliente não enviou depoimentos. **Não invente depoimentos, avaliações ou notas** — isso é prova social falsa.
+Prepare o layout da seção com 3 a 6 blocos e deixe um comentário no código indicando onde colar os depoimentos reais. Sugira ao cliente coletar avaliações no Google e pedir autorização de uso.
+
+**FAQ**
+O cliente não enviou FAQ. Use estas perguntas (típicas do segmento) como base — ajuste as respostas aos fatos reais do negócio:
+- Precisa agendar ou atende por ordem de chegada? → Trabalhamos com hora marcada para você não esperar. Se surgir um horário livre no dia, avisamos no WhatsApp.
+- Quanto tempo demora um corte? → De 30 a 45 minutos, e corte com barba leva cerca de 1 hora. Esse tempo já aparece na hora de marcar.
+- Quanto custa? → A tabela completa está na página de serviços. Trabalhamos com combos de corte + barba e planos mensais com desconto.
+- Vocês atendem crianças? → Sim, temos horários específicos para o corte infantil, com paciência e cadeira apropriada.
+- Como funciona o clube de assinatura? → Você escolhe um plano mensal, paga por assinatura e usa os cortes quantas vezes o plano permitir. O cancelamento pode ser feito a qualquer momento.
+
+## 9. TOM DE VOZ E COMUNICAÇÃO
+
+**Personalidade da marca:** Direto e confiante · Descontraído, com humor leve · Comunidade e tradição de barbearia · Sem frescura
+
+**Como escrever (regras práticas)**
+- Frases curtas e objetivas, com verbos no imperativo no CTA ("chegue", "marque")
+- Usar o vocabulário do segmento: "navalhado", "degradê", "toalha quente"
+- Falar de pertencimento ("a melhor hora do seu dia", "vem pro time")
+- Zero corporativês e nada de "nossos prezados clientes"
+- Humor leve permitido, mas sem piadas com aparência de clientes
+
+**Evitar**
+- Linguagem agressiva ou estereotipada de "machão"
+- Textos formais longos
+- Emojis em excesso
+
+**Exemplos de referência para copiar o padrão**
+- Título: "Corte, barba e a melhor conversa da semana"
+- CTA: "Marcar horário" / "Ver planos do clube"
+- Bloco: "Sem fila, sem espera. Você marca, chega e senta na cadeira."
+
+**Boas práticas de redação para web (aplicar em todo o site)**
+- Frases curtas (até 20 palavras) e parágrafos de no máximo 4 linhas.
+- Um CTA por bloco, com verbo no infinitivo ou imperativo ("Agendar", "Falar no WhatsApp").
+- Títulos que falem do benefício, não do recurso.
+- Zero "clique aqui", "saiba mais" solto ou "bem-vindo ao nosso site".
+- Revisar ortografia e remover repetições de "qualidade", "excelência" e "compromisso".
+
+## 10. ESTILO VISUAL E IDENTIDADE DA MARCA
+
+**Estilo desejado pelo cliente:** Dark clássico
+**Direções adequadas ao segmento:** Dark clássico (barbershop) / Industrial moderno / Rústico vintage
+
+**Paleta de cores a usar**
+- **#111111** (informada pelo cliente)
+- **#C8A24A** (informada pelo cliente)
+
+**Cor de destaque/CTA:** usar o tom mais saturado da paleta nos botões de ação, com contraste mínimo de 4.5:1 contra o fundo (WCAG AA).
+**Neutros:** definir uma escala de cinzas/off-white para fundos e divisores a partir da paleta acima; evitar preto puro (#000) em grandes áreas.
+
+**Tipografia**
+- Títulos: Condensada/serifada máscula (Oswald, Bebas Neue, Playfair Display)
+- Corpo do texto: Sans neutra (Roboto, Inter, Barlow)
+- Escala sugerida: H1 40–56px (24–30px no mobile), H2 28–36px, corpo 16–18px, legenda 14px.
+- No máximo **duas famílias tipográficas**. Carregar com `display=swap` e apenas os pesos usados.
+
+**Diretrizes visuais específicas do segmento**
+- Fundo escuro como padrão, com contraste alto em amarelo/dourado nos CTAs
+- Ícones lineares de navalha, tesoura, pente e toalha
+- Fotos P&B ou com tratamento de contraste para reforçar o estilo
+- Layout de portfólio em grade quadrada
+- Animações discretas: hover com leve zoom nas fotos
+
+**Imagens e vídeos adequados (usar os arquivos do cliente quando existirem)**
+- Detalhes de degradê e barba feita
+- Ambiente com cadeiras e espelhos
+- Barbeiro em ação
+- Produtos (pomadas, óleos, loção)
+
+**Evitar neste segmento**
+- Imagens com aparência de estúdio artificial
+- Cores pastel e layouts fofos (quebra a identidade)
+
+**Sistema de design a entregar**
+- Tokens em CSS custom properties (cores, espaçamentos, raios, sombras e tipografia).
+- Componentes reutilizáveis: botão (primário/secundário/texto), card, badge, acordeão, carrossel, formulário e modal.
+- Sombras discretas, raio de borda entre 8px e 16px e espaçamento em múltiplos de 8px.
+- Ícones de linha consistentes (mesma família e espessura) — nada de misturar estilos.
+- Microinterações discretas (200–300ms) em hover, foco e abertura de acordeão; respeitar `prefers-reduced-motion`.
+
+## 11. USO DAS IMAGENS E VÍDEOS ANEXADOS
+
+**Pasta do projeto**
+carlos-mendes_barbearia-tradicao/midias/ — imagens; carlos-mendes_barbearia-tradicao/branding/ — logo e identidade; carlos-mendes_barbearia-tradicao/conteudo/ — textos e documentos.
+
+**Como usar cada arquivo**
+- **Logo:** não há arquivo de logo na pasta. Preencha o cabeçalho com o nome da empresa em tipografia da paleta e sinalize ao cliente sobre a necessidade do vetor.
+- **Banner principal (hero):** sem imagens enviadas. Use composição tipográfica sobre a cor principal da paleta e deixe o componente pronto para receber a foto (mesma proporção de 16:9 no desktop e 4:5 no mobile).
+- **Sem imagens próprias:** não preencher o site com banco de imagens genérico. Usar blocos de cor, ícones e espaços reservados sinalizados, e entregar uma lista do que o cliente precisa fotografar (ver seção "Materiais a solicitar").
+
+**Regras gerais de imagem**
+- Nunca usar imagens de banco de imagens quando houver material próprio do cliente disponível.
+- Toda imagem precisa de `alt` descritivo e contextualizado (ex.: "corte de cabelo feminino em camadas no salão X"), nunca "imagem1.jpg".
+- Manter proporções consistentes por seção: hero 16:9, cards 4:3, produtos 1:1, retratos 3:4.
+- Não distorcer nem esticar fotos; usar recorte centralizado inteligente.
+- Comprimir antes de subir e manter os arquivos originais em `midias/` intactos.
+- Vídeos: máximo 30s, com legenda embutida (a maioria assiste sem som).
+
+**Tratamento quando faltar material**
+- Sinalizar no site, com comentário no código ou bloco marcado, exatamente onde cada foto deve entrar.
+- Nunca publicar placeholder genérico visível ao visitante final.
+- Entregar a lista "Materiais a solicitar ao cliente" junto com o site (logo vetorial, fotos de ambiente, fotos de equipe, fotos de produto).
+
+## 12. LINKS, REDES SOCIAIS E DADOS DE CONTATO
+
+**Dados de contato que devem aparecer no rodapé e na página de contato (idênticos em todo o site)**
+- WhatsApp: (31) 97777-6666
+- Link de WhatsApp a usar em todos os botões: https://wa.me/5531977776666 — com mensagem pré-preenchida e contextualizada por página (ex.: na home "Olá! Vim pelo site e gostaria de mais informações"; na página de Corte social "Olá! Vim pelo site e gostaria de informações sobre Corte social")
+- E-mail: contato@barbeariatradicao.com.br
+- Endereço: Av. Central, 900, Centro • Belo Horizonte/MG • CEP 30110-000
+- Horário de atendimento: Terça a sábado, 9h às 20h
+
+**Redes sociais e links**
+- Google Maps: https://maps.app.goo.gl/exemplo-barbearia
+- Instagram: https://instagram.com/barbeariatradicao
+
+**Regras de aplicação dos links**
+- Abrir links externos com `target="_blank"` e `rel="noopener noreferrer"`.
+- Não usar placeholders do tipo `#` em links publicados — se o canal não existir, o ícone não aparece.
+- Incorporar o Google Maps em `iframe` com `loading="lazy"` e `title` descritivo; oferecer também o botão "Traçar rota".
+- Manter o mesmo NAP (nome, endereço, telefone) do Google Meu Negócio, do Instagram e do site — divergência prejudica o SEO local.
+- Formulário de contato: enviar para contato@barbeariatradicao.com.br e replicar no WhatsApp; incluir checkbox de consentimento LGPD com link para a política.
+
+## 13. SEO BÁSICO E LOCAL
+
+**SEO local — aplicar obrigatoriamente**
+
+**Título e descrição da home**
+- Title (até 60 caracteres): `Barbearia Tradição | Barbearia em Belo Horizonte — Agende seu Horário Online`
+- Meta description (até 155 caracteres): `Corte masculino, barba e navalhado com hora marcada em Belo Horizonte. Tabela de preços, clube de assinatura e agendamento online em segundos.`
+- H1 único da home: variação do title com a cidade, sem repetir palavra-chave em excesso.
+
+**Titles sugeridos para as páginas internas** (padrão: `[Página] | [Nome] em [Cidade]`)
+- Home: `Home | Barbearia Tradição em Belo Horizonte`
+- Serviços e Preços: `Serviços e Preços | Barbearia Tradição em Belo Horizonte`
+- Barbeiros: `Barbeiros | Barbearia Tradição em Belo Horizonte`
+- Galeria: `Galeria | Barbearia Tradição em Belo Horizonte`
+- Sobre: `Sobre | Barbearia Tradição em Belo Horizonte`
+- Agendamento: `Agendamento | Barbearia Tradição em Belo Horizonte`
+- Contato: `Contato | Barbearia Tradição em Belo Horizonte`
+- Política de Privacidade: `Política de Privacidade | Barbearia Tradição em Belo Horizonte`
+- Loja: `Loja | Barbearia Tradição em Belo Horizonte`
+
+**Palavras-chave a trabalhar** (uma principal por página, as demais como secundárias no corpo do texto)
+- barbearia em Belo Horizonte
+- barbearia Centro
+- corte masculino Belo Horizonte
+- barba na navalha Belo Horizonte
+- barbearia com agendamento online Belo Horizonte
+- barbeiro perto de mim
+
+**Palavras-chave por serviço** (usar na página de serviços e nos textos individuais)
+- corte social em Belo Horizonte
+- degradê em Belo Horizonte
+- barba na navalha em Belo Horizonte
+- corte + barba em Belo Horizonte
+
+**Palavras-chave de cauda longa** (blog e FAQ)
+- quanto custa corte social em Belo Horizonte
+- onde fazer degradê perto de Centro
+- melhor barbearia em Centro
+- horário de funcionamento de barbearia em Belo Horizonte
+
+**Dados estruturados (JSON-LD) a implementar**
+- `LocalBusiness` (subtipo mais específico: HairSalon) com nome, endereço, telefone, geo, horário (openingHoursSpecification), preço e `aggregateRating` apenas se houver avaliações reais.
+- `FAQPage` na página de perguntas frequentes.
+- `BreadcrumbList` nas páginas internas.
+- `Product` e `Offer` na loja, com preço, disponibilidade e avaliações.
+- `Organization` com logo e perfis sociais (`sameAs`).
+
+**Google Meu Negócio**
+- Reivindicar e padronizar o perfil com o mesmo nome, endereço e telefone do site.
+- Publicar fotos reais da fachada, interior, equipe e serviços (o perfil é a principal fonte de cliques locais).
+- Pedir avaliação por link curto após cada atendimento e responder todas as avaliações.
+- Incluir UTM nos botões do site que levam ao perfil para medir o retorno.
+
+**Arquivos e configurações técnicas**
+- `sitemap.xml` e `robots.txt` gerados e enviados no Google Search Console.
+- URLs amigáveis com a palavra-chave (ex.: /servicos/limpeza-de-pele, nunca /?p=123).
+- Canonical em todas as páginas, `lang` correto e `hreflang` apenas se houver versão em outro idioma.
+- Open Graph e Twitter Card configurados para compartilhamento bonito no WhatsApp e no Instagram.
+- HTTPS, redirecionamento de www e de http para a versão canônica.
+- Página 404 com retorno de status correto e links úteis.
+
+## 14. REQUISITOS TÉCNICOS, LGPD E ACESSIBILIDADE
+
+**Requisitos técnicos do site**
+
+**Desempenho (metas objetivas)**
+- Nota mínima de 90 no Lighthouse em Desktop e 80 em Mobile para Performance, Acessibilidade e SEO.
+- LCP abaixo de 2,5s e CLS abaixo de 0,1 em conexão 4G.
+- Lazy loading em imagens/vídeos, compactação de assets e CDN para arquivos estáticos.
+- CSS crítico inline no topo e carregamento assíncrono do restante.
+
+**Acessibilidade (WCAG 2.1 AA)**
+- Contraste mínimo de 4.5:1 em texto e 3:1 em elementos de interface.
+- Todos os campos de formulário com `label` visível e mensagens de erro claras.
+- Navegação completa por teclado, com foco visível e link "pular para o conteúdo".
+- Textos alternativos em todas as imagens informativas e legendas nos vídeos.
+- Não usar cor como único indicador de estado.
+
+**Estrutura técnica recomendada**
+- Site responsivo com breakpoints em 480, 768, 1024 e 1440px.
+- Páginas renderizadas no servidor ou pré-renderizadas (bom para SEO local).
+- CMS simples para o cliente editar textos, serviços, preços, horários, posts e produtos.
+- Formulário com proteção anti-spam (honeypot + reCAPTCHA invisível) e envio por e-mail + WhatsApp.
+- Painel administrativo protegido com 2FA e backups automáticos semanais.
+- Ambiente de homologação separado da produção.
+
+**Conformidade**
+- LGPD: política de privacidade, banner de cookies, consentimento explícito nos formulários e dados sensíveis com tratamento restrito.
+- Termos de uso quando houver venda online ou área do cliente.
+- Rodapé com razão social e CNPJ quando exigido pelo segmento.
+- Conteúdo em conformidade com as regras publicitárias da profissão (ver seção de cuidados).
+
+**Integrações obrigatórias no lançamento**
+- Google Analytics 4 com eventos de conversão
+- Google Search Console
+- Google Meu Negócio
+- Meta Pixel
+- WhatsApp Business (link e resposta rápida configurados)
+
+**Idioma do site:** pt-BR
+
+## 15. CUIDADOS ESPECÍFICOS DO SEGMENTO
+
+**Regras de comunicação e conformidade deste segmento — não violar**
+- Não usar fotos de clientes sem autorização (mesmo em stories repostados)
+- Higienização e descarte de lâminas: mencionar no site como diferencial sanitário
+- Assinatura recorrente exige termos claros de cancelamento e reembolso (CDC)
+- Evitar linguagem que exclua público (pais levando filhos, público LGBTQIA+)
+
+## 16. O QUE EVITAR
+
+**O que NÃO fazer em nenhum caso**
+- Não inventar informações: telefone, endereço, preços, prazos, certificações, prêmios, número de clientes ou depoimentos.
+- Não usar textos genéricos de "empresa séria e comprometida com a qualidade" — escreva o que a empresa realmente faz.
+- Não copiar layout, textos ou imagens de sites de concorrentes.
+- Não usar banco de imagens quando houver material próprio; nunca usar imagem com marca d'água.
+- Não colocar carrossel automático no topo que troca de slide rápido (ruim para conversão e acessibilidade).
+- Não esconder informações essenciais (preço, endereço, horário) atrás de menus distantes.
+- Não usar CAPS LOCK em títulos, nem fontes decorativas no corpo do texto.
+- Não publicar o site com links `href="#"`, formulários não testados ou página 404 genérica do servidor.
+- Não deixar o site dependente de um único canal (só Instagram não basta — o objetivo do site é ser a base própria do negócio).
+- Não exceder duas famílias tipográficas nem mais de 5 cores principais.
+
+## 17. CRITÉRIOS DE ACEITE E MATERIAIS PENDENTES
+
+**Checklist de aceite — o trabalho só é considerado entregue quando todos os itens estiverem marcados**
+- Todas as páginas obrigatórias implementadas e acessíveis pelo menu: Home, Serviços e Preços, Clube de Assinatura, Barbeiros, Galeria, Sobre, Agendamento, Depoimentos, Perguntas Frequentes (FAQ), Contato, Política de Privacidade.
+- Nenhum texto placeholder, "lorem ipsum" ou imagem de exemplo publicada.
+- NAP (nome, endereço, telefone) idêntico em todas as páginas e igual ao Google Meu Negócio.
+- Links de WhatsApp e telefone testados em Android e iPhone.
+- Formulários testados de ponta a ponta, com mensagem de sucesso e de erro.
+- SEO: title, description, H1 único, alt em imagens, sitemap e robots publicados.
+- Dados estruturados validados no Rich Results Test, sem erros.
+- Lighthouse com as notas mínimas definidas na seção técnica.
+- Testado nos navegadores Chrome, Safari e Firefox (últimas 2 versões) e em telas de 360px a 1920px.
+- Política de privacidade publicada e linkada no rodapé e nos formulários.
+- GA4 e Pixel disparando os eventos de conversão configurados.
+- Backup, acesso ao CMS e treinamento de uso entregues ao cliente.
+
+**Materiais a solicitar ao cliente, caso ainda não estejam na pasta**
+- Logo em vetor (SVG/AI/PDF) — se o cliente só tiver PNG, solicitar o vetor.
+- Fotos próprias em alta resolução (mínimo 1600px de largura): fachada, ambiente, equipe e serviços/produtos.
+- Vídeos curtos (opcional), em boa luz e sem áudio obrigatório.
+- Depoimentos reais com nome e autorização de uso.
+- Lista de preços atualizada (ou definição de "consultar valores").
+- Acesso ao perfil do Google Meu Negócio e às redes sociais.
+- Dados para nota fiscal e política de trocas, no caso da loja.
+
+**Entregue junto com o site**
+- Documento de orientação para o cliente (como editar textos, produtos e horários no CMS).
+- Relatório de SEO inicial: palavras-chave, title/description aplicados e checklist do Google Meu Negócio.
+- Acessos e credenciais organizados e entregues em local seguro (nunca por WhatsApp ou e-mail em texto aberto).
+- Recomendação de rotina de manutenção: publicar 1 a 2 conteúdos por mês e revisar preços a cada trimestre.
+
+---
+
+## RESUMO PARA COLAR NO CHAT (versão curta)
+- Crie o site de "Barbearia Tradição" (Belo Horizonte, Centro) — barbearia.
+- Descrição: barbearia com atendimento por hora marcada, especializada em cortes masculinos e barba na navalha.
+- Público-alvo: Homens de 20 a 45 anos da região central que valorizam atendimento sem fila.
+- Objetivo do site: Agendamento online.
+- Serviços: Corte social, Degradê, Barba na navalha, Corte + barba.
+- Páginas: Home, Serviços e Preços, Clube de Assinatura, Barbeiros, Galeria, Sobre, Agendamento, Depoimentos, Perguntas Frequentes (FAQ), Contato, Política de Privacidade.
+- Funcionalidades: Agendamento online por barbeiro e serviço, Botão de WhatsApp flutuante e "ligar agora", Tabela de preços e combos, Galeria de trabalhos, Google Maps com horários por dia, Dados estruturados LocalBusiness/HairSalon.
+- Tom de voz: Direto e confiante, Descontraído, com humor leve, Comunidade e tradição de barbearia, Sem frescura.
+- Estilo visual: Dark clássico (Dark clássico (barbershop), Industrial moderno, Rústico vintage).
+- Cores: #111111, #C8A24A.
+- Não há mídias enviadas: use placeholders elegantes e liste o que precisa ser fotografado.
+- SEO local: title "Barbearia Tradição | Barbearia em Belo Horizonte — Agende seu Horário Online", palavras-chave com foco em "barbearia em Belo Horizonte" e dados estruturados LocalBusiness.
+- Contato: (31) 97777-6666 | contato@barbeariatradicao.com.br | https://instagram.com/barbeariatradicao.
+- Não invente informações, preços, avaliações ou depoimentos.

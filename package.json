@@ -1,0 +1,24 @@
+{
+  "name": "magic-prompt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema de geração automática de prompts para criação de sites de clientes, com modelos pré-definidos por segmento.",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test test/*.test.js",
+    "exemplo": "node scripts/gerar-exemplo.js"
+  },
+  "keywords": [
+    "prompt",
+    "gerador-de-sites",
+    "ia",
+    "agencia",
+    "modelos"
+  ],
+  "license": "MIT"
+}
