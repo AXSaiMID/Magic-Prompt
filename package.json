@@ -11,7 +11,9 @@
     "start": "node server/index.js",
     "dev": "node --watch server/index.js",
     "test": "node --test test/*.test.js",
-    "exemplo": "node scripts/gerar-exemplo.js"
+    "exemplo": "node scripts/gerar-exemplo.js",
+    "pagina": "node scripts/build-pagina.js",
+    "pagina:ver": "node scripts/servir-pagina.js"
   },
   "keywords": [
     "prompt",

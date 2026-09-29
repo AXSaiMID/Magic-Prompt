@@ -42,9 +42,38 @@ Outros comandos:
 
 ```bash
 npm run dev         # inicia com reinício automático ao salvar arquivos
-npm test            # roda a suíte de testes (53 testes)
+npm test            # roda a suíte de testes (64 testes)
 npm run exemplo     # gera prompts de exemplo em exemplos/ sem abrir a interface
+npm run pagina      # regenera a página estática (docs/) do GitHub Pages
+npm run pagina:ver  # pré-visualiza a página estática localmente
 ```
+
+### Publicar como página (GitHub Pages)
+
+O repositório já vem pronto para publicar: a pasta **`docs/`** contém uma versão **100% estática** do sistema, na qual o motor de prompt e o gerador de `.zip` rodam no próprio navegador.
+
+```bash
+npm run pagina       # regenera docs/ a partir de server/lib/ e web/
+npm run pagina:ver   # abre a página em http://localhost:8080 (prévia local)
+```
+
+**Como ativar (uma vez):** no GitHub, vá em **Settings → Pages**, escolha
+*Source: Deploy from a branch*, **Branch: `main`** e **Folder: `/docs`**, e salve.
+A página fica em `https://<usuario>.github.io/<repositorio>/`.
+
+Para conferir a página **antes** de mesclar, aponte o Pages para a branch
+`arena/01a0eb21-magic-prompt` com a pasta `/docs` — depois é só trocar para `main`.
+Também funciona publicar pela **raiz** do repositório: o `index.html` da raiz
+encaminha o visitante para `/docs/`.
+
+| Modo | O que roda | Onde ficam os dados |
+| --- | --- | --- |
+| **Página estática** (`docs/`) | Motor de prompt e montagem do `.zip` no navegador | Histórico no `localStorage` do visitante; arquivos enviados apenas em memória (saem no `.zip` baixado) |
+| **Servidor** (`npm start`) | API + armazenamento em disco por cliente | `data/clientes/<id>/` na máquina que roda o servidor |
+
+A versão estática gera **exatamente o mesmo prompt** que o servidor — o teste
+`test/pagina.test.js` compara as duas saídas byte a byte e falha se alguém
+alterar o motor e esquecer de rodar `npm run pagina`.
 
 Variáveis de ambiente opcionais:
 
@@ -249,7 +278,7 @@ Depois de editar, rode `npm test` (a suíte valida completude do modelo e o resu
 npm test
 ```
 
-53 testes em quatro arquivos:
+64 testes em seis arquivos:
 
 | Arquivo | O que cobre |
 | --- | --- |
@@ -258,6 +287,7 @@ npm test
 | `test/zip.test.js` | Escritor de ZIP: CRC32, índice central, nomes UTF-8, conteúdo recuperável e muitos arquivos |
 | `test/api.test.js` | Integração HTTP ponta a ponta: criar projeto, gerar prompt, upload multipart, arquivo bruto, path traversal bloqueado, edição manual, ZIP completo, duplicação e exclusão |
 | `test/interface.test.js` | Sanidade da interface: ids do HTML, arquivos estáticos e cobertura do CSS |
+| `test/pagina.test.js` | Página estática: bundle atualizado, prompt idêntico ao do servidor, `Buffer` do navegador, `.zip` gerado no navegador e ausência de chamadas ao servidor |
 
 ---
 
@@ -275,9 +305,13 @@ server/
     ├── zip.js             escritor de ZIP (store + CRC32, sem dependências)
     └── utils.js          slugs, telefone, datas e formatação
 
-public/                   interface web (HTML + CSS + JS puros, sem build)
+public/                   interface do modo servidor (HTML + CSS + JS puros, sem build)
+web/                      fontes da página estática (Buffer do navegador + app estático)
+docs/                     PÁGINA GERADA para o GitHub Pages (`npm run pagina`)
 test/                     suíte de testes + clientes de exemplo em fixtures/
 scripts/gerar-exemplo.js  gera projetos completos em exemplos/
+scripts/build-pagina.js   empacota o motor para o navegador e gera docs/
+scripts/servir-pagina.js  pré-visualiza a página estática localmente
 exemplos/                 saída de exemplo do sistema (versionada como documentação)
 data/                     projetos dos clientes (não versionado)
 ```
@@ -306,13 +340,15 @@ O motor segue estas regras, verificadas por testes automatizados:
 - **Depoimentos e imagens de clientes** só podem ser publicados com autorização de uso assinada — o prompt exige isso explicitamente em todos os segmentos.
 - **Dados sensíveis** (saúde do pet/tutor, histórico de procedimentos) aparecem no cadastro apenas quando fazem parte do site, e a política de privacidade, o banner de cookies e o consentimento nos formulários são itens obrigatórios do prompt.
 - **Dados de clientes ficam locais** em `data/` e não são versionados; o compartilhamento acontece pelo `.zip` baixado pelo operador.
-- **Uploads grandes**: o corpo da requisição é processado em memória (limite de 200 MB por arquivo). Para volumes maiores, integre um armazenamento externo.
+- **Uploads grandes**: no modo servidor o corpo da requisição é processado em memória (limite de 200 MB por arquivo). No modo estático, os arquivos escolhidos ficam apenas na aba aberta e não são enviados a lugar nenhum.
+- **Página estática**: por não ter servidor, o histórico mora no `localStorage` de cada navegador e os arquivos enviados precisam ser re-adicionados após recarregar — o `.zip` baixado é a via de saída. Precisa de histórico compartilhado entre pessoas? Use o modo servidor.
 
 ---
 
 ## Próximos passos
 
 - [ ] **Integração direta com APIs de IA de criação de sites** — enviar prompt + arquivos automaticamente (hoje a ponte é o `.zip`).
+- [x] **Versão estática para o GitHub Pages** — `docs/`, com o motor rodando no navegador (`npm run pagina`).
 - [ ] Autenticação de operadores e trilha de auditoria por projeto.
 - [ ] Versionamento de prompts por cliente (histórico de gerações e comparação).
 - [ ] Importação de `dados-cliente.json` para reabrir projetos em outra máquina.
