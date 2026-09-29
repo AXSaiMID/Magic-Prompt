@@ -1,0 +1,89 @@
+/* =====================================================================
+   Ajustes específicos da versão estática (GitHub Pages)
+   Concatenado ao final de public/styles.css pelo build.
+   ===================================================================== */
+
+.aviso-modo {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: #eef4ff;
+  border: 1px solid #c8d9f7;
+  color: #24446f;
+  border-radius: var(--raio);
+  padding: 12px 14px;
+  font-size: 12.8px;
+  line-height: 1.5;
+}
+.aviso-modo b { color: #16305a; }
+.aviso-modo code {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  background: #dde8fb;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.aviso-modo .fechar {
+  margin-left: auto;
+  border: none;
+  background: none;
+  color: #24446f;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  padding: 0 2px;
+}
+.aviso-modo[hidden] { display: none; }
+
+.campo-arquivo-memoria {
+  font-size: 12.5px;
+  color: var(--texto-suave);
+  background: #fffdf7;
+  border: 1px solid #f0e0bd;
+  border-radius: var(--raio-sm);
+  padding: 9px 11px;
+  margin-top: 10px;
+}
+
+.lista-arquivos-memoria {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin-top: 10px;
+}
+.lista-arquivos-memoria .item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-sm);
+  padding: 7px 9px;
+  font-size: 12px;
+  background: var(--branco);
+  min-width: 0;
+}
+.lista-arquivos-memoria .item .icone { font-size: 15px; }
+.lista-arquivos-memoria .item .nome { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lista-arquivos-memoria .item button {
+  border: none;
+  background: none;
+  color: var(--texto-fraco);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0 2px;
+}
+.lista-arquivos-memoria .item button:hover { color: var(--vermelho); }
+
+.rodape-pagina {
+  text-align: center;
+  font-size: 12px;
+  color: var(--texto-fraco);
+  padding: 0 22px 22px;
+}
+.rodape-pagina a { color: var(--roxo); }
+
+.progresso-envio {
+  font-size: 12.5px;
+  color: var(--verde);
+  margin-top: 8px;
+}
