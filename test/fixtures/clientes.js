@@ -154,6 +154,83 @@ const clienteVeterinaria = {
   opcoes: { ecommerce: true, incluirBlog: true, incluirFaq: true, incluirDepoimentos: true, incluirGaleria: true, incluirEquipe: true },
 };
 
+/** Imobiliária — cobre os modelos de imóveis e obras acrescentados depois. */
+const clienteImobiliaria = {
+  nomeContato: 'Paulo Andrade',
+  pasta: 'paulo-andrade_andrade-imoveis',
+  segmento: 'imobiliaria',
+  empresa: {
+    nomeFantasia: 'Andrade Imóveis',
+    razaoSocial: 'Andrade Intermediação Imobiliária Ltda',
+    cnpj: '98.765.432/0001-10',
+    telefone: '(44) 3222-4455',
+    whatsapp: '(44) 98888-1234',
+    email: 'contato@andradeimoveis.com.br',
+    horario: 'Seg a Sex, 8h30 às 18h • Sáb, 9h às 13h',
+    endereco: {
+      rua: 'Avenida São Paulo',
+      numero: '1200',
+      complemento: 'Sala 12',
+      bairro: 'Zona 07',
+      cidade: 'Maringá',
+      estado: 'PR',
+      cep: '87020-015',
+    },
+    servicos: [
+      { nome: 'Compra e venda de apartamentos', descricao: 'Intermediação completa, da avaliação à escritura.', preco: '', duracao: '' },
+      { nome: 'Locação residencial com garantia', descricao: 'Análise de crédito e contrato em até 48 horas.', preco: '', duracao: '' },
+      { nome: 'Administração de aluguéis', descricao: 'Repasse em dia, vistoria e manutenção.', preco: '', duracao: '' },
+      { nome: 'Avaliação de imóveis', descricao: 'Gratuita e sem compromisso, com laudo de valor de mercado.', preco: '', duracao: '' },
+    ],
+  },
+  negocio: {
+    descricao:
+      'imobiliária com 18 anos de atuação na Zona 07, especializada em apartamentos usados e lançamentos da região central de Maringá, com administração de locação para proprietários e assessoria completa de documentação.',
+    publicoAlvo:
+      'Famílias e casais de 28 a 50 anos comprando o primeiro ou o segundo imóvel, investidores de locação e proprietários que querem alugar sem dor de cabeça; chegam pelo Google e pelos portais, filtram por bairro e faixa de preço e decidem pela clareza das informações e pela agilidade do corretor.',
+    diferenciais: [
+      'Corretores com CRECI ativo e especialização por bairro da cidade',
+      'Anúncios com fotos atualizadas e visita agendada em até 24 horas',
+      'Documentação conferida antes de publicar: matrícula, IPTU e condomínio',
+      'Repasse do aluguel em dia e acompanhamento de manutenção para o proprietário',
+    ],
+    objetivo: 'orcamento',
+    objetivoDetalhe: 'Receber pedidos de avaliação de proprietários e agendamentos de visita qualificados pelo site.',
+    sazonalidade: 'Pico de procura em janeiro e fevereiro e nos lançamentos do segundo semestre.',
+  },
+  redes: {
+    googleMaps: 'https://maps.google.com/?q=Andrade+Imoveis+Maringa',
+    instagram: 'https://instagram.com/andradeimoveis',
+    facebook: 'https://facebook.com/andradeimoveis',
+    youtube: 'https://youtube.com/@andradeimoveis',
+    siteAtual: 'https://andradeimoveis.com.br',
+    linksExtras: [{ rotulo: 'Portal de avaliação', url: 'https://andradeimoveis.com.br/avalie' }],
+  },
+  identidade: {
+    cores: [{ hex: '#132B45', nome: 'Azul-marinho' }, { hex: '#C8A24A', nome: 'Dourado' }],
+    estilo: 'Corporativo confiável',
+    referencias: ['https://exemplo-imobiliaria.com', 'https://exemplo-lancamentos.com'],
+    observacoes: 'O dourado deve aparecer apenas nos botões de ação.',
+  },
+  conteudo: {
+    textos:
+      'A Andrade Imóveis nasceu em 2008 na Zona 07 e acompanhou o crescimento da região central de Maringá...',
+    depoimentos: [{ nome: 'Compradora', texto: 'Visitei três apartamentos no mesmo sábado e fechei negócio em três semanas, com a documentação toda conferida pela equipe.' }],
+    faq: [{ pergunta: 'Quanto custa a comissão?', resposta: 'A comissão segue a tabela do CRECI e é informada por escrito antes da contratação, sem taxa surpresa.' }],
+    palavrasChave: ['imobiliária Zona 07', 'apartamento à venda Maringá'],
+    avisos: ['Não divulgar o endereço exato de imóveis desocupados.'],
+  },
+  opcoes: {
+    ecommerce: false,
+    incluirBlog: true,
+    incluirFaq: true,
+    incluirDepoimentos: true,
+    incluirGaleria: true,
+    incluirEquipe: true,
+    tomDeVoz: 'Transparente e resolutivo, sem pressão de venda',
+  },
+};
+
 const ARQUIVOS_EXEMPLO = {
   midias: [
     { nome: 'banner-fachada.jpg', extensao: 'jpg' },
@@ -170,4 +247,4 @@ const ARQUIVOS_EXEMPLO = {
   conteudo: [{ nome: 'textos-sobre.docx', extensao: 'docx' }],
 };
 
-module.exports = { clienteEstetica, clienteBarbearia, clienteVeterinaria, ARQUIVOS_EXEMPLO };
+module.exports = { clienteEstetica, clienteBarbearia, clienteVeterinaria, clienteImobiliaria, ARQUIVOS_EXEMPLO };

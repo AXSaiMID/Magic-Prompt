@@ -16,7 +16,7 @@ const path = require('path');
 
 const { gerarPrompt } = require('../server/lib/prompt-engine');
 const { gerarArquivosDeApoio } = require('../server/lib/pacote');
-const { clienteEstetica, clienteBarbearia, clienteVeterinaria } = require('../test/fixtures/clientes');
+const { clienteEstetica, clienteBarbearia, clienteVeterinaria, clienteImobiliaria } = require('../test/fixtures/clientes');
 
 const RAIZ = path.resolve(__dirname, '..');
 const DESTINO = path.join(RAIZ, 'exemplos');
@@ -25,6 +25,7 @@ const CLIENTES = [
   { dados: clienteEstetica, arquivos: exigirArquivos(), rotulo: 'Centro de estética com loja online' },
   { dados: clienteBarbearia, arquivos: {}, rotulo: 'Barbearia sem loja (agendamento)' },
   { dados: clienteVeterinaria, arquivos: {}, rotulo: 'Clínica veterinária com blog e loja' },
+  { dados: clienteImobiliaria, arquivos: {}, rotulo: 'Imobiliária (busca de imóveis, captação e locação)' },
 ];
 
 function exigirArquivos() {

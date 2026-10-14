@@ -9,6 +9,6 @@
 - Estilo visual: Dark clássico (Dark clássico (barbershop), Industrial moderno, Rústico vintage).
 - Cores: #111111, #C8A24A.
 - Não há mídias enviadas: use placeholders elegantes e liste o que precisa ser fotografado.
-- SEO local: title "Barbearia Tradição | Barbearia em Belo Horizonte — Agende seu Horário Online", palavras-chave com foco em "barbearia em Belo Horizonte" e dados estruturados LocalBusiness.
+- SEO local: title "Barbearia Tradição | Barbearia em Belo Horizonte — Agende seu Horário Online", palavras-chave com foco em "barbearia em Belo Horizonte" e dados estruturados HairSalon.
 - Contato: (31) 97777-6666 | contato@barbeariatradicao.com.br | https://instagram.com/barbeariatradicao.
 - Não invente informações, preços, avaliações ou depoimentos.

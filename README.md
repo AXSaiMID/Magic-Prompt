@@ -174,7 +174,7 @@ O documento tem 19 seções e cerca de **5.000 a 6.000 palavras** (aproximadamen
 
 ### Exemplos prontos
 
-A pasta [`exemplos/`](exemplos/) tem três projetos completos gerados pelo sistema (estética com loja, barbearia sem loja e clínica veterinária). Rode `npm run exemplo` para recriá-los.
+A pasta [`exemplos/`](exemplos/) tem quatro projetos completos gerados pelo sistema: estética com loja, barbearia sem loja, clínica veterinária com blog e **imobiliária** (busca de imóveis, captação de proprietários e locação). Rode `npm run exemplo` para recriá-los.
 
 ---
 

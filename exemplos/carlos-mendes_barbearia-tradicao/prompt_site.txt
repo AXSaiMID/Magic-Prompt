@@ -18,13 +18,13 @@
 
 **Projeto:** carlos-mendes_barbearia-tradicao
 **Modelo base:** barbearia v1.0
-**Gerado em:** 29/09/2026 às 03h20
+**Gerado em:** 14/10/2026 às 16h21
 
 ## 1. PAPEL E MISSÃO
 
-Você é um **designer e desenvolvedor web sênior**, especializado em sites para o setor de beleza, com forte domínio de SEO local, conversão, acessibilidade e performance.
+Você é um **designer e desenvolvedor web sênior**, especializado em sites para o setor de barbearia e cuidados masculinos, com forte domínio de SEO local, conversão, acessibilidade e performance.
 
-Sua missão: **criar (ou reformular) o site de "Barbearia Tradição", em Belo Horizonte**, um barbearia, entregando estrutura, conteúdo e design prontos para publicação.
+Sua missão: **criar (ou reformular) o site de "Barbearia Tradição", em Belo Horizonte**, uma barbearia, entregando estrutura, conteúdo e design prontos para publicação.
 
 **Entregáveis esperados nesta rodada**
 1. Mapa do site e wireframe textual de cada página (seções na ordem em que aparecem).
@@ -442,10 +442,11 @@ carlos-mendes_barbearia-tradicao/midias/ — imagens; carlos-mendes_barbearia-tr
 - quanto custa corte social em Belo Horizonte
 - onde fazer degradê perto de Centro
 - melhor barbearia em Centro
-- horário de funcionamento de barbearia em Belo Horizonte
+- horário de funcionamento da barbearia em Belo Horizonte
+- como escolher uma barbearia em Belo Horizonte
 
 **Dados estruturados (JSON-LD) a implementar**
-- `LocalBusiness` (subtipo mais específico: HairSalon) com nome, endereço, telefone, geo, horário (openingHoursSpecification), preço e `aggregateRating` apenas se houver avaliações reais.
+- HairSalon com nome, endereço, telefone, geo, horário (openingHoursSpecification), preço e `aggregateRating` apenas se houver avaliações reais.
 - `FAQPage` na página de perguntas frequentes.
 - `BreadcrumbList` nas páginas internas.
 - `Product` e `Offer` na loja, com preço, disponibilidade e avaliações.
@@ -572,6 +573,6 @@ carlos-mendes_barbearia-tradicao/midias/ — imagens; carlos-mendes_barbearia-tr
 - Estilo visual: Dark clássico (Dark clássico (barbershop), Industrial moderno, Rústico vintage).
 - Cores: #111111, #C8A24A.
 - Não há mídias enviadas: use placeholders elegantes e liste o que precisa ser fotografado.
-- SEO local: title "Barbearia Tradição | Barbearia em Belo Horizonte — Agende seu Horário Online", palavras-chave com foco em "barbearia em Belo Horizonte" e dados estruturados LocalBusiness.
+- SEO local: title "Barbearia Tradição | Barbearia em Belo Horizonte — Agende seu Horário Online", palavras-chave com foco em "barbearia em Belo Horizonte" e dados estruturados HairSalon.
 - Contato: (31) 97777-6666 | contato@barbeariatradicao.com.br | https://instagram.com/barbeariatradicao.
 - Não invente informações, preços, avaliações ou depoimentos.

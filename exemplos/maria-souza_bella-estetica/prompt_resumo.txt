@@ -9,6 +9,6 @@
 - Estilo visual: Sofisticado e minimalista (Sofisticado, Minimalista clean, Clean-clínico com toques quentes).
 - Cores: #EFE6DD, #C98B8B, #3B3B3B.
 - Use os arquivos da pasta maria-souza_bella-estetica/ (logo em branding/, imagens e vídeos em midias/, textos em conteudo/) — não invente mídias nem dados.
-- SEO local: title "Bella Estética | Clínica de Estética em São Paulo — Agende sua Avaliação", palavras-chave com foco em "clínica de estética em São Paulo" e dados estruturados LocalBusiness.
+- SEO local: title "Bella Estética | Clínica de Estética em São Paulo — Agende sua Avaliação", palavras-chave com foco em "clínica de estética em São Paulo" e dados estruturados BeautySalon.
 - Contato: (11) 3456-7890 | contato@bellaestetica.com.br | https://instagram.com/bellaestetica.
 - Não invente informações, preços, avaliações ou depoimentos.

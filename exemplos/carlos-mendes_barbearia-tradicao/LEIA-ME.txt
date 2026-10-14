@@ -3,7 +3,7 @@ COMO USAR ESTA PASTA
 
 Projeto: Barbearia Tradição — Belo Horizonte/MG
 Segmento: Barbearia
-Gerado em: 29/09/2026 às 03h20
+Gerado em: 14/10/2026 às 16h21
 Pasta do cliente: carlos-mendes_barbearia-tradicao
 
 1) O arquivo principal é o prompt_site.txt. Copie o conteúdo integral e cole na
