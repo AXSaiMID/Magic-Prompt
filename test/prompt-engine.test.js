@@ -215,3 +215,110 @@ test('não deixa seções vazias no documento final', () => {
     assert.ok(resto.join('\n').trim().length > 40, `seção "${titulo.trim()}" parece vazia`);
   }
 });
+
+/* ---------------------- cobertura dos 14 segmentos ---------------------- */
+
+const { MODELOS } = require('../server/lib/segmentos');
+
+/** Cliente mínimo válido para qualquer segmento. */
+function clienteMinimo(segmento) {
+  return {
+    segmento,
+    empresa: { nomeFantasia: 'Empresa Modelo', whatsapp: '(44) 99999-0000', endereco: { cidade: 'Maringá', estado: 'PR' } },
+  };
+}
+
+test('gera prompt válido para todos os segmentos suportados', () => {
+  for (const modelo of MODELOS) {
+    const { texto, meta } = gerarPrompt(clienteMinimo(modelo.id), {});
+
+    assert.equal(meta.segmento, modelo.id);
+    assert.ok(texto.length > 8000, `${modelo.id}: prompt curto demais (${texto.length})`);
+    for (const secao of SECOES_OBRIGATORIAS) {
+      assert.ok(texto.includes(`## ${secao}`), `${modelo.id}: seção ausente -> ${secao}`);
+    }
+    // nada de placeholder de outro segmento ou sobra de template
+    assert.ok(!texto.includes('[NOME]'), `${modelo.id}: [NOME] não substituído`);
+    assert.ok(!texto.includes('undefined'), `${modelo.id}: valor undefined no prompt`);
+    assert.ok(!texto.includes('responde_'), `${modelo.id}: sobra de template no prompt`);
+    assert.ok(!texto.includes('[SERVIÇO]'), `${modelo.id}: [SERVIÇO] não substituído`);
+  }
+});
+
+test('a apresentação do segmento concorda em gênero e cita o termo de busca', () => {
+  for (const modelo of MODELOS) {
+    const { texto } = gerarPrompt(clienteMinimo(modelo.id), {});
+    const artigo = modelo.genero === 'f' ? 'uma' : 'um';
+
+    assert.ok(
+      texto.includes(`${artigo} ${modelo.termoBusca}, entregando estrutura`),
+      `${modelo.id}: esperado "${artigo} ${modelo.termoBusca}" na missão`
+    );
+    assert.ok(texto.includes(`melhor ${modelo.termoBusca} em`), `${modelo.id}: cauda longa sem o termo de busca`);
+    assert.ok(
+      texto.includes(`horário de funcionamento d${modelo.genero === 'f' ? 'a' : 'o'} ${modelo.termoBusca}`),
+      `${modelo.id}: cauda longa com artigo errado`
+    );
+    assert.ok(texto.includes(`setor de ${modelo.setor}`), `${modelo.id}: papel da IA sem o setor do modelo`);
+  }
+  // nenhuma combinação errada de artigo
+  for (const id of ['veterinaria', 'estetica', 'barbearia', 'imobiliaria', 'construtora', 'construcao']) {
+    const modelo = MODELOS.find((m) => m.id === id);
+    if (!modelo) continue;
+    const { texto } = gerarPrompt(clienteMinimo(id), {});
+    assert.ok(!texto.includes(`um ${modelo.termoBusca}, entregando`), `${id}: artigo masculino indevido`);
+  }
+});
+
+test('o dado estruturado usa o subtipo de negócio do segmento', () => {
+  for (const modelo of MODELOS) {
+    const { texto } = gerarPrompt(clienteMinimo(modelo.id), {});
+    assert.ok(
+      texto.includes(`${modelo.schemaOrg} com nome, endereço, telefone`),
+      `${modelo.id}: JSON-LD deveria usar ${modelo.schemaOrg}`
+    );
+  }
+  assert.ok(gerarPrompt(clienteMinimo('barbearia'), {}).texto.includes('HairSalon'));
+  assert.ok(gerarPrompt(clienteMinimo('veterinaria'), {}).texto.includes('VeterinaryCare'));
+  assert.ok(gerarPrompt(clienteMinimo('imobiliaria'), {}).texto.includes('RealEstateAgent'));
+});
+
+test('segmentos sem loja não recebem especificação de e-commerce', () => {
+  for (const modelo of MODELOS.filter((m) => !m.suportaEcommerce)) {
+    const comPedidoDeLoja = gerarPrompt({ ...clienteMinimo(modelo.id), opcoes: { ecommerce: true } }, {}).texto;
+    assert.ok(!/Loja online — especificação/.test(comPedidoDeLoja), `${modelo.id}: não deveria ter loja`);
+    assert.ok(!/Fluxo de compra/.test(comPedidoDeLoja), `${modelo.id}: não deveria ter fluxo de compra`);
+    assert.ok(!/Carrinho e checkout completos/.test(comPedidoDeLoja), `${modelo.id}: não deveria ter carrinho`);
+    assert.ok(/não vendeu online/i.test(comPedidoDeLoja), `${modelo.id}: falta o aviso de que não há loja`);
+  }
+  // os que suportam loja continuam funcionando quando a opção é marcada
+  const comLoja = gerarPrompt({ ...clienteMinimo('decoracao'), opcoes: { ecommerce: true } }, {}).texto;
+  assert.ok(/Loja online — especificação/.test(comLoja));
+});
+
+test('o prompt de obra e de imóvel traz as páginas próprias do setor', () => {
+  const obra = gerarPrompt(clienteMinimo('construcao'), {}).texto;
+  assert.ok(/Obras Entregues/.test(obra));
+  assert.ok(/Garantias e Pós-obra/.test(obra));
+  assert.ok(/cronograma/i.test(obra));
+
+  const imovel = gerarPrompt(clienteMinimo('imobiliaria'), {}).texto;
+  assert.ok(/Buscar Imóveis/.test(imovel));
+  assert.ok(/Ficha do Imóvel/.test(imovel));
+  assert.ok(/Anuncie seu Imóvel/.test(imovel));
+  assert.ok(/matrícula/i.test(imovel));
+  // a ficha do imóvel é página de template: existe, mas não entra no menu
+  const menu = (imovel.match(/\*\*Menu principal sugerido:\*\* [^\n]*/) || [''])[0];
+  assert.ok(/Buscar Imóveis/.test(menu), 'busca de imóveis deve estar no menu');
+  assert.ok(!/Ficha do Imóvel/.test(menu), 'ficha do imóvel não é item de menu');
+
+  const lancamento = gerarPrompt(clienteMinimo('empreendimentos'), {}).texto;
+  assert.ok(/O Empreendimento/.test(lancamento));
+  assert.ok(/Plantas e Tipologias/.test(lancamento));
+  assert.ok(/registro de incorporação/i.test(lancamento));
+  assert.ok(/imagem ilustrativa|ilustrativ/i.test(lancamento));
+
+  const decoracao = gerarPrompt(clienteMinimo('decoracao'), {}).texto;
+  assert.ok(/Ambientes/.test(decoracao));
+  assert.ok(/Showroom/.test(decoracao));
+});

@@ -448,6 +448,23 @@ function seccaoObjetivo(ctx) {
  * assinaturas) à lista de páginas do modelo. Fonte única da verdade — usada pelo
  * prompt completo, pela versão curta, pelos critérios de aceite e pela interface.
  */
+/**
+ * Nome do setor usado na definição do papel da IA ("especializado em sites para o
+ * setor de ..."). Cada modelo traz o seu; o fallback usa a área do card.
+ */
+function setorDoModelo(modelo) {
+  return texto(modelo.setor) || String(modelo.area || 'serviços').toLowerCase();
+}
+
+/**
+ * Junta artigo + termo de busca do segmento ("uma clínica veterinária", "um
+ * escritório de arquitetura"). O gênero vem do modelo: "um empresa" empobrece o
+ * texto entregue à IA.
+ */
+function comArtigo(termo, genero) {
+  return `${genero === 'f' ? 'uma' : 'um'} ${texto(termo) || 'empresa'}`;
+}
+
 function paginasAtivas(ctx) {
   const opcoes = ctx.opcoes || {};
   const regras = [
@@ -467,7 +484,9 @@ function paginasAtivas(ctx) {
 
 function seccaoPaginas(ctx) {
   const paginas = paginasAtivas(ctx);
-  const menuObrigatorio = paginas.filter((p) => p.obrigatoria).map((p) => p.nome);
+  // Páginas de template (ficha do imóvel, página de projeto) existem no site mas
+  // são alcançadas por listagem, não pelo menu principal.
+  const menuObrigatorio = paginas.filter((p) => p.obrigatoria && p.noMenu !== true).map((p) => p.nome);
 
   const blocos = paginas.map((pagina, i) => {
     const marca = pagina.obrigatoria ? 'OBRIGATÓRIA' : 'OPCIONAL (recomendada)';
@@ -884,18 +903,28 @@ function seccaoSeo(ctx) {
   const bairro = texto(endereco.bairro);
   const nome = empresa.nomeFantasia;
 
+  // O modelo pode usar [CIDADE], [BAIRRO], [NOME], [SERVIÇO] e [SERVIÇOS].
+  // O serviço vem da lista confirmada pelo cliente (ou das sugestões do modelo),
+  // para nenhum placeholder vazar no prompt entregue à IA.
+  const tokens = (valor, minusculo = false) => {
+    const servico = ctx.listaServicos[0]?.nome || 'nossos serviços';
+    const servicos = ctx.listaServicos.map((x) => x.nome).join(', ') || 'nossos serviços';
+    return texto(valor)
+      .replace(/\[CIDADE\]/g, cidade)
+      .replace(/\[BAIRRO\]/g, bairro || cidade)
+      .replace(/\[NOME\]/g, nome)
+      .replace(/\[SERVIÇOS\]/g, minusculo ? servicos.toLowerCase() : servicos)
+      .replace(/\[SERVIÇO\]/g, minusculo ? servico.toLowerCase() : servico);
+  };
+
   const palavras = (Array.isArray(ctx.conteudo.palavrasChave) ? ctx.conteudo.palavrasChave.map(texto).filter(Boolean) : [])
     .concat(base.palavrasChave || [])
-    .map((p) => p.replace(/\[CIDADE\]/g, cidade).replace(/\[BAIRRO\]/g, bairro || cidade))
+    .map((p) => tokens(p, true))
     .filter((p, i, arr) => arr.indexOf(p) === i);
 
-  const titulo = texto(ctx.conteudo.seoTitulo) || base.tituloHome
-    .replace(/\[NOME\]/g, nome)
-    .replace(/\[CIDADE\]/g, cidade);
+  const titulo = texto(ctx.conteudo.seoTitulo) || tokens(base.tituloHome);
 
-  const descricao = texto(ctx.conteudo.seoDescricao) || base.descricaoHome
-    .replace(/\[NOME\]/g, nome)
-    .replace(/\[CIDADE\]/g, cidade);
+  const descricao = texto(ctx.conteudo.seoDescricao) || tokens(base.descricaoHome);
 
   const servicosChave = ctx.listaServicos.slice(0, 6).map((s) => s.nome.toLowerCase());
   const paginas = modelo.paginas.filter((p) => p.obrigatoria).map((p) => p.nome);
@@ -927,13 +956,14 @@ function seccaoSeo(ctx) {
     bullets([
       `quanto custa ${servicosChave[0] || 'o serviço'} em ${cidade}`,
       `onde fazer ${servicosChave[1] || servicosChave[0] || 'o serviço'} perto de ${bairro || cidade}`,
-      `melhor ${ctx.modelo.nome.toLowerCase()} em ${bairro || cidade}`,
-      `horário de funcionamento de ${ctx.modelo.nome.toLowerCase()} em ${cidade}`,
+      `melhor ${ctx.modelo.termoBusca} em ${bairro || cidade}`,
+      `horário de funcionamento d${ctx.modelo.genero === 'f' ? 'a' : 'o'} ${ctx.modelo.termoBusca} em ${cidade}`,
+      `como escolher ${comArtigo(ctx.modelo.termoBusca, ctx.modelo.genero)} em ${cidade}`,
     ]),
     '',
     '**Dados estruturados (JSON-LD) a implementar**',
     bullets([
-      `\`LocalBusiness\` (subtipo mais específico: ${ctx.modelo.id === 'barbearia' || ctx.modelo.id === 'salao' ? 'HairSalon' : ctx.modelo.id === 'veterinaria' || ctx.modelo.id === 'petshop_veterinaria' ? 'VeterinaryCare' : ctx.modelo.id === 'estetica' ? 'BeautySalon' : 'Store'}) com nome, endereço, telefone, geo, horário (openingHoursSpecification), preço e ` + '`aggregateRating`' + ' apenas se houver avaliações reais.',
+      `${ctx.modelo.schemaOrg || 'LocalBusiness'} com nome, endereço, telefone, geo, horário (openingHoursSpecification), preço e ` + '`aggregateRating`' + ' apenas se houver avaliações reais.',
       '`FAQPage` na página de perguntas frequentes.',
       '`BreadcrumbList` nas páginas internas.',
       '`Product` e `Offer` na loja, com preço, disponibilidade e avaliações.',
@@ -1121,9 +1151,9 @@ function gerarPrompt(entrada = {}, arquivos = {}) {
   empurrar(
     '1. PAPEL E MISSÃO',
     [
-      'Você é um **designer e desenvolvedor web sênior**, especializado em sites para o setor de ' + modelo.area.toLowerCase() + ', com forte domínio de SEO local, conversão, acessibilidade e performance.',
+      'Você é um **designer e desenvolvedor web sênior**, especializado em sites para o setor de ' + setorDoModelo(modelo) + ', com forte domínio de SEO local, conversão, acessibilidade e performance.',
       '',
-      `Sua missão: **criar (ou reformular) o site de "${empresa.nomeFantasia}"${cidade ? `, em ${cidade}` : ''}**, um ${modelo.nome.toLowerCase()}, entregando estrutura, conteúdo e design prontos para publicação.`,
+      `Sua missão: **criar (ou reformular) o site de "${empresa.nomeFantasia}"${cidade ? `, em ${cidade}` : ''}**, ${comArtigo(modelo.termoBusca, modelo.genero)}, entregando estrutura, conteúdo e design prontos para publicação.`,
       '',
       '**Entregáveis esperados nesta rodada**',
       bulletsNumerados([
@@ -1248,7 +1278,7 @@ function gerarPromptResumo(entrada = {}, arquivos = {}) {
     ctx.arquivosBranding.length || ctx.arquivosMidias.length
       ? `Use os arquivos da pasta ${pasta}/ (logo em branding/, imagens e vídeos em midias/, textos em conteudo/) — não invente mídias nem dados.`
       : `Não há mídias enviadas: use placeholders elegantes e liste o que precisa ser fotografado.`,
-    `SEO local: title "${texto(ctx.conteudo.seoTitulo) || modelo.conteudoPronto.seo.tituloHome.replace(/\[NOME\]/g, empresa.nomeFantasia).replace(/\[CIDADE\]/g, cidade)}", palavras-chave com foco em "${modelo.conteudoPronto.seo.palavrasChave[0].replace(/\[CIDADE\]/g, cidade)}" e dados estruturados LocalBusiness.`,
+    `SEO local: title "${texto(ctx.conteudo.seoTitulo) || substituirTokens(modelo.conteudoPronto.seo.tituloHome, ctx)}", palavras-chave com foco em "${substituirTokens(modelo.conteudoPronto.seo.palavrasChave[0], ctx)}" e dados estruturados ${modelo.schemaOrg || 'LocalBusiness'}.`,
     `Contato: ${[formatarTelefone(texto(empresa.telefone) || texto(empresa.whatsapp)), texto(empresa.email), ctx.redes.instagram].filter(Boolean).join(' | ') || 'informar ao cliente'}.`,
     'Não invente informações, preços, avaliações ou depoimentos.',
   ];

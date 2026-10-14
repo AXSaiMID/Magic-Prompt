@@ -86,13 +86,17 @@ test('health responde com a versão e a quantidade de segmentos', async () => {
   const { status, dados } = await json('/api/health');
   assert.equal(status, 200);
   assert.equal(dados.ok, true);
-  assert.equal(dados.segmentos, 7);
+  assert.equal(dados.segmentos, 14);
 });
 
 test('lista segmentos, objetivos e estilos para a interface', async () => {
   const { status, dados } = await json('/api/segmentos');
   assert.equal(status, 200);
-  assert.equal(dados.modelos.length, 7);
+  assert.equal(dados.modelos.length, 14);
+  // a interface agrupa por área e busca por nome/termo de busca
+  assert.ok(dados.modelos.every((m) => m.area));
+  assert.ok(dados.modelos.some((m) => m.id === 'imobiliaria'));
+  assert.ok(dados.modelos.some((m) => m.id === 'construcao'));
   assert.ok(dados.objetivos.length >= 5);
   assert.ok(dados.estilos.includes('Minimalista'));
   assert.ok(dados.idiomas.some((i) => i.id === 'pt-BR'));

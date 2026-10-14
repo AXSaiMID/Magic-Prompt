@@ -7,19 +7,51 @@ const { MODELOS, OBJETIVOS, listarModelos, getModelo, sugestoesDoModelo } = requ
 
 const IDS_OBJETIVOS = new Set(OBJETIVOS.map((o) => o.id));
 
-test('há 7 modelos de negócio, com ids únicos', () => {
-  assert.equal(MODELOS.length, 7);
+test('há 14 modelos de negócio, com ids únicos', () => {
+  assert.equal(MODELOS.length, 14);
   const ids = MODELOS.map((m) => m.id);
   assert.equal(new Set(ids).size, ids.length);
-  for (const esperado of ['estetica', 'salao', 'barbearia', 'petshop', 'petshop_banho_tosa', 'petshop_veterinaria', 'veterinaria']) {
+  const esperados = [
+    // beleza e pet (briefing original)
+    'estetica', 'salao', 'barbearia', 'petshop', 'petshop_banho_tosa', 'petshop_veterinaria', 'veterinaria',
+    // modalidades acrescentadas depois
+    'empresas_gerais', 'arquitetura', 'engenharia', 'decoracao', 'construcao', 'imobiliaria', 'empreendimentos',
+  ];
+  for (const esperado of esperados) {
     assert.ok(ids.includes(esperado), `modelo ausente: ${esperado}`);
   }
 });
 
+test('cada modelo declara área, gênero gramatical, termo de busca e dado estruturado', () => {
+  for (const m of MODELOS) {
+    assert.ok(m.area && typeof m.area === 'string', `${m.id}: área ausente`);
+    assert.ok(m.setor && m.setor.length > 4, `${m.id}: setor ausente (usado no papel da IA)`);
+    assert.ok(['m', 'f'].includes(m.genero), `${m.id}: gênero deve ser 'm' ou 'f'`);
+    assert.ok(m.termoBusca && m.termoBusca.length > 4, `${m.id}: termo de busca ausente`);
+    // o termo alimenta frases do tipo "uma clínica veterinária" e "melhor imobiliária em X"
+    assert.ok(!/^[A-Z]/.test(m.termoBusca), `${m.id}: termo de busca deve ser minúsculo`);
+    assert.match(m.schemaOrg, /^[A-Z][A-Za-z]+$/, `${m.id}: schemaOrg inválido (${m.schemaOrg})`);
+  }
+  assert.equal(new Set(MODELOS.map((m) => m.id)).size, MODELOS.length);
+});
+
 test('segmentos com e sem e-commerce estão contemplados', () => {
-  assert.ok(MODELOS.every((m) => m.suportaEcommerce === true), 'todos os modelos devem permitir a opção de loja');
+  const comLoja = MODELOS.filter((m) => m.suportaEcommerce);
+  const semLoja = MODELOS.filter((m) => !m.suportaEcommerce);
+
+  assert.ok(semLoja.length >= 3, 'deve haver segmentos em que a loja não faz sentido (obra, imóveis)');
+  assert.ok(comLoja.length >= 8, 'a maior parte dos segmentos deve permitir loja');
+  // beleza e pet sempre vendem produto
+  for (const id of ['estetica', 'salao', 'barbearia', 'petshop', 'petshop_banho_tosa', 'petshop_veterinaria', 'veterinaria', 'decoracao']) {
+    assert.ok(getModelo(id).suportaEcommerce, `${id}: deveria permitir loja`);
+  }
+  // quem não tem loja não traz página de Loja na estrutura
+  for (const m of semLoja) {
+    assert.ok(!m.paginas.some((p) => p.nome === 'Loja'), `${m.id}: não deveria listar página de Loja`);
+    assert.equal(m.ecommerce, null, `${m.id}: bloco de e-commerce deveria ser nulo`);
+  }
   assert.ok(MODELOS.some((m) => m.temAgendamento), 'deve haver modelos com agendamento');
-  assert.ok(MODELOS.some((m) => !m.temAgendamento), 'deve haver modelo sem agendamento (pet shop)');
+  assert.ok(MODELOS.some((m) => !m.temAgendamento), 'deve haver modelo sem agendamento');
 });
 
 test('cada modelo tem estrutura, funcionalidades, tom de voz e estilo visual completos', () => {
@@ -68,7 +100,7 @@ test('objetivo recomendado de cada modelo existe na lista de objetivos', () => {
 });
 
 test('modelos com loja descrevem categorias e recursos de e-commerce', () => {
-  for (const m of MODELOS) {
+  for (const m of MODELOS.filter((x) => x.suportaEcommerce)) {
     assert.ok(m.ecommerce, `${m.id}: falta bloco de e-commerce`);
     assert.ok(m.ecommerce.categorias.length >= 3, `${m.id}: poucas categorias de loja`);
     assert.ok(m.ecommerce.recursos.length >= 2, `${m.id}: poucos recursos de loja`);
@@ -94,6 +126,38 @@ test('especificidades do briefing estão presentes nos modelos certos', () => {
   assert.ok(estetica.paginas.some((p) => /resultados/i.test(p.nome)), 'estética deve ter página de resultados');
 });
 
+test('modelos de construção, imóveis e decoração trazem as páginas do setor', () => {
+  const arquitetura = getModelo('arquitetura');
+  assert.ok(arquitetura.paginas.some((p) => /portfólio|projetos/i.test(p.nome)), 'arquitetura deve ter portfólio');
+  assert.ok(arquitetura.cuidados.some((c) => /CAU/.test(c)), 'arquitetura deve citar registro no CAU');
+
+  const engenharia = getModelo('engenharia');
+  assert.ok(engenharia.paginas.some((p) => /orçamento/i.test(p.nome)), 'engenharia deve ter página de orçamento');
+  assert.ok(engenharia.cuidados.some((c) => /CREA/.test(c)), 'engenharia deve citar CREA');
+
+  const decoracao = getModelo('decoracao');
+  assert.ok(decoracao.paginas.some((p) => /ambientes/i.test(p.nome)), 'decoração deve ter página de ambientes');
+  assert.ok(decoracao.paginas.some((p) => /showroom/i.test(p.nome)), 'decoração deve ter página de showroom');
+
+  const construcao = getModelo('construcao');
+  assert.ok(construcao.paginas.some((p) => /obras entregues/i.test(p.nome)), 'construção deve ter obras entregues');
+  assert.ok(construcao.paginas.some((p) => /garantias/i.test(p.nome)), 'construção deve explicar garantias');
+
+  const imobiliaria = getModelo('imobiliaria');
+  assert.ok(imobiliaria.paginas.some((p) => /buscar imóveis/i.test(p.nome)), 'imobiliária deve ter busca de imóveis');
+  assert.ok(imobiliaria.paginas.some((p) => /anuncie seu imóvel/i.test(p.nome)), 'imobiliária deve captar imóveis');
+  assert.ok(imobiliaria.cuidados.some((c) => /CRECI/.test(c)), 'imobiliária deve citar CRECI');
+
+  const empreendimentos = getModelo('empreendimentos');
+  assert.ok(empreendimentos.paginas.some((p) => /o empreendimento/i.test(p.nome)), 'deve ter página do empreendimento');
+  assert.ok(empreendimentos.paginas.some((p) => /plantas e tipologias/i.test(p.nome)), 'deve ter plantas e tipologias');
+  assert.ok(empreendimentos.paginas.some((p) => /tour virtual/i.test(p.nome)), 'deve prever tour virtual');
+  assert.ok(empreendimentos.cuidados.some((c) => /ilustrativ/i.test(c)), 'imagens ilustrativas precisam de aviso legal');
+
+  const geral = getModelo('empresas_gerais');
+  assert.ok(geral.paginas.some((p) => /produtos e serviços/i.test(p.nome)), 'empresas em geral deve cobrir produtos e serviços');
+});
+
 test('sugestões trazem textos prontos para pré-preencher o formulário', () => {
   const s = sugestoesDoModelo('estetica');
   assert.ok(s.descricaoNegocio.length > 30);
@@ -106,7 +170,12 @@ test('sugestões trazem textos prontos para pré-preencher o formulário', () =>
 
 test('listarModelos devolve versão enxuta para a interface', () => {
   const lista = listarModelos();
-  assert.equal(lista.length, 7);
+  assert.equal(lista.length, 14);
   assert.ok(lista[0].paginasObrigatorias.includes('Home'));
   assert.ok(lista.every((m) => typeof m.suportaEcommerce === 'boolean'));
+  assert.ok(lista.every((m) => m.area), 'a interface agrupa os segmentos por área');
+  // páginas de template (como a ficha do imóvel) não entram no menu nem na contagem
+  const imobiliaria = lista.find((m) => m.id === 'imobiliaria');
+  assert.ok(!imobiliaria.paginasObrigatorias.includes('Ficha do Imóvel'), 'ficha do imóvel não é item de menu');
+  assert.ok(getModelo('imobiliaria').paginas.some((p) => p.nome === 'Ficha do Imóvel' && p.obrigatoria));
 });

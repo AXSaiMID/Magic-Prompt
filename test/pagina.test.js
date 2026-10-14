@@ -148,7 +148,7 @@ test('a validação e as sugestões de segmento funcionam no navegador', () => {
 
   const sugestoes = motor.sugestoesDoModelo('barbearia');
   assert.ok(sugestoes.servicos.length >= 8);
-  assert.equal(motor.listarModelos().length, 7);
+  assert.equal(motor.listarModelos().length, 14);
 });
 
 /* --------------------- ZIP montado no navegador --------------------- */

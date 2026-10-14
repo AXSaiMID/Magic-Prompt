@@ -83,6 +83,103 @@ function escapar(str) {
   return String(str == null ? '' : str).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
+/* --------------------- segmentos: agrupamento e busca --------------------- */
+
+/** Compara ignorando acentos e caixa (quem digita "imobiliaria" acha "Imobiliária"). */
+function normalizarBusca(valor) {
+  return String(valor == null ? '' : valor)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+}
+
+/** Agrupa os modelos por área de atuação, preservando a ordem de cadastro. */
+function agruparPorArea(modelos) {
+  const grupos = [];
+  for (const modelo of modelos) {
+    const area = modelo.area || 'Outros';
+    let grupo = grupos.find((g) => g.area === area);
+    if (!grupo) {
+      grupo = { area, modelos: [] };
+      grupos.push(grupo);
+    }
+    grupo.modelos.push(modelo);
+  }
+  return grupos;
+}
+
+/**
+ * Cartões de segmento agrupados por área, prontos para a busca.
+ * tipo: 'escolha' (modal de novo projeto) | 'selecao' (formulário) | 'catalogo' (informativo)
+ */
+function blocosDeSegmento(tipo, selecionado) {
+  return agruparPorArea(estado.modelos)
+    .map(
+      (grupo) => `
+      <section class="grupo-segmento" data-grupo-segmento>
+        <h4><span>${escapar(grupo.area)}</span><em>${grupo.modelos.length}</em></h4>
+        <div class="cartoes-segmento">
+          ${grupo.modelos
+            .map((m) => {
+              const alvo = normalizarBusca(m.nome + ' ' + m.area + ' ' + m.resumo + ' ' + (m.termoBusca || ''));
+              const tags =
+                tipo === 'catalogo'
+                  ? `${m.paginasObrigatorias.map((p) => `<span class="tag">${escapar(p)}</span>`).join('')}${
+                      m.suportaEcommerce ? '<span class="tag roxa">e-commerce opcional</span>' : ''
+                    }`
+                  : `<span class="tag">${m.totalPaginas} páginas</span>${
+                      m.temAgendamento ? '<span class="tag verde">agendamento</span>' : ''
+                    }${m.suportaEcommerce ? '<span class="tag roxa">loja opcional</span>' : ''}`;
+              const atributos =
+                tipo === 'escolha' ? ` data-escolha="${m.id}"` : tipo === 'selecao' ? ` data-modelo="${m.id}"` : '';
+              const marcado = selecionado === m.id ? ' selecionado' : '';
+              const tag = tipo === 'catalogo' ? 'div' : 'button';
+              const cursor = tipo === 'catalogo' ? ' style="cursor:default"' : '';
+              return `<${tag} class="cartao-segmento${marcado}"${atributos}${cursor} data-busca="${escapar(alvo)}">
+                <span class="emoji">${m.emoji}</span>
+                <strong>${escapar(m.nome)}</strong>
+                <p>${escapar(m.resumo)}</p>
+                <div class="tags">${tags}</div>
+              </${tag}>`;
+            })
+            .join('')}
+        </div>
+      </section>`
+    )
+    .join('');
+}
+
+/** Campo de busca dos cartões de segmento (um por contexto, para não colidir ids). */
+function campoBuscaSegmento(idCampo, idContagem, placeholder) {
+  return `<div class="busca-segmento">
+    <input type="search" id="${idCampo}" autocomplete="off" aria-label="Buscar segmento" placeholder="${escapar(placeholder)}" />
+    <span class="contagem-segmento" id="${idContagem}" hidden></span>
+  </div>`;
+}
+
+/** Filtra os cartões já renderizados sem refazer a tela (mantém o foco no campo). */
+function ligarBuscaSegmento(container, idCampo, idContagem) {
+  const campo = document.getElementById(idCampo);
+  if (!campo) return;
+  campo.addEventListener('input', () => {
+    const termo = normalizarBusca(campo.value.trim());
+    let visiveis = 0;
+    $$('[data-busca]', container).forEach((el) => {
+      const combina = !termo || el.dataset.busca.includes(termo);
+      el.hidden = !combina;
+      if (combina) visiveis += 1;
+    });
+    $$('[data-grupo-segmento]', container).forEach((grupo) => {
+      grupo.hidden = !$$('[data-busca]:not([hidden])', grupo).length;
+    });
+    const contagem = document.getElementById(idContagem);
+    if (contagem) {
+      contagem.hidden = !termo;
+      contagem.textContent = visiveis === 1 ? '1 segmento encontrado' : visiveis + ' segmentos encontrados';
+    }
+  });
+}
+
 function obter(obj, caminho) {
   return caminho.split('.').reduce((acc, parte) => (acc == null ? undefined : acc[parte]), obj);
 }
@@ -415,19 +512,8 @@ function renderFormulario() {
         <h3>Segmento de atuação</h3>
         <p>O modelo define a estrutura de páginas, as funcionalidades e o tom de voz usados no prompt.</p>
       </div>
-      <div class="cartoes-segmento">
-        ${estado.modelos.map((m) => `
-          <button class="cartao-segmento ${m.id === d.segmento ? 'selecionado' : ''}" data-modelo="${m.id}">
-            <span class="emoji">${m.emoji}</span>
-            <strong>${escapar(m.nome)}</strong>
-            <p>${escapar(m.resumo)}</p>
-            <div class="tags">
-              <span class="tag">${m.totalPaginas} páginas obrigatórias</span>
-              ${m.temAgendamento ? '<span class="tag verde">agendamento</span>' : ''}
-              ${m.suportaEcommerce ? '<span class="tag roxa">loja opcional</span>' : ''}
-            </div>
-          </button>`).join('')}
-      </div>
+      ${campoBuscaSegmento('busca-segmento', 'contagem-segmento', 'Buscar segmento (ex.: imobiliária, pet, obra, decoração)')}
+      ${blocosDeSegmento('selecao', d.segmento)}
     </div>`);
 
     blocos.push(cartao({
@@ -705,6 +791,9 @@ function renderFormulario() {
 
 function ligarEventosFormulario() {
   const container = $('#formulario');
+
+  // Busca de segmento (filtra os cartões já renderizados, sem refazer a tela)
+  ligarBuscaSegmento(container, 'busca-segmento', 'contagem-segmento');
 
   $$('[data-path]', container).forEach((el) => {
     const evento = el.tagName === 'SELECT' || el.type === 'checkbox' ? 'change' : 'input';
@@ -1224,14 +1313,9 @@ function abrirModalNovoProjeto() {
   conteudo.innerHTML = `
     <h2>Novo projeto</h2>
     <p>Escolha o segmento do cliente. O modelo define estrutura de páginas, funcionalidades, tom de voz e estilo visual do prompt.</p>
-    <div class="cartoes-segmento" id="escolha-segmento">
-      ${estado.modelos.map((m) => `
-        <button class="cartao-segmento" data-escolha="${m.id}">
-          <span class="emoji">${m.emoji}</span>
-          <strong>${escapar(m.nome)}</strong>
-          <p>${escapar(m.resumo)}</p>
-          <div class="tags"><span class="tag">${m.totalPaginas} páginas</span>${m.suportaEcommerce ? '<span class="tag roxa">loja opcional</span>' : ''}</div>
-        </button>`).join('')}
+    <div id="escolha-segmento">
+      ${campoBuscaSegmento('busca-novo-segmento', 'contagem-novo-segmento', 'Buscar segmento')}
+      ${blocosDeSegmento('escolha', '')}
     </div>
     <div class="grade" style="margin-top:18px">
       <div class="campo"><label for="novo-cliente">Nome do contato/cliente <span class="opcional">usado no nome da pasta</span></label>
@@ -1245,6 +1329,7 @@ function abrirModalNovoProjeto() {
     </div>`;
 
   let segmentoEscolhido = '';
+  ligarBuscaSegmento(conteudo, 'busca-novo-segmento', 'contagem-novo-segmento');
   $$('[data-escolha]', conteudo).forEach((el) =>
     el.addEventListener('click', () => {
       segmentoEscolhido = el.dataset.escolha;
@@ -1273,19 +1358,12 @@ function abrirModalSegmentos() {
   $('#modal-conteudo').innerHTML = `
     <h2>Modelos pré-definidos por segmento</h2>
     <p>Cada modelo reúne estrutura de páginas, funcionalidades típicas, tom de voz, estilo visual, conteúdos de exemplo e cuidados específicos do nicho.</p>
-    <div class="cartoes-segmento">
-      ${estado.modelos.map((m) => `
-        <div class="cartao-segmento" style="cursor:default">
-          <span class="emoji">${m.emoji}</span>
-          <strong>${escapar(m.nome)}</strong>
-          <p>${escapar(m.resumo)}</p>
-          <div class="tags">
-            ${m.paginasObrigatorias.map((p) => `<span class="tag">${escapar(p)}</span>`).join('')}
-            ${m.suportaEcommerce ? '<span class="tag roxa">e-commerce opcional</span>' : ''}
-          </div>
-        </div>`).join('')}
+    <div id="catalogo-segmentos">
+      ${campoBuscaSegmento('busca-catalogo', 'contagem-catalogo', 'Buscar segmento')}
+      ${blocosDeSegmento('catalogo', '')}
     </div>
     <div class="modal-rodape"><button class="btn btn-primario" onclick="document.getElementById('modal').hidden = true">Fechar</button></div>`;
+  ligarBuscaSegmento($('#modal-conteudo'), 'busca-catalogo', 'contagem-catalogo');
   modal.hidden = false;
 }
 

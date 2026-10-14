@@ -42,7 +42,7 @@ Outros comandos:
 
 ```bash
 npm run dev         # inicia com reinício automático ao salvar arquivos
-npm test            # roda a suíte de testes (64 testes)
+npm test            # roda a suíte de testes (71 testes)
 npm run exemplo     # gera prompts de exemplo em exemplos/ sem abrir a interface
 npm run pagina      # regenera a página estática (docs/) do GitHub Pages
 npm run pagina:ver  # pré-visualiza a página estática localmente
@@ -118,17 +118,30 @@ O **Histórico de clientes** fica na barra lateral, com busca por nome ou empres
 
 ## Segmentos suportados
 
-| Segmento | Agendamento | Loja opcional | Páginas obrigatórias |
-| --- | :---: | :---: | --- |
-| ✨ Centro de Estética e Beleza | sim | sim | 9 |
-| 💇‍♀️ Salão de Beleza | sim | sim | 8 |
-| 💈 Barbearia | sim | sim | 9 |
-| 🐶 Pet Shop | não | sim | 6 |
-| 🛁 Pet Shop com Banho e Tosa | sim | sim | 8 |
-| 🩺 Pet Shop com Clínica Veterinária | sim | sim | 7 |
-| 🐾 Clínica Veterinária | sim | sim | 7 |
+São **14 modelos**, agrupados por área na interface (com busca por nome):
+
+| Área | Segmento | Agendamento | Loja opcional | Páginas obrigatórias |
+| --- | --- | :---: | :---: | --- |
+| Beleza | ✨ Centro de Estética e Beleza | sim | sim | 9 |
+| Beleza | 💇‍♀️ Salão de Beleza | sim | sim | 8 |
+| Beleza | 💈 Barbearia | sim | sim | 9 |
+| Pet | 🐶 Pet Shop | não | sim | 6 |
+| Pet | 🛁 Pet Shop com Banho e Tosa | sim | sim | 8 |
+| Pet | 🩺 Pet Shop com Clínica Veterinária | sim | sim | 7 |
+| Pet | 🐾 Clínica Veterinária | sim | sim | 7 |
+| Construção e Imóveis | 📐 Arquitetura | sim | sim | 8 |
+| Construção e Imóveis | 📊 Engenharia | não | não | 8 |
+| Construção e Imóveis | 🧱 Construção | não | não | 9 |
+| Construção e Imóveis | 🏠 Imobiliária | sim | não | 8 |
+| Construção e Imóveis | 🏙️ Empreendimentos Imobiliários | sim | não | 11 |
+| Casa e Decoração | 🛋️ Decoração | sim | sim | 9 |
+| Geral | 🏢 Empresas em Geral | não | sim | 9 |
+
+> **Empresas em Geral** é o modelo coringa: serve para qualquer negócio fora dos nichos acima (prestadores de serviço, comércios, indústrias, escritórios) e é a saída quando o cliente vende produtos mas o segmento dele não tem loja no modelo, como engenharia e imobiliária.
 
 Cada modelo traz: estrutura de páginas com seções ordenadas, funcionalidades típicas (essenciais e desejáveis), integrações, tom de voz, estilo visual com duas paletas prontas, serviços de exemplo, FAQ, depoimentos-modelo, SEO local e **cuidados de conformidade do nicho**.
+
+Cada modelo também declara metadados que o motor usa para escrever bem: o **setor** (aparece no papel da IA), o **gênero gramatical** e o **termo de busca** (é o que produz "uma clínica veterinária" e "melhor imobiliária em [cidade]" sem concordância errada) e o **subtipo de dado estruturado** (`HairSalon`, `VeterinaryCare`, `RealEstateAgent`, `GeneralContractor`…), usado no JSON-LD do prompt.
 
 ---
 
@@ -278,7 +291,7 @@ Depois de editar, rode `npm test` (a suíte valida completude do modelo e o resu
 npm test
 ```
 
-64 testes em seis arquivos:
+71 testes em seis arquivos:
 
 | Arquivo | O que cobre |
 | --- | --- |
