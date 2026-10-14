@@ -1,0 +1,652 @@
+# PROMPT PARA CRIAÇÃO DO SITE
+## Clínica Vida Animal — Curitiba | Clínica Veterinária
+
+> Documento gerado pelo sistema Magic Prompt a partir do modelo "Clínica Veterinária" (veterinaria) e dos dados preenchidos para este cliente.
+> **Objetivo declarado do site:** Agendamento online + loja online.
+> Cole este prompt integralmente na ferramenta de IA de criação de sites e anexe a pasta `renata-lima_clinica-vida-animal/` com as mídias e o conteúdo.
+
+---
+
+## FICHA DO PROJETO
+
+**Cliente:** Dra. Renata Lima
+**Empresa:** Clínica Vida Animal
+**Razão social:** Vida Animal Serviços Veterinários LTDA
+**CNPJ:** 98.765.432/0001-10
+**Segmento:** Clínica Veterinária (com loja online)
+**Localização:** Rua dos Ipês, 45, Vila Nova • Curitiba/PR • CEP 80000-000
+
+**Projeto:** renata-lima_clinica-vida-animal
+**Modelo base:** veterinaria v1.0
+**Gerado em:** 14/10/2026 às 16h21
+
+## 1. PAPEL E MISSÃO
+
+Você é um **designer e desenvolvedor web sênior**, especializado em sites para o setor de medicina veterinária, com forte domínio de SEO local, conversão, acessibilidade e performance.
+
+Sua missão: **criar (ou reformular) o site de "Clínica Vida Animal", em Curitiba**, uma clínica veterinária, entregando estrutura, conteúdo e design prontos para publicação.
+
+**Entregáveis esperados nesta rodada**
+1. Mapa do site e wireframe textual de cada página (seções na ordem em que aparecem).
+2. Textos finais aplicados, prontos para copiar — sem placeholders.
+3. Direção visual: paleta aplicada, tipografia, componentes e estados de interação.
+4. Código responsivo e acessível, com os dados estruturados e o SEO on-page configurados.
+5. Lista do que ficou pendente de material do cliente.
+
+**Como responder**
+- Antes de produzir, apresente em até 10 linhas o seu plano de execução (estrutura + direção visual) para validação.
+- Depois, entregue na ordem: wireframe → textos → design → código.
+- Quando faltar informação, use a decisão mais coerente com o segmento e **sinalize a suposição** no final, na lista de pendências. Nunca invente dados factuais.
+
+## 2. ARQUIVOS DE APOIO DO PROJETO
+
+Este projeto acompanha uma pasta com todos os materiais do cliente. Considere os arquivos abaixo como a **fonte oficial** de conteúdo — não invente produtos, endereços, telefones ou imagens.
+
+renata-lima_clinica-vida-animal/
+├── prompt_site.txt        (este documento)
+├── midias/                (imagens e vídeos para o site)
+├── branding/              (logo, paleta de cores, fontes e referências)
+└── conteudo/              (textos, depoimentos, FAQ e demais documentos)
+
+**Arquivos disponíveis**
+- Nenhum arquivo foi enviado ainda. Trabalhe com placeholders elegantes e mantenha a estrutura pronta para receber as mídias.
+
+## 3. DESCRIÇÃO DO NEGÓCIO
+
+**Clínica Vida Animal** é clínica veterinária com atendimento clínico, exames de imagem e laboratório próprio, além de urgências no horário estendido.
+
+Atua em **Curitiba/PR** (bairro Vila Nova), atendendo presencialmente com o seguinte horário de funcionamento: Segunda a sábado, 8h às 20h. Plantão de urgência até 22h..
+
+**Principais serviços/produtos**
+- Consulta clínica geral (30 min)
+- Vacinação — Protocolo completo para filhotes e adultos
+- Ultrassonografia (40 min)
+- Castração — Procedimento eletivo com orçamento prévio
+
+**Diferenciais / proposta de valor**
+- Laboratório próprio com resultado no mesmo dia
+- Orçamento aprovado pelo tutor antes de qualquer procedimento
+
+## 4. PÚBLICO-ALVO
+
+Tutores de cães e gatos de 25 a 60 anos que buscam atendimento de confiança e orçamento transparente
+
+Considere este público em todas as decisões de conteúdo e design:
+- **Dispositivo principal:** celular. Projete mobile-first e teste em telas pequenas antes da versão desktop.
+- **Região de influência:** Curitiba/PR e cidades vizinhas. Priorize buscas com intenção local ("perto de mim", "em [cidade]").
+
+## 5. OBJETIVO DO SITE
+
+**Objetivo principal do site:** Agendamento online — O cliente marca horário/serviço sozinho pelo site.
+
+**Diretriz de conversão da loja**
+- O caminho até o "pagamento concluído" deve ter no máximo 3 passos a partir da home.
+- Ofereça sempre duas rotas: finalizar a compra no site **ou** enviar o pedido pelo WhatsApp (muito usado por este público).
+- Exiba o prazo de entrega estimado por região antes do checkout, não depois.
+
+**O que conta como sucesso (métricas a instrumentar já no lançamento)**
+- Cliques no botão "Agendar" (eventos de conversão configurados)
+- Agendamentos concluídos por semana
+- Origem dos agendamentos (orgânico, anúncio, Instagram, Google Meu Negócio)
+- Taxa de no-show em relação aos agendamentos feitos pelo site
+
+Configure as conversões no Google Analytics 4 e no Meta Pixel desde a publicação da primeira versão. Sem medição, nenhuma otimização posterior é possível.
+
+## 6. ESTRUTURA DE PÁGINAS E SEÇÕES
+
+A estrutura abaixo vem do modelo **Clínica Veterinária**, já ajustada para este cliente. Mantenha a ordem, os rótulos do menu e adapte os textos ao contexto real do negócio.
+
+**Menu principal sugerido:** Home | Especialidades | Agendamento | Estrutura e Serviços Complementares | Contato | Política de Privacidade | Loja
+O menu deve ser fixo (sticky) no topo, com o botão de contato/destaque sempre visível no canto direito.
+
+#### 1. Home — OBRIGATÓRIA
+*Objetivo da página:* Estabelecer confiança imediata e rotear o visitante (rotina x urgência).
+Seções, na ordem:
+1. Faixa superior com horários e telefone de urgência clicável
+2. Hero com "Agendar consulta" e segundo CTA "Estou com uma urgência"
+3. Especialidades em cards (clínica geral, cirurgia, dermatologia, oftalmo, ortopedia, cardiologia)
+4. Estrutura e equipamentos (laboratório, ultrassom, raio-x, internação)
+5. Equipe com foto, especialidade e CRMV
+6. Planos, convênios e formas de pagamento
+7. Como chegar: mapa, estacionamento, acessibilidade
+8. Depoimentos e avaliação do Google
+9. Orientações rápidas: o que fazer em emergência, primeiros cuidados, calendário de vacinas
+> Orientação específica: Separar visualmente "atendimento agendado" de "urgência" reduz ansiedade e melhora a experiência.
+
+#### 2. Especialidades — OBRIGATÓRIA
+*Objetivo da página:* Mostrar a profundidade clínica e direcionar para o agendamento correto.
+Seções, na ordem:
+1. Card por especialidade com: o que trata, quando procurar, como é a consulta e profissional responsável
+2. Clínica geral, vacinação, dermatologia, cardiologia, ortopedia, neurologia, oftalmologia, oncologia (com muito cuidado de linguagem), geriatria
+3. Odontologia veterinária e procedimentos cirúrgicos
+4. Diagnóstico por imagem e laboratório
+5. Internação e cuidados intensivos
+6. Atendimento domiciliar (quando existir) e telemedicina para triagem
+7. Dúvidas comuns em cada especialidade (mini-FAQ)
+> Orientação específica: Em oncologia e casos paliativos, incluir linguagem de cuidado, sigilo e apoio ao tutor.
+
+#### 3. Agendamento — OBRIGATÓRIA
+*Objetivo da página:* Permitir que o cliente marque horário sozinho, 24 horas por dia.
+Seções, na ordem:
+1. Seleção de serviço (com duração e valor)
+2. Seleção de profissional (quando o cliente exigir)
+3. Calendário com horários disponíveis em tempo real
+4. Formulário com nome, WhatsApp e observações
+5. Resumo antes de confirmar e confirmação imediata por WhatsApp/e-mail
+6. Instruções de preparo/chegada e política de cancelamento
+7. Fluxo separado: "Agendar consulta" x "Urgência agora"
+8. Escolha de especialidade e profissional
+9. Ficha do paciente: nome, espécie, raça, idade, peso, castrado, histórico, medicamentos
+10. Motivo da consulta e descrição de sintomas com data de início
+11. Upload de exames anteriores (PDF/imagem)
+12. Instruções: jejum quando necessário, trazer carteira de vacinação e exames
+> Orientação específica: Deixar always-visible um botão "Agendar agora" no topo e um botão flutuante de WhatsApp em todas as páginas.
+
+#### 4. Equipe — OPCIONAL (recomendada)
+*Objetivo da página:* Humanizar a marca e valorizar a qualificação técnica dos profissionais.
+Seções, na ordem:
+1. Cards com foto, nome, cargo, especialidades e tempo de experiência
+2. Formação, cursos e certificações de cada profissional
+3. Botão "agendar com [profissional]"
+4. Link para o Instagram profissional, quando houver
+5. Médicos-veterinários com CRMV, formação, especialização e tempo de atuação
+6. Responsável técnico em destaque
+7. Equipe de enfermagem, laboratório e imagem
+8. Vídeos curtos de apresentação (cria conexão)
+> Orientação específica: Se o cliente não tiver fotos, orientar sessão fotográfica ou usar imagens em tratamento neutro.
+
+#### 5. Estrutura e Serviços Complementares — OBRIGATÓRIA
+*Objetivo da página:* Provar capacidade técnica e cobertura de atendimento.
+Seções, na ordem:
+1. Fotos: recepção, consultório, laboratório, sala de imagem, centro cirúrgico, internação
+2. Equipamentos e para que servem em linguagem acessível
+3. Farmácia veterinária e loja (com link para o e-commerce)
+4. Rede de parceiros para serviços não realizados na clínica (encaminhamento)
+5. Acessibilidade física, estacionamento e localização
+> Orientação específica: Se houver mais de uma unidade, criar uma página por unidade com horários, equipe e mapa próprios (bom para SEO local).
+
+#### 6. Urgência e Emergência — OPCIONAL (recomendada)
+*Objetivo da página:* Ser a página mais rápida de achar quando alguém está desesperado.
+Seções, na ordem:
+1. Checklist de sinais de emergência em destaque (dificuldade para respirar, sangramento, convulsão, ingestão de tóxicos, trauma, distensão abdominal)
+2. O que fazer (e o que não fazer) antes de sair de casa: transporte seguro, não medicar por conta própria, manter o pet aquecido
+3. Telefone de contato direto e horário de plantão
+4. Tempo médio de chegada e instruções de priorização por gravidade
+5. Endereço com botão de rota e estacionamento de emergência
+> Orientação específica: Página extremamente enxuta, com botão de ligar fixo e texto grande — normalmente usada no celular.
+
+#### 7. Planos e Convênios — OPCIONAL (recomendada)
+*Objetivo da página:* Tornar a prevenção acessível e aumentar retenção.
+Seções, na ordem:
+1. Planos por faixa de idade do pet, com o que cobre e o que não cobre
+2. Tabela comparativa de planos
+3. Convênios e reembolso: passo a passo para o tutor
+4. Formas de pagamento, parcelamento de procedimentos eletivos
+> Orientação específica: Transparência sobre cobertura reduz cancelamentos e reclamações futuras.
+
+#### 8. Perguntas Frequentes (FAQ) — OPCIONAL (recomendada)
+*Objetivo da página:* Reduzir o volume de dúvidas repetidas no atendimento e melhorar o SEO.
+Seções, na ordem:
+1. Acordeão com 8 a 12 perguntas mais comuns
+2. Cada resposta em até 3 frases, com CTA quando fizer sentido
+3. Marcação de dados estruturados FAQPage (schema.org)
+4. Como funciona o atendimento de urgência?
+5. Vocês parcelam exames e cirurgias?
+6. Qual o valor da consulta?
+7. Preciso de agenda para vacinação?
+8. Atendem animais silvestres ou exóticos?
+9. Fazem atendimento domiciliar?
+10. Como vocês passam o orçamento?
+> Orientação específica: Escreva as perguntas como o cliente perguntaria no WhatsApp: "quanto custa?", "dói?".
+
+#### 9. Depoimentos — OPCIONAL (recomendada)
+*Objetivo da página:* Prova social: reduzir a hesitação de quem está decidindo.
+Seções, na ordem:
+1. Grade de depoimentos com nome, foto (opcional), nota e texto curto
+2. Avaliações do Google (embed/prints)
+3. Nota média em destaque e link "Avaliar no Google"
+4. Carrossel de prints de conversas do WhatsApp (com autorização)
+5. Depoimentos de casos de urgência e de acompanhamento contínuo (com autorização)
+> Orientação específica: Depoimento sem nome próprio e sem contexto perde força. Prefira poucos e verdadeiros.
+
+#### 10. Blog / Dicas — OPCIONAL (recomendada)
+*Objetivo da página:* Atrair tráfego orgânico de longo prazo e educar o público.
+Seções, na ordem:
+1. Listagem de posts com imagem, título, resumo e data
+2. Página de artigo com índice, imagens e CTA ao final
+3. Categorias ligadas aos serviços principais
+4. Bloco "posts relacionados" e compartilhamento social
+5. Pautas: "primeiros socorros para cães", "sinais de dor em gatos", "calendário de vacinação", "cuidados com pets idosos"
+6. Cada artigo assinado por um médico-veterinário com CRMV
+> Orientação específica: Sugerir 6 pautas iniciais já otimizadas para busca local. Ex.: "quanto custa [serviço] em [cidade]".
+
+#### 11. Contato — OBRIGATÓRIA
+*Objetivo da página:* Transformar visita em conversa, com o menor atrito possível.
+Seções, na ordem:
+1. Telefone e WhatsApp com links clicáveis (wa.me e tel:)
+2. Formulário de contato curto (nome, telefone/e-mail, mensagem) com aviso de privacidade (LGPD)
+3. Endereço completo com Google Maps incorporado
+4. Horário de atendimento por dia da semana (destacando feriados e plantões)
+5. E-mail e redes sociais
+6. Bloco "como chegar" com referências de pontos conhecidos e opções de transporte/estacionamento
+7. Telefone de urgência e de agendamento separados e destacados
+8. WhatsApp com resposta automática sobre horários
+> Orientação específica: O formulário deve enviar e-mail e/ou WhatsApp automaticamente e ter proteção anti-spam.
+
+#### 12. Política de Privacidade — OBRIGATÓRIA
+*Objetivo da página:* Conformidade com a LGPD e com políticas de anúncios/análise.
+Seções, na ordem:
+1. Quais dados são coletados (formulários, cookies, analytics)
+2. Finalidade do tratamento e base legal
+3. Compartilhamento com terceiros (WhatsApp, Google, ferramentas de agendamento)
+4. Direitos do titular e canal de contato do encarregado
+5. Política de cookies com banner de consentimento
+> Orientação específica: Incluir link no rodapé de todas as páginas e no rodapé do formulário.
+
+#### 13. Loja — OBRIGATÓRIA
+*Objetivo da página:* Vender produtos online com o mínimo de fricção, integrado ao restante do site.
+Seções, na ordem:
+1. Home da loja com vitrines: mais vendidos, lançamentos, kits e promoções
+2. Listagem com filtros (categoria, preço, marca, porte/tamanho) e ordenação
+3. Página de produto com galeria, variações, avaliações, descrição e frete calculado
+4. Carrinho lateral e página de checkout com Pix, cartão e boleto
+5. Página de obrigado / pedido confirmado, com próximos passos e link de rastreio
+6. Central de ajuda: entregas, prazos, trocas, devoluções e formas de pagamento
+7. Categorias: ração, dietas prescritas, antiparasitários, higiene, suplementos, acessórios
+8. Venda de medicamento controlado apenas com validação de receita
+> Orientação específica: Clínica veterinária: cadastrar de 20 a 40 produtos-semente para a loja não nascer vazia, com fotos em fundo neutro.
+
+**Regras transversais de navegação e layout**
+- Cabeçalho com logo à esquerda, menu ao centro/direita e botão de ação destacado.
+- Rodapé completo com NAP (nome, endereço, telefone), horários, redes sociais, formas de pagamento, mapa e link da Política de Privacidade.
+- Breadcrumbs em páginas internas e destaque da página atual no menu.
+- Botão de WhatsApp e/ou agendar fixo (flutuante) em todas as páginas.
+- Página 404 personalizada com atalhos para Serviços, Contato e Agendamento.
+- Título e descrição únicos por página (SEO), sem repetições.
+
+## 7. FUNCIONALIDADES E INTEGRAÇÕES
+
+**Obrigatórias (sem elas o site não entra no ar)**
+- Agendamento online por especialidade e profissional
+- Página de urgência otimizada para celular com botão de ligar
+- Formulário de contato com upload de exames
+- Equipe com CRMV visível e responsável técnico
+- Catálogo de produtos (loja) com carrinho e checkout
+- Google Maps na home e na página de contato
+- Dados estruturados VeterinaryCare + LocalBusiness + FAQPage
+- Blog com artigos assinados por veterinários
+- Carrinho e checkout completos, com cálculo de frete por CEP
+- Cadastro/login do cliente com histórico de pedidos
+- E-mails e mensagens automáticas de confirmação de pedido e status de envio
+
+**Desejáveis (fase 2)**
+- Área do tutor: histórico do pet, carteira de vacinação digital, resultados de exames
+- Lembretes automáticos de vacinas, antiparasitários e retornos
+- Telemedicina / triagem online com veterinário
+- Orçamento online para procedimentos eletivos (castração, odontologia)
+- Assinatura de plano de saúde pet e cobrança recorrente
+- Integração com prontuário eletrônico e laboratório
+- Chat com triagem automática e encaminhamento para urgência
+- Assinatura de ração e antiparasitário com lembrete de reaplicação
+- Upload de receita para produtos controlados com validação da equipe
+- Retirada na clínica (com desconto) e entrega local
+- Recompra rápida a partir do histórico do pet na área do tutor
+
+**Integrações a prever no projeto**
+- Sistema de gestão veterinário (prontuário, agenda, financeiro)
+- WhatsApp Business API
+- Laboratórios parceiros para resultados online
+- Gateway de pagamento e link de pagamento no orçamento
+- Google Analytics 4 + Google Ads + Meta Pixel
+
+### Loja online — especificação
+Categorias a montar: Ração e dietas prescritas, Antiparasitários, Medicamentos de venda livre, Suplementos, Higiene, Acessórios e caminhas.
+
+**Fluxo de compra**
+1. Vitrine → página de produto → adicionar ao carrinho → carrinho lateral com resumo e frete → checkout → obrigado.
+2. Checkout em página única, com campos mínimos: nome, CPF/CNPJ (opcional), e-mail, telefone, endereço com busca por CEP e forma de pagamento.
+3. Ofereça Pix (com desconto opcional), cartão de crédito (parcelamento) e boleto; e sempre a alternativa "finalizar pelo WhatsApp".
+4. Confirmação imediata na tela + e-mail/WhatsApp com número do pedido e prazo estimado.
+5. Página de acompanhamento de pedido por código.
+
+**Regras comerciais a implementar**
+- Exibir preço, parcelamento estimado e disponibilidade de estoque em todo card de produto.
+- Cálculo de frete por CEP no carrinho; frete grátis acima do valor definido pelo cliente.
+- Cupom de primeira compra e cupom de recuperação de carrinho abandonado.
+- Aviso "últimas unidades" apenas quando for verdadeiro.
+- Recuperação de carrinho por e-mail e WhatsApp em 2 toques (24h e 72h).
+
+**Catálogo inicial**
+- Cadastrar entre 20 e 40 itens no lançamento, cobrindo Ração e dietas prescritas, Antiparasitários, Medicamentos de venda livre, Suplementos, Higiene e Acessórios e caminhas.
+- Fotos em fundo neutro, 1:1, com no mínimo 3 ângulos por produto.
+- Descrições com benefício + especificação técnica + modo de uso.
+- Variações (tamanho, peso, cor) com estoque próprio por variação.
+
+**Atenção específica do segmento**
+- Texto de produto sem promessa terapêutica e com aviso "medicamento de uso veterinário"
+- Integrar pedidos ao prontuário para registro do que foi vendido ao pet
+
+## 8. CONTEÚDO E COPY SUGERIDA
+
+O cliente não enviou textos prontos. **Redija o conteúdo** seguindo a estrutura sugerida abaixo e o tom de voz definido neste prompt. Entregue os textos na pasta `conteudo/` em `.md` além de aplicá-los no site.
+
+**Estrutura de textos a produzir por página**
+1. Home: headline (máx. 8 palavras), subheadline (1 frase), chamadas de cada bloco e CTAs.
+2. Serviços: um texto curto por serviço com o que é, para quem é, como acontece e o que está incluso.
+3. Sobre: história, propósito, equipe e números de credibilidade.
+4. Contato: instruções de chegada e orientação de atendimento.
+5. Rodapé: descrição curta da empresa em 1 frase (até 25 palavras).
+
+**Sugestão de serviços/produtos para esta página (base do modelo)**
+- Consulta clínica geral *(confirmado pelo cliente)*
+- Consulta com especialista
+- Vacinação e protocolo de filhotes
+- Exames laboratoriais
+- Ultrassonografia
+- Radiografia digital
+- Eletrocardiograma e ecocardiograma
+- Castração e cirurgias gerais
+- Cirurgia ortopédica
+- Odontologia veterinária
+- Internação e observação
+- Atendimento de urgência
+
+**Depoimentos**
+- "Atenderam minha gata em uma urgência num sábado e explicaram tudo com paciência." — Marcos A.
+
+**FAQ**
+- Vocês atendem emergência? → Sim, dentro do nosso horário, com prioridade para casos graves; ligue antes para prepararmos o atendimento.
+
+## 9. TOM DE VOZ E COMUNICAÇÃO
+
+**Personalidade da marca:** Acolhedor e humano · Profissional e confiável · Claro na comunicação sobre preço e conduta · Disponível em urgência
+
+**Como escrever (regras práticas)**
+- Explicar condutas em linguagem simples e sempre reforçar que a avaliação presencial é necessária
+- Nomear corretamente: médico-veterinário, tutor, paciente
+- Informar com transparência sobre orçamento prévio e formas de pagamento
+- Tratar temas sensíveis (eutanásia, oncologia) com cuidado e empatia
+- Destacar canais de urgência e horários de forma inequívoca
+
+**Evitar**
+- Prometer cura ou resultado
+- Indicar medicamentos na web
+- Tom comercial agressivo em saúde
+
+**Exemplos de referência para copiar o padrão**
+- Título: "Cuidado veterinário de confiança para quem é da família"
+- CTA: "Agendar consulta" / "Falar com a equipe" / "Estou em uma urgência"
+- Bloco: "Orçamento transparente: você aprova antes de cada exame ou procedimento."
+
+**Boas práticas de redação para web (aplicar em todo o site)**
+- Frases curtas (até 20 palavras) e parágrafos de no máximo 4 linhas.
+- Um CTA por bloco, com verbo no infinitivo ou imperativo ("Agendar", "Falar no WhatsApp").
+- Títulos que falem do benefício, não do recurso.
+- Zero "clique aqui", "saiba mais" solto ou "bem-vindo ao nosso site".
+- Revisar ortografia e remover repetições de "qualidade", "excelência" e "compromisso".
+
+## 10. ESTILO VISUAL E IDENTIDADE DA MARCA
+
+**Estilo desejado pelo cliente:** Clínico acolhedor
+**Direções adequadas ao segmento:** Clínico moderno / Acolhedor e humano / Premium com foco em confiança
+
+**Paleta de cores a usar**
+- **#14395C** (informada pelo cliente)
+- **#2E7BB8** (informada pelo cliente)
+- **#3E9E7C** (informada pelo cliente)
+
+**Cor de destaque/CTA:** usar o tom mais saturado da paleta nos botões de ação, com contraste mínimo de 4.5:1 contra o fundo (WCAG AA).
+**Neutros:** definir uma escala de cinzas/off-white para fundos e divisores a partir da paleta acima; evitar preto puro (#000) em grandes áreas.
+
+**Tipografia**
+- Títulos: Sans humanista séria (Poppins, Source Sans) ou serifada suave para o acolhimento
+- Corpo do texto: Sans legível (Inter, Roboto) em 17px+ para leitura fácil
+- Escala sugerida: H1 40–56px (24–30px no mobile), H2 28–36px, corpo 16–18px, legenda 14px.
+- No máximo **duas famílias tipográficas**. Carregar com `display=swap` e apenas os pesos usados.
+
+**Diretrizes visuais específicas do segmento**
+- Informação de urgência sempre no topo, com telefone clicável
+- Cards de especialidade com ícones claros em vez de fotos genéricas
+- Blocos de preço/convênio com fundo destacado
+- Fotos claras, humanas, com tutores e pets interagindo com a equipe
+- Acessibilidade: contraste alto e textos grandes (público mais velho também acessa)
+
+**Imagens e vídeos adequados (usar os arquivos do cliente quando existirem)**
+- Médico-veterinário examinando com o tutor presente
+- Recepção e consultórios organizados
+- Equipamentos de imagem e laboratório
+- Retrato individual de cada veterinário
+
+**Evitar neste segmento**
+- Imagens de animais doentes ou em sofrimento
+- Estética de pet shop infantilizada
+
+**Sistema de design a entregar**
+- Tokens em CSS custom properties (cores, espaçamentos, raios, sombras e tipografia).
+- Componentes reutilizáveis: botão (primário/secundário/texto), card, badge, acordeão, carrossel, formulário e modal.
+- Sombras discretas, raio de borda entre 8px e 16px e espaçamento em múltiplos de 8px.
+- Ícones de linha consistentes (mesma família e espessura) — nada de misturar estilos.
+- Microinterações discretas (200–300ms) em hover, foco e abertura de acordeão; respeitar `prefers-reduced-motion`.
+
+## 11. USO DAS IMAGENS E VÍDEOS ANEXADOS
+
+**Pasta do projeto**
+renata-lima_clinica-vida-animal/midias/ — imagens; renata-lima_clinica-vida-animal/branding/ — logo e identidade; renata-lima_clinica-vida-animal/conteudo/ — textos e documentos.
+
+**Como usar cada arquivo**
+- **Logo:** não há arquivo de logo na pasta. Preencha o cabeçalho com o nome da empresa em tipografia da paleta e sinalize ao cliente sobre a necessidade do vetor.
+- **Banner principal (hero):** sem imagens enviadas. Use composição tipográfica sobre a cor principal da paleta e deixe o componente pronto para receber a foto (mesma proporção de 16:9 no desktop e 4:5 no mobile).
+- **Sem imagens próprias:** não preencher o site com banco de imagens genérico. Usar blocos de cor, ícones e espaços reservados sinalizados, e entregar uma lista do que o cliente precisa fotografar (ver seção "Materiais a solicitar").
+
+**Regras gerais de imagem**
+- Nunca usar imagens de banco de imagens quando houver material próprio do cliente disponível.
+- Toda imagem precisa de `alt` descritivo e contextualizado (ex.: "corte de cabelo feminino em camadas no salão X"), nunca "imagem1.jpg".
+- Manter proporções consistentes por seção: hero 16:9, cards 4:3, produtos 1:1, retratos 3:4.
+- Não distorcer nem esticar fotos; usar recorte centralizado inteligente.
+- Comprimir antes de subir e manter os arquivos originais em `midias/` intactos.
+- Vídeos: máximo 30s, com legenda embutida (a maioria assiste sem som).
+
+**Tratamento quando faltar material**
+- Sinalizar no site, com comentário no código ou bloco marcado, exatamente onde cada foto deve entrar.
+- Nunca publicar placeholder genérico visível ao visitante final.
+- Entregar a lista "Materiais a solicitar ao cliente" junto com o site (logo vetorial, fotos de ambiente, fotos de equipe, fotos de produto).
+
+## 12. LINKS, REDES SOCIAIS E DADOS DE CONTATO
+
+**Dados de contato que devem aparecer no rodapé e na página de contato (idênticos em todo o site)**
+- Telefone fixo: (41) 3333-4444
+- WhatsApp: (41) 99999-1111
+- Link de WhatsApp a usar em todos os botões: https://wa.me/5541999991111 — com mensagem pré-preenchida e contextualizada por página (ex.: na home "Olá! Vim pelo site e gostaria de mais informações"; na página de Consulta clínica geral "Olá! Vim pelo site e gostaria de informações sobre Consulta clínica geral")
+- E-mail: contato@vidaanimal.com.br
+- Endereço: Rua dos Ipês, 45, Vila Nova • Curitiba/PR • CEP 80000-000
+- Horário de atendimento: Segunda a sábado, 8h às 20h. Plantão de urgência até 22h.
+- Razão social (para rodapé e políticas): Vida Animal Serviços Veterinários LTDA
+- CNPJ: 98.765.432/0001-10
+
+**Redes sociais e links**
+- Google Maps: https://maps.app.goo.gl/exemplo-vida-animal
+- Instagram: https://instagram.com/vidaanimal
+- Site atual (referência de conteúdo a migrar): https://vidaanimal.com.br
+
+**Regras de aplicação dos links**
+- Abrir links externos com `target="_blank"` e `rel="noopener noreferrer"`.
+- Não usar placeholders do tipo `#` em links publicados — se o canal não existir, o ícone não aparece.
+- Incorporar o Google Maps em `iframe` com `loading="lazy"` e `title` descritivo; oferecer também o botão "Traçar rota".
+- Manter o mesmo NAP (nome, endereço, telefone) do Google Meu Negócio, do Instagram e do site — divergência prejudica o SEO local.
+- Formulário de contato: enviar para contato@vidaanimal.com.br e replicar no WhatsApp; incluir checkbox de consentimento LGPD com link para a política.
+
+## 13. SEO BÁSICO E LOCAL
+
+**SEO local — aplicar obrigatoriamente**
+
+**Título e descrição da home**
+- Title (até 60 caracteres): `Clínica Vida Animal | Clínica Veterinária em Curitiba — Consultas, Exames e Urgência`
+- Meta description (até 155 caracteres): `Consultas, vacinas, exames, cirurgias e urgência veterinária em Curitiba. Especialistas, orçamento transparente e agendamento online.`
+- H1 único da home: variação do title com a cidade, sem repetir palavra-chave em excesso.
+
+**Titles sugeridos para as páginas internas** (padrão: `[Página] | [Nome] em [Cidade]`)
+- Home: `Home | Clínica Vida Animal em Curitiba`
+- Especialidades: `Especialidades | Clínica Vida Animal em Curitiba`
+- Agendamento: `Agendamento | Clínica Vida Animal em Curitiba`
+- Estrutura e Serviços Complementares: `Estrutura e Serviços Complementares | Clínica Vida Animal em Curitiba`
+- Contato: `Contato | Clínica Vida Animal em Curitiba`
+- Política de Privacidade: `Política de Privacidade | Clínica Vida Animal em Curitiba`
+- Loja: `Loja | Clínica Vida Animal em Curitiba`
+
+**Palavras-chave a trabalhar** (uma principal por página, as demais como secundárias no corpo do texto)
+- clínica veterinária Curitiba
+- veterinário perto de mim
+- veterinário 24 horas Curitiba
+- consulta veterinária Vila Nova
+- ultrassom veterinário Curitiba
+- castração Curitiba preço
+- vacina para cachorro Curitiba
+
+**Palavras-chave por serviço** (usar na página de serviços e nos textos individuais)
+- consulta clínica geral em Curitiba
+- vacinação em Curitiba
+- ultrassonografia em Curitiba
+- castração em Curitiba
+
+**Palavras-chave de cauda longa** (blog e FAQ)
+- quanto custa consulta clínica geral em Curitiba
+- onde fazer vacinação perto de Vila Nova
+- melhor clínica veterinária em Vila Nova
+- horário de funcionamento da clínica veterinária em Curitiba
+- como escolher uma clínica veterinária em Curitiba
+
+**Dados estruturados (JSON-LD) a implementar**
+- VeterinaryCare com nome, endereço, telefone, geo, horário (openingHoursSpecification), preço e `aggregateRating` apenas se houver avaliações reais.
+- `FAQPage` na página de perguntas frequentes.
+- `BreadcrumbList` nas páginas internas.
+- `Product` e `Offer` na loja, com preço, disponibilidade e avaliações.
+- `Organization` com logo e perfis sociais (`sameAs`).
+
+**Google Meu Negócio**
+- Reivindicar e padronizar o perfil com o mesmo nome, endereço e telefone do site.
+- Publicar fotos reais da fachada, interior, equipe e serviços (o perfil é a principal fonte de cliques locais).
+- Pedir avaliação por link curto após cada atendimento e responder todas as avaliações.
+- Incluir UTM nos botões do site que levam ao perfil para medir o retorno.
+
+**Arquivos e configurações técnicas**
+- `sitemap.xml` e `robots.txt` gerados e enviados no Google Search Console.
+- URLs amigáveis com a palavra-chave (ex.: /servicos/limpeza-de-pele, nunca /?p=123).
+- Canonical em todas as páginas, `lang` correto e `hreflang` apenas se houver versão em outro idioma.
+- Open Graph e Twitter Card configurados para compartilhamento bonito no WhatsApp e no Instagram.
+- HTTPS, redirecionamento de www e de http para a versão canônica.
+- Página 404 com retorno de status correto e links úteis.
+
+## 14. REQUISITOS TÉCNICOS, LGPD E ACESSIBILIDADE
+
+**Requisitos técnicos do site**
+
+**Desempenho (metas objetivas)**
+- Nota mínima de 90 no Lighthouse em Desktop e 80 em Mobile para Performance, Acessibilidade e SEO.
+- LCP abaixo de 2,5s e CLS abaixo de 0,1 em conexão 4G.
+- Lazy loading em imagens/vídeos, compactação de assets e CDN para arquivos estáticos.
+- CSS crítico inline no topo e carregamento assíncrono do restante.
+
+**Acessibilidade (WCAG 2.1 AA)**
+- Contraste mínimo de 4.5:1 em texto e 3:1 em elementos de interface.
+- Todos os campos de formulário com `label` visível e mensagens de erro claras.
+- Navegação completa por teclado, com foco visível e link "pular para o conteúdo".
+- Textos alternativos em todas as imagens informativas e legendas nos vídeos.
+- Não usar cor como único indicador de estado.
+
+**Estrutura técnica recomendada**
+- Site responsivo com breakpoints em 480, 768, 1024 e 1440px.
+- Páginas renderizadas no servidor ou pré-renderizadas (bom para SEO local).
+- CMS simples para o cliente editar textos, serviços, preços, horários, posts e produtos.
+- Formulário com proteção anti-spam (honeypot + reCAPTCHA invisível) e envio por e-mail + WhatsApp.
+- Painel administrativo protegido com 2FA e backups automáticos semanais.
+- Ambiente de homologação separado da produção.
+
+**Conformidade**
+- LGPD: política de privacidade, banner de cookies, consentimento explícito nos formulários e dados sensíveis com tratamento restrito.
+- Termos de uso quando houver venda online ou área do cliente.
+- Rodapé com razão social e CNPJ quando exigido pelo segmento.
+- Conteúdo em conformidade com as regras publicitárias da profissão (ver seção de cuidados).
+
+**Integrações obrigatórias no lançamento**
+- Google Analytics 4 com eventos de conversão
+- Google Search Console
+- Google Meu Negócio
+- Meta Pixel
+- WhatsApp Business (link e resposta rápida configurados)
+
+**Idioma do site:** pt-BR
+
+## 15. CUIDADOS ESPECÍFICOS DO SEGMENTO
+
+**Regras de comunicação e conformidade deste segmento — não violar**
+- Divulgar responsável técnico e CRMV; conteúdo clínico deve ter assinatura profissional
+- Nunca prescrever, diagnosticar ou dosar medicamento pelo site ou WhatsApp
+- Dados de saúde do pet e do tutor são sensíveis: consentimento, sigilo e retenção mínima (LGPD)
+- Em emergência, orientar ligação telefônica e nunca instruir ações que possam agravar o quadro
+- Comunicação de planos deve descrever cobertura, carência e exclusões com clareza (CDC)
+
+## 16. O QUE EVITAR
+
+**O que NÃO fazer em nenhum caso**
+- Não inventar informações: telefone, endereço, preços, prazos, certificações, prêmios, número de clientes ou depoimentos.
+- Não usar textos genéricos de "empresa séria e comprometida com a qualidade" — escreva o que a empresa realmente faz.
+- Não copiar layout, textos ou imagens de sites de concorrentes.
+- Não usar banco de imagens quando houver material próprio; nunca usar imagem com marca d'água.
+- Não colocar carrossel automático no topo que troca de slide rápido (ruim para conversão e acessibilidade).
+- Não esconder informações essenciais (preço, endereço, horário) atrás de menus distantes.
+- Não usar CAPS LOCK em títulos, nem fontes decorativas no corpo do texto.
+- Não publicar o site com links `href="#"`, formulários não testados ou página 404 genérica do servidor.
+- Não deixar o site dependente de um único canal (só Instagram não basta — o objetivo do site é ser a base própria do negócio).
+- Não exceder duas famílias tipográficas nem mais de 5 cores principais.
+- Não esconder o frete ou o prazo até a última etapa do checkout.
+- Não deixar o cadastro obrigatório antes de o cliente ver o preço final.
+
+## 17. CRITÉRIOS DE ACEITE E MATERIAIS PENDENTES
+
+**Checklist de aceite — o trabalho só é considerado entregue quando todos os itens estiverem marcados**
+- Todas as páginas obrigatórias implementadas e acessíveis pelo menu: Home, Especialidades, Agendamento, Equipe, Estrutura e Serviços Complementares, Urgência e Emergência, Planos e Convênios, Perguntas Frequentes (FAQ), Depoimentos, Blog / Dicas, Contato, Política de Privacidade, Loja.
+- Nenhum texto placeholder, "lorem ipsum" ou imagem de exemplo publicada.
+- NAP (nome, endereço, telefone) idêntico em todas as páginas e igual ao Google Meu Negócio.
+- Links de WhatsApp e telefone testados em Android e iPhone.
+- Fluxo de compra testado com pedido real de baixo valor: carrinho, frete, pagamento, confirmação e rastreio.
+- Formulários testados de ponta a ponta, com mensagem de sucesso e de erro.
+- SEO: title, description, H1 único, alt em imagens, sitemap e robots publicados.
+- Dados estruturados validados no Rich Results Test, sem erros.
+- Lighthouse com as notas mínimas definidas na seção técnica.
+- Testado nos navegadores Chrome, Safari e Firefox (últimas 2 versões) e em telas de 360px a 1920px.
+- Política de privacidade publicada e linkada no rodapé e nos formulários.
+- GA4 e Pixel disparando os eventos de conversão configurados.
+- Backup, acesso ao CMS e treinamento de uso entregues ao cliente.
+
+**Materiais a solicitar ao cliente, caso ainda não estejam na pasta**
+- Logo em vetor (SVG/AI/PDF) — se o cliente só tiver PNG, solicitar o vetor.
+- Fotos próprias em alta resolução (mínimo 1600px de largura): fachada, ambiente, equipe e serviços/produtos.
+- Vídeos curtos (opcional), em boa luz e sem áudio obrigatório.
+- Depoimentos reais com nome e autorização de uso.
+- Lista de preços atualizada (ou definição de "consultar valores").
+- Acesso ao perfil do Google Meu Negócio e às redes sociais.
+- Dados para nota fiscal e política de trocas, no caso da loja.
+
+**Entregue junto com o site**
+- Documento de orientação para o cliente (como editar textos, produtos e horários no CMS).
+- Relatório de SEO inicial: palavras-chave, title/description aplicados e checklist do Google Meu Negócio.
+- Acessos e credenciais organizados e entregues em local seguro (nunca por WhatsApp ou e-mail em texto aberto).
+- Recomendação de rotina de manutenção: publicar 1 a 2 conteúdos por mês e revisar preços a cada trimestre.
+
+---
+
+## RESUMO PARA COLAR NO CHAT (versão curta)
+- Crie o site de "Clínica Vida Animal" (Curitiba, Vila Nova) — clínica veterinária.
+- Descrição: clínica veterinária com atendimento clínico, exames de imagem e laboratório próprio, além de urgências no horário estendido.
+- Público-alvo: Tutores de cães e gatos de 25 a 60 anos que buscam atendimento de confiança e orçamento transparente.
+- Objetivo do site: Agendamento online + e-commerce.
+- Serviços: Consulta clínica geral, Vacinação, Ultrassonografia, Castração.
+- Páginas: Home, Especialidades, Agendamento, Equipe, Estrutura e Serviços Complementares, Urgência e Emergência, Planos e Convênios, Perguntas Frequentes (FAQ), Depoimentos, Blog / Dicas, Contato, Política de Privacidade, Loja.
+- Funcionalidades: Agendamento online por especialidade e profissional, Página de urgência otimizada para celular com botão de ligar, Formulário de contato com upload de exames, Equipe com CRMV visível e responsável técnico, Catálogo de produtos (loja) com carrinho e checkout, Google Maps na home e na página de contato, Dados estruturados VeterinaryCare + LocalBusiness + FAQPage, Blog com artigos assinados por veterinários, carrinho e checkout com Pix, cartão e frete por CEP.
+- Tom de voz: Acolhedor e humano, Profissional e confiável, Claro na comunicação sobre preço e conduta, Disponível em urgência.
+- Estilo visual: Clínico acolhedor (Clínico moderno, Acolhedor e humano, Premium com foco em confiança).
+- Cores: #14395C, #2E7BB8, #3E9E7C.
+- Não há mídias enviadas: use placeholders elegantes e liste o que precisa ser fotografado.
+- SEO local: title "Clínica Vida Animal | Clínica Veterinária em Curitiba — Consultas, Exames e Urgência", palavras-chave com foco em "clínica veterinária Curitiba" e dados estruturados VeterinaryCare.
+- Contato: (41) 3333-4444 | contato@vidaanimal.com.br | https://instagram.com/vidaanimal.
+- Não invente informações, preços, avaliações ou depoimentos.

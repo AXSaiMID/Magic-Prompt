@@ -1,0 +1,28 @@
+COMO USAR ESTA PASTA
+====================
+
+Projeto: Bella Estética — São Paulo/SP
+Segmento: Centro de Estética e Beleza
+Gerado em: 14/10/2026 às 16h21
+Pasta do cliente: maria-souza_bella-estetica
+
+1) O arquivo principal é o prompt_site.txt. Copie o conteúdo integral e cole na
+   ferramenta de IA que vai criar o site.
+
+2) Anexe (ou envie junto) os arquivos das pastas:
+   - midias/    imagens e vídeos que devem aparecer no site
+   - branding/  logo, paleta de cores e referências visuais
+   - conteudo/  textos, depoimentos e FAQ
+
+3) Se a ferramenta limitar o tamanho da mensagem, use o arquivo
+   prompt_resumo.txt (versão curta) e depois complemente com as seções do
+   prompt completo conforme a ferramenta pedir.
+
+4) dados-cliente.json guarda tudo o que foi preenchido no formulário. Use-o para
+   reabrir este cliente no sistema e gerar uma nova versão do prompt quando
+   alguma informação mudar.
+
+5) Pendências registradas nesta geração:
+   - nenhuma: todos os campos relevantes foram preenchidos.
+
+Dúvidas sobre o que pedir ao cliente? Veja conteudo/checklist-entrega.md.

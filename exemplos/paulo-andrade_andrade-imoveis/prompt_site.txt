@@ -1,0 +1,636 @@
+# PROMPT PARA CRIAÇÃO DO SITE
+## Andrade Imóveis — Maringá | Imobiliária
+
+> Documento gerado pelo sistema Magic Prompt a partir do modelo "Imobiliária" (imobiliaria) e dos dados preenchidos para este cliente.
+> **Objetivo declarado do site:** Captação de orçamentos e leads.
+> Cole este prompt integralmente na ferramenta de IA de criação de sites e anexe a pasta `paulo-andrade_andrade-imoveis/` com as mídias e o conteúdo.
+
+---
+
+## FICHA DO PROJETO
+
+**Cliente:** Paulo Andrade
+**Empresa:** Andrade Imóveis
+**Razão social:** Andrade Intermediação Imobiliária Ltda
+**CNPJ:** 98.765.432/0001-10
+**Segmento:** Imobiliária
+**Localização:** Avenida São Paulo, 1200 — Sala 12, Zona 07 • Maringá/PR • CEP 87020-015
+
+**Projeto:** paulo-andrade_andrade-imoveis
+**Modelo base:** imobiliaria v1.0
+**Gerado em:** 14/10/2026 às 16h21
+
+## 1. PAPEL E MISSÃO
+
+Você é um **designer e desenvolvedor web sênior**, especializado em sites para o setor de mercado imobiliário, com forte domínio de SEO local, conversão, acessibilidade e performance.
+
+Sua missão: **criar (ou reformular) o site de "Andrade Imóveis", em Maringá**, uma imobiliária, entregando estrutura, conteúdo e design prontos para publicação.
+
+**Entregáveis esperados nesta rodada**
+1. Mapa do site e wireframe textual de cada página (seções na ordem em que aparecem).
+2. Textos finais aplicados, prontos para copiar — sem placeholders.
+3. Direção visual: paleta aplicada, tipografia, componentes e estados de interação.
+4. Código responsivo e acessível, com os dados estruturados e o SEO on-page configurados.
+5. Lista do que ficou pendente de material do cliente.
+
+**Como responder**
+- Antes de produzir, apresente em até 10 linhas o seu plano de execução (estrutura + direção visual) para validação.
+- Depois, entregue na ordem: wireframe → textos → design → código.
+- Quando faltar informação, use a decisão mais coerente com o segmento e **sinalize a suposição** no final, na lista de pendências. Nunca invente dados factuais.
+
+## 2. ARQUIVOS DE APOIO DO PROJETO
+
+Este projeto acompanha uma pasta com todos os materiais do cliente. Considere os arquivos abaixo como a **fonte oficial** de conteúdo — não invente produtos, endereços, telefones ou imagens.
+
+paulo-andrade_andrade-imoveis/
+├── prompt_site.txt        (este documento)
+├── midias/                (imagens e vídeos para o site)
+├── branding/              (logo, paleta de cores, fontes e referências)
+└── conteudo/              (textos, depoimentos, FAQ e demais documentos)
+
+**Arquivos disponíveis**
+- Nenhum arquivo foi enviado ainda. Trabalhe com placeholders elegantes e mantenha a estrutura pronta para receber as mídias.
+
+## 3. DESCRIÇÃO DO NEGÓCIO
+
+**Andrade Imóveis** é imobiliária com 18 anos de atuação na Zona 07, especializada em apartamentos usados e lançamentos da região central de Maringá, com administração de locação para proprietários e assessoria completa de documentação..
+
+Atua em **Maringá/PR** (bairro Zona 07), atendendo presencialmente com o seguinte horário de funcionamento: Seg a Sex, 8h30 às 18h • Sáb, 9h às 13h.
+
+**Principais serviços/produtos**
+- Compra e venda de apartamentos — Intermediação completa, da avaliação à escritura.
+- Locação residencial com garantia — Análise de crédito e contrato em até 48 horas.
+- Administração de aluguéis — Repasse em dia, vistoria e manutenção.
+- Avaliação de imóveis — Gratuita e sem compromisso, com laudo de valor de mercado.
+
+**Diferenciais / proposta de valor**
+- Corretores com CRECI ativo e especialização por bairro da cidade
+- Anúncios com fotos atualizadas e visita agendada em até 24 horas
+- Documentação conferida antes de publicar: matrícula, IPTU e condomínio
+- Repasse do aluguel em dia e acompanhamento de manutenção para o proprietário
+
+**Observações do negócio**
+- Pico de procura em janeiro e fevereiro e nos lançamentos do segundo semestre.
+
+## 4. PÚBLICO-ALVO
+
+Famílias e casais de 28 a 50 anos comprando o primeiro ou o segundo imóvel, investidores de locação e proprietários que querem alugar sem dor de cabeça; chegam pelo Google e pelos portais, filtram por bairro e faixa de preço e decidem pela clareza das informações e pela agilidade do corretor.
+
+Considere este público em todas as decisões de conteúdo e design:
+- **Dispositivo principal:** celular. Projete mobile-first e teste em telas pequenas antes da versão desktop.
+- **Região de influência:** Maringá/PR e cidades vizinhas. Priorize buscas com intenção local ("perto de mim", "em [cidade]").
+
+## 5. OBJETIVO DO SITE
+
+**Objetivo principal do site:** Captação de orçamentos e leads — Formulários e WhatsApp para gerar contatos comerciais.
+
+**Como o cliente descreveu a meta:** Receber pedidos de avaliação de proprietários e agendamentos de visita qualificados pelo site.
+
+**O que conta como sucesso (métricas a instrumentar já no lançamento)**
+- Formulários e cliques em WhatsApp (com origem registrada)
+- Tempo médio de resposta ao lead
+- Taxa de conversão de lead em cliente
+
+Configure as conversões no Google Analytics 4 e no Meta Pixel desde a publicação da primeira versão. Sem medição, nenhuma otimização posterior é possível.
+
+## 6. ESTRUTURA DE PÁGINAS E SEÇÕES
+
+A estrutura abaixo vem do modelo **Imobiliária**, já ajustada para este cliente. Mantenha a ordem, os rótulos do menu e adapte os textos ao contexto real do negócio.
+
+**Menu principal sugerido:** Home | Buscar Imóveis | Anuncie seu Imóvel | Serviços | Proprietários e Locação | Sobre | Contato | Política de Privacidade
+O menu deve ser fixo (sticky) no topo, com o botão de contato/destaque sempre visível no canto direito.
+
+> **Sem loja online nesta versão:** onde as seções abaixo citarem produtos ou prateleira, trate como **catálogo/vitrine** com pedido pelo WhatsApp ou retirada no balcão. Não implemente carrinho nem checkout.
+
+#### 1. Home — OBRIGATÓRIA
+*Objetivo da página:* Fazer o visitante buscar em menos de 10 segundos e captar o proprietário no caminho.
+Seções, na ordem:
+1. Busca em destaque: tipo, bairro, faixa de preço e finalidade (comprar ou alugar)
+2. Vitrines: imóveis em destaque, lançamentos, redução de preço e prontos para morar
+3. Atalhos por bairro e por tipo (apartamento, casa, terreno, comercial, rural)
+4. Serviços para quem compra e para quem vende/loca, em dois blocos separados
+5. Avaliação do imóvel: "quanto vale o seu imóvel?" com formulário curto
+6. Depoimentos, CRECI e tempo de mercado
+7. Blog com conteúdo de bairro e de mercado
+8. Contato com corretores, endereço e horário
+> Orientação específica: A busca é o produto principal: precisa carregar rápido e funcionar bem no celular, onde está a maioria das visitas.
+
+#### 2. Buscar Imóveis — OBRIGATÓRIA
+*Objetivo da página:* Busca sem atrito: o visitante encontra o imóvel certo em poucos filtros e no celular.
+Seções, na ordem:
+1. Busca com filtros: tipo, bairro, faixa de preço, quartos, suítes, vagas, área, aceita pet, mobiliado
+2. Cards com foto principal, preço, condomínio, IPTU, metragem, bairro e selos (lançamento, exclusivo, aluguel)
+3. Ordenação (mais recentes, menor preço, maior área) e alternância entre grade e lista
+4. Mapa com os imóveis agrupados, desenho de área de interesse e busca "perto de mim"
+5. Favoritos, comparação lado a lado e compartilhamento por WhatsApp
+6. Estado vazio útil quando não houver resultado: alerta de novos imóveis com os filtros salvos
+> Orientação específica: Fotos na ordem em que o cliente entra (fachada, sala, dormitórios, banheiros, cozinha, área externa) aumentam os contatos.
+
+#### 3. Ficha do Imóvel — OBRIGATÓRIA
+*Objetivo da página:* Página individual de cada imóvel: dar tudo o que o cliente precisa para decidir a visita.
+Seções, na ordem:
+1. Galeria em alta resolução, vídeo e tour virtual quando houver
+2. Dados completos: área útil e total, quartos, suítes, banheiros, vagas, andar, condomínio, IPTU, matrícula e situação de ocupação
+3. Descrição do imóvel e do entorno (comércio, escolas, transporte, lazer)
+4. Mapa do entorno com localização aproximada — sem expor o endereço exato em imóvel vazio
+5. Calculadora estimada de custos: entrada, parcela do financiamento, ITBI, escritura e condomínio
+6. Botões fixos no celular: WhatsApp do corretor, ligar e agendar visita
+7. Bloco de imóveis semelhantes e opção de receber novas opções por e-mail/WhatsApp
+> Orientação específica: Página acessada pela busca, não pelo menu. Cuidado com dados sensíveis: nenhum dado do proprietário aparece publicamente.
+
+#### 4. Anuncie seu Imóvel — OBRIGATÓRIA
+*Objetivo da página:* Captar imóveis de proprietários — a outra metade do negócio imobiliário.
+Seções, na ordem:
+1. Formulário de cadastro do imóvel: tipo, endereço, características, ocupação atual e intenção (venda ou locação)
+2. Upload de fotos e documentos (matrícula, IPTU, planta) com orientação de privacidade
+3. Como funciona a avaliação: método, dados usados, prazo de resposta e quem analisa
+4. Argumentos de confiança: autorização formal, sigilo dos dados, histórico de vendas na região e anúncio nos portais
+5. Alternativa "quero uma avaliação por WhatsApp" com mensagem pronta
+6. Bloco "quanto vale meu imóvel" com resultado imediato por metragem e bairro
+7. Explicação das taxas de administração e comissão, com honestidade
+> Orientação específica: Dizer quem verá os dados e o que acontece depois do envio reduz a desconfiança do proprietário.
+
+#### 5. Serviços — OBRIGATÓRIA
+*Objetivo da página:* Explicar tudo o que a imobiliária faz — muita gente só conhece a parte de aluguel.
+Seções, na ordem:
+1. Compra e venda: avaliação, anúncio, visitas, proposta, documentação e escritura
+2. Locação: análise de crédito, garantias (fiador, seguro-fiança, caução, título de capitalização) e contrato
+3. Administração de aluguel: repasse, inadimplência, manutenção e reajuste anual
+4. Assessoria jurídica e regularização de documentação, com parceiros
+5. Consultoria para investidor: rentabilidade de aluguel e potencial de valorização
+6. Condomínios e parcerias com construtoras e incorporadoras
+7. Quem paga o quê: comissão, taxas, ITBI, escritura, registro e vistoria
+> Orientação específica: Explicar as garantias de locação em linguagem simples reduz drasticamente a insegurança de proprietário e inquilino.
+
+#### 6. Proprietários e Locação — OBRIGATÓRIA
+*Objetivo da página:* Página dedicada a quem tem imóvel para alugar ou vender — outro funil, outras dúvidas.
+Seções, na ordem:
+1. Vantagens de administrar o imóvel pela imobiliária: repasse em dia, vistoria, manutenção e contrato
+2. Como funciona a avaliação de valor de aluguel e de venda do imóvel
+3. Garantias de locação explicadas uma por uma, com exemplos
+4. O que acontece em caso de inadimplência e qual é o seguro disponível
+5. Reajuste, tabela de taxas e prazo de repasse
+6. Formulário de cadastro do imóvel com upload de fotos e documentos
+> Orientação específica: Proprietário inseguro não anuncia: mostre o processo todo, do cadastro do inquilino ao repasse.
+
+#### 7. Depoimentos — OPCIONAL (recomendada)
+*Objetivo da página:* Prova social: reduzir a hesitação de quem está decidindo.
+Seções, na ordem:
+1. Grade de depoimentos com nome, foto (opcional), nota e texto curto
+2. Avaliações do Google (embed/prints)
+3. Nota média em destaque e link "Avaliar no Google"
+4. Carrossel de prints de conversas do WhatsApp (com autorização)
+5. Depoimentos de quem comprou, de quem vendeu e de proprietários que recebem aluguel em dia
+6. Nota e avaliações do Google com média em destaque
+> Orientação específica: Depoimento sem nome próprio e sem contexto perde força. Prefira poucos e verdadeiros.
+
+#### 8. Perguntas Frequentes (FAQ) — OPCIONAL (recomendada)
+*Objetivo da página:* Reduzir o volume de dúvidas repetidas no atendimento e melhorar o SEO.
+Seções, na ordem:
+1. Acordeão com 8 a 12 perguntas mais comuns
+2. Cada resposta em até 3 frases, com CTA quando fizer sentido
+3. Marcação de dados estruturados FAQPage (schema.org)
+4. Quanto custa a comissão de venda e de locação?
+5. Quais são as garantias de aluguel aceitas?
+6. Em quanto tempo recebo o repasse do aluguel?
+7. Quanto de renda preciso comprovar para alugar?
+8. Posso visitar o imóvel antes de decidir?
+9. Vocês cobram para avaliar meu imóvel?
+10. Que documentos preciso para vender ou alugar?
+11. Aceitam pet no imóvel?
+> Orientação específica: Escreva as perguntas como o cliente perguntaria no WhatsApp: "quanto custa?", "dói?".
+
+#### 9. Blog / Dicas — OPCIONAL (recomendada)
+*Objetivo da página:* Atrair tráfego orgânico de longo prazo e educar o público.
+Seções, na ordem:
+1. Listagem de posts com imagem, título, resumo e data
+2. Página de artigo com índice, imagens e CTA ao final
+3. Categorias ligadas aos serviços principais
+4. Bloco "posts relacionados" e compartilhamento social
+5. Bairros de [CIDADE]: onde morar e quanto custa
+6. O que avaliar antes de alugar um apartamento
+7. Documentos para comprar um imóvel sem dor de cabeça
+8. Vale mais comprar ou alugar em [CIDADE]?
+9. Como funciona o reajuste do aluguel
+> Orientação específica: Sugerir 6 pautas iniciais já otimizadas para busca local. Ex.: "quanto custa [serviço] em [cidade]".
+
+#### 10. Sobre — OBRIGATÓRIA
+*Objetivo da página:* Gerar confiança e mostrar quem está por trás da empresa, desde quando atua e o que a torna diferente.
+Seções, na ordem:
+1. História da empresa (ano de fundação, trajetória, missão) em 2 a 3 parágrafos
+2. Apresentação do(a) responsável / fundadores com foto
+3. Missão, visão e valores em cards curtos
+4. Números de credibilidade (anos de mercado, clientes atendidos, profissionais)
+5. Estrutura física / ambiente em fotos
+6. Selos e certificações relevantes do segmento
+7. História da imobiliária, número de CRECI e responsável técnico
+8. Equipe de corretores com CRECI, foto e especialidade (residencial, comercial, locação, lançamentos)
+9. Área de atuação: bairros e cidades atendidos
+10. Parcerias com construtoras, incorporadoras, cartórios e bancos
+> Orientação específica: Use linguagem humana em primeira pessoa do plural ("nós cuidamos"). Evite texto genérico de "empresa que preza pela qualidade".
+
+#### 11. Contato — OBRIGATÓRIA
+*Objetivo da página:* Transformar visita em conversa, com o menor atrito possível.
+Seções, na ordem:
+1. Telefone e WhatsApp com links clicáveis (wa.me e tel:)
+2. Formulário de contato curto (nome, telefone/e-mail, mensagem) com aviso de privacidade (LGPD)
+3. Endereço completo com Google Maps incorporado
+4. Horário de atendimento por dia da semana (destacando feriados e plantões)
+5. E-mail e redes sociais
+6. Bloco "como chegar" com referências de pontos conhecidos e opções de transporte/estacionamento
+7. Telefone e WhatsApp por setor (locação, venda, administração)
+8. Endereço do escritório, horário e plantão para emergências de locação
+> Orientação específica: O formulário deve enviar e-mail e/ou WhatsApp automaticamente e ter proteção anti-spam.
+
+#### 12. Política de Privacidade — OBRIGATÓRIA
+*Objetivo da página:* Conformidade com a LGPD e com políticas de anúncios/análise.
+Seções, na ordem:
+1. Quais dados são coletados (formulários, cookies, analytics)
+2. Finalidade do tratamento e base legal
+3. Compartilhamento com terceiros (WhatsApp, Google, ferramentas de agendamento)
+4. Direitos do titular e canal de contato do encarregado
+5. Política de cookies com banner de consentimento
+> Orientação específica: Incluir link no rodapé de todas as páginas e no rodapé do formulário.
+
+**Regras transversais de navegação e layout**
+- Cabeçalho com logo à esquerda, menu ao centro/direita e botão de ação destacado.
+- Rodapé completo com NAP (nome, endereço, telefone), horários, redes sociais, formas de pagamento, mapa e link da Política de Privacidade.
+- Breadcrumbs em páginas internas e destaque da página atual no menu.
+- Botão de WhatsApp e/ou agendar fixo (flutuante) em todas as páginas.
+- Página 404 personalizada com atalhos para Serviços, Contato e Agendamento.
+- Título e descrição únicos por página (SEO), sem repetições.
+
+## 7. FUNCIONALIDADES E INTEGRAÇÕES
+
+**Obrigatórias (sem elas o site não entra no ar)**
+- Busca avançada com filtros de tipo, bairro, preço, quartos, vagas, área e aceita pet
+- Página de imóvel com galeria, vídeo, dados completos, mapa e corretor responsável
+- Agendamento de visita com escolha de dia, horário e corretor
+- Formulário "anuncie seu imóvel" com upload de fotos e documentos
+- Botões fixos no celular: WhatsApp, ligar e agendar visita
+- Dados estruturados RealEstateAgent e RealEstateListing por imóvel
+- Blog com conteúdo de bairro e de mercado para atrair busca local
+
+**Desejáveis (fase 2, se houver prazo ou orçamento)**
+- Mapa com todos os imóveis, desenho de área de interesse e busca "perto de mim"
+- Favoritos, comparação de imóveis e alerta por e-mail/WhatsApp de novos resultados
+- Simulador de financiamento e calculadora de custos (ITBI, escritura, condomínio, IPTU)
+- Área do proprietário com extrato de repasses, recibos e histórico de manutenção
+- Área do inquilino com contrato, boletos e pedido de manutenção
+- Integração com portais (ZAP, Viva Real, OLX) e com o CRM da imobiliária
+- Tour virtual 360 em imóveis de maior valor
+
+**Integrações a prever no projeto**
+- CRM imobiliário e espelho de imóveis (sincronização automática do que está disponível)
+- Portais de imóveis e sites de parceiros (feed XML)
+- Google Analytics 4 + Google Ads + Google Meu Negócio
+- WhatsApp Business com atendimento por corretor
+- Sistemas de análise de crédito e emissão de contrato de locação
+
+> Este cliente **não vendeu online** nesta contratação. Não crie carrinho, checkout ou catálogo de produtos. Se o cliente optar por vender depois, a estrutura deve permitir acoplar uma loja sem refazer o site (deixe o menu e o CSS preparados).
+
+## 8. CONTEÚDO E COPY SUGERIDA
+
+**Textos enviados pelo cliente (usar como base e ajustar apenas para clareza e SEO)**
+A Andrade Imóveis nasceu em 2008 na Zona 07 e acompanhou o crescimento da região central de Maringá...
+
+**Estrutura de textos a produzir por página**
+1. Home: headline (máx. 8 palavras), subheadline (1 frase), chamadas de cada bloco e CTAs.
+2. Serviços: um texto curto por serviço com o que é, para quem é, como acontece e o que está incluso.
+3. Sobre: história, propósito, equipe e números de credibilidade.
+4. Contato: instruções de chegada e orientação de atendimento.
+5. Rodapé: descrição curta da empresa em 1 frase (até 25 palavras).
+
+**Sugestão de serviços/produtos para esta página (base do modelo)**
+- Compra e venda de imóveis residenciais
+- Compra e venda de imóveis comerciais
+- Locação residencial
+- Locação comercial
+- Administração de aluguéis
+- Avaliação de imóvel (valor de venda e de aluguel)
+- Consultoria para investidores
+- Assessoria em documentação e regularização
+- Intermediação de terrenos e áreas
+- Lançamentos e imóveis na planta
+- Locação por temporada (quando houver)
+- Vistoria de entrada e saída de imóvel
+
+**Depoimentos**
+- "Visitei três apartamentos no mesmo sábado e fechei negócio em três semanas, com a documentação toda conferida pela equipe." — Compradora
+
+**FAQ**
+- Quanto custa a comissão? → A comissão segue a tabela do CRECI e é informada por escrito antes da contratação, sem taxa surpresa.
+
+**Informações que NÃO podem ser publicadas ou prometidas**
+- Não divulgar o endereço exato de imóveis desocupados.
+
+## 9. TOM DE VOZ E COMUNICAÇÃO
+
+**Personalidade da marca:** Confiável e profissional · Ágil e resolutivo · Transparente com valores e taxas · Próximo, sem pressão de venda
+
+**Ajuste pedido pelo cliente:** Transparente e resolutivo, sem pressão de venda
+
+**Como escrever (regras práticas)**
+- Informar sempre os dados do imóvel: metragem, quartos, vagas, condomínio, IPTU e o que está incluso
+- Explicar as etapas e os custos de cada tipo de negócio (compra, venda, locação, administração)
+- Nunca pressionar com "é só até hoje" ou escassez artificial
+- Responder a dúvida do proprietário e a do inquilino em páginas separadas
+- Citar CRECI e o número do corretor em toda comunicação que envolva intermediação
+
+**Evitar**
+- Fotos de anúncio antigas ou de outro imóvel
+- Texto com "oportunidade única" e exclamações sem informação
+- Esconder taxa, condomínio ou valor real de aluguel
+
+**Exemplos de referência para copiar o padrão**
+- Título: "Apartamento 2 quartos no Zona 07 — R$ X/mês + condomínio"
+- CTA: "Agendar visita" / "Falar com o corretor" / "Quero avaliação do meu imóvel"
+- Bloco: "Visitamos o imóvel com você, conferimos a documentação e acompanhamos a proposta até a assinatura."
+
+**Boas práticas de redação para web (aplicar em todo o site)**
+- Frases curtas (até 20 palavras) e parágrafos de no máximo 4 linhas.
+- Um CTA por bloco, com verbo no infinitivo ou imperativo ("Agendar", "Falar no WhatsApp").
+- Títulos que falem do benefício, não do recurso.
+- Zero "clique aqui", "saiba mais" solto ou "bem-vindo ao nosso site".
+- Revisar ortografia e remover repetições de "qualidade", "excelência" e "compromisso".
+
+## 10. ESTILO VISUAL E IDENTIDADE DA MARCA
+
+**Estilo desejado pelo cliente:** Corporativo confiável
+**Direções adequadas ao segmento:** Corporativo confiável / Contemporâneo com fotos grandes / Clássico e sóbrio
+
+**Paleta de cores a usar**
+- **#132B45** — Azul-marinho (informada pelo cliente)
+- **#C8A24A** — Dourado (informada pelo cliente)
+
+**Cor de destaque/CTA:** usar o tom mais quente da paleta nos botões de ação, com contraste mínimo de 4.5:1 contra o fundo (WCAG AA).
+**Neutros:** definir uma escala de cinzas/off-white para fundos e divisores a partir da paleta acima; evitar preto puro (#000) em grandes áreas.
+
+**Tipografia**
+- Títulos: Sans forte e legível (Montserrat, Poppins, Archivo)
+- Corpo do texto: Sans neutra (Inter, Open Sans, Roboto)
+- Escala sugerida: H1 40–56px (24–30px no mobile), H2 28–36px, corpo 16–18px, legenda 14px.
+- No máximo **duas famílias tipográficas**. Carregar com `display=swap` e apenas os pesos usados.
+
+**Diretrizes visuais específicas do segmento**
+- Busca em destaque logo na primeira dobra, com filtros visíveis no celular
+- Card de imóvel com foto grande, preço legível, metragem e bairro — sem promessas no texto
+- Fotos na ordem em que o cliente entra: fachada, sala, quartos, banheiros, cozinha, área externa
+- Selo de destaque para imóvel exclusivo, novo no mercado ou com preço reduzido
+- Mapa com pins agrupados e link "ver no mapa" em cada ficha
+
+**Imagens e vídeos adequados (usar os arquivos do cliente quando existirem)**
+- Fotos reais bem iluminadas de cada ambiente
+- Fachada e área externa
+- Vista do entorno e do bairro
+- Vídeo curto e tour virtual quando houver
+
+**Evitar neste segmento**
+- Fotos de anúncio antigo, emprestadas de outro imóvel ou com marca d'água de portal
+- Descrições copiadas de outro anúncio
+- Card com preço escondido ou "consulte"
+
+**Sistema de design a entregar**
+- Tokens em CSS custom properties (cores, espaçamentos, raios, sombras e tipografia).
+- Componentes reutilizáveis: botão (primário/secundário/texto), card, badge, acordeão, carrossel, formulário e modal.
+- Sombras discretas, raio de borda entre 8px e 16px e espaçamento em múltiplos de 8px.
+- Ícones de linha consistentes (mesma família e espessura) — nada de misturar estilos.
+- Microinterações discretas (200–300ms) em hover, foco e abertura de acordeão; respeitar `prefers-reduced-motion`.
+
+**Sites de referência enviados pelo cliente (inspiração de layout, nunca cópia de conteúdo)**
+- https://exemplo-imobiliaria.com
+- https://exemplo-lancamentos.com
+
+## 11. USO DAS IMAGENS E VÍDEOS ANEXADOS
+
+**Pasta do projeto**
+paulo-andrade_andrade-imoveis/midias/ — imagens; paulo-andrade_andrade-imoveis/branding/ — logo e identidade; paulo-andrade_andrade-imoveis/conteudo/ — textos e documentos.
+
+**Como usar cada arquivo**
+- **Logo:** não há arquivo de logo na pasta. Preencha o cabeçalho com o nome da empresa em tipografia da paleta e sinalize ao cliente sobre a necessidade do vetor.
+- **Banner principal (hero):** sem imagens enviadas. Use composição tipográfica sobre a cor principal da paleta e deixe o componente pronto para receber a foto (mesma proporção de 16:9 no desktop e 4:5 no mobile).
+- **Sem imagens próprias:** não preencher o site com banco de imagens genérico. Usar blocos de cor, ícones e espaços reservados sinalizados, e entregar uma lista do que o cliente precisa fotografar (ver seção "Materiais a solicitar").
+
+**Regras gerais de imagem**
+- Nunca usar imagens de banco de imagens quando houver material próprio do cliente disponível.
+- Toda imagem precisa de `alt` descritivo e contextualizado (ex.: "corte de cabelo feminino em camadas no salão X"), nunca "imagem1.jpg".
+- Manter proporções consistentes por seção: hero 16:9, cards 4:3, produtos 1:1, retratos 3:4.
+- Não distorcer nem esticar fotos; usar recorte centralizado inteligente.
+- Comprimir antes de subir e manter os arquivos originais em `midias/` intactos.
+- Vídeos: máximo 30s, com legenda embutida (a maioria assiste sem som).
+
+**Tratamento quando faltar material**
+- Sinalizar no site, com comentário no código ou bloco marcado, exatamente onde cada foto deve entrar.
+- Nunca publicar placeholder genérico visível ao visitante final.
+- Entregar a lista "Materiais a solicitar ao cliente" junto com o site (logo vetorial, fotos de ambiente, fotos de equipe, fotos de produto).
+
+## 12. LINKS, REDES SOCIAIS E DADOS DE CONTATO
+
+**Dados de contato que devem aparecer no rodapé e na página de contato (idênticos em todo o site)**
+- Telefone fixo: (44) 3222-4455
+- WhatsApp: (44) 98888-1234
+- Link de WhatsApp a usar em todos os botões: https://wa.me/5544988881234 — com mensagem pré-preenchida e contextualizada por página (ex.: na home "Olá! Vim pelo site e gostaria de mais informações"; na página de Compra e venda de apartamentos "Olá! Vim pelo site e gostaria de informações sobre Compra e venda de apartamentos")
+- E-mail: contato@andradeimoveis.com.br
+- Endereço: Avenida São Paulo, 1200 — Sala 12, Zona 07 • Maringá/PR • CEP 87020-015
+- Horário de atendimento: Seg a Sex, 8h30 às 18h • Sáb, 9h às 13h
+- Razão social (para rodapé e políticas): Andrade Intermediação Imobiliária Ltda
+- CNPJ: 98.765.432/0001-10
+
+**Redes sociais e links**
+- Google Maps: https://maps.google.com/?q=Andrade+Imoveis+Maringa
+- Instagram: https://instagram.com/andradeimoveis
+- Facebook: https://facebook.com/andradeimoveis
+- YouTube: https://youtube.com/@andradeimoveis
+- Site atual (referência de conteúdo a migrar): https://andradeimoveis.com.br
+- Portal de avaliação: https://andradeimoveis.com.br/avalie
+
+**Regras de aplicação dos links**
+- Abrir links externos com `target="_blank"` e `rel="noopener noreferrer"`.
+- Não usar placeholders do tipo `#` em links publicados — se o canal não existir, o ícone não aparece.
+- Incorporar o Google Maps em `iframe` com `loading="lazy"` e `title` descritivo; oferecer também o botão "Traçar rota".
+- Manter o mesmo NAP (nome, endereço, telefone) do Google Meu Negócio, do Instagram e do site — divergência prejudica o SEO local.
+- Formulário de contato: enviar para contato@andradeimoveis.com.br e replicar no WhatsApp; incluir checkbox de consentimento LGPD com link para a política.
+
+**Links adicionais informados** (exibir onde fizer sentido: rodapé, página de contato ou página específica)
+- Portal de avaliação → https://andradeimoveis.com.br/avalie
+
+## 13. SEO BÁSICO E LOCAL
+
+**SEO local — aplicar obrigatoriamente**
+
+**Título e descrição da home**
+- Title (até 60 caracteres): `Andrade Imóveis | Imobiliária em Maringá — Venda e Locação de Imóveis`
+- Meta description (até 155 caracteres): `Imóveis para comprar e alugar em Maringá, com fotos reais, dados completos e visita agendada em até 24 horas. Avaliação gratuita para proprietários.`
+- H1 único da home: variação do title com a cidade, sem repetir palavra-chave em excesso.
+
+**Titles sugeridos para as páginas internas** (padrão: `[Página] | [Nome] em [Cidade]`)
+- Home: `Home | Andrade Imóveis em Maringá`
+- Buscar Imóveis: `Buscar Imóveis | Andrade Imóveis em Maringá`
+- Ficha do Imóvel: `Ficha do Imóvel | Andrade Imóveis em Maringá`
+- Anuncie seu Imóvel: `Anuncie seu Imóvel | Andrade Imóveis em Maringá`
+- Serviços: `Serviços | Andrade Imóveis em Maringá`
+- Proprietários e Locação: `Proprietários e Locação | Andrade Imóveis em Maringá`
+- Sobre: `Sobre | Andrade Imóveis em Maringá`
+- Contato: `Contato | Andrade Imóveis em Maringá`
+- Política de Privacidade: `Política de Privacidade | Andrade Imóveis em Maringá`
+
+**Palavras-chave a trabalhar** (uma principal por página, as demais como secundárias no corpo do texto)
+- imobiliária Zona 07
+- apartamento à venda Maringá
+- imobiliária em Maringá
+- apartamento à venda em Zona 07
+- casa para alugar em Maringá
+- imóveis em Maringá
+- quanto vale meu imóvel em Maringá
+- apartamento 2 quartos Zona 07
+- aluguel de casa em Maringá com garantia
+
+**Palavras-chave por serviço** (usar na página de serviços e nos textos individuais)
+- compra e venda de apartamentos em Maringá
+- locação residencial com garantia em Maringá
+- administração de aluguéis em Maringá
+- avaliação de imóveis em Maringá
+
+**Palavras-chave de cauda longa** (blog e FAQ)
+- quanto custa compra e venda de apartamentos em Maringá
+- onde fazer locação residencial com garantia perto de Zona 07
+- melhor imobiliária em Zona 07
+- horário de funcionamento da imobiliária em Maringá
+- como escolher uma imobiliária em Maringá
+
+**Dados estruturados (JSON-LD) a implementar**
+- RealEstateAgent com nome, endereço, telefone, geo, horário (openingHoursSpecification), preço e `aggregateRating` apenas se houver avaliações reais.
+- `FAQPage` na página de perguntas frequentes.
+- `BreadcrumbList` nas páginas internas.
+- `Product` e `Offer` na loja, com preço, disponibilidade e avaliações.
+- `Organization` com logo e perfis sociais (`sameAs`).
+
+**Google Meu Negócio**
+- Reivindicar e padronizar o perfil com o mesmo nome, endereço e telefone do site.
+- Publicar fotos reais da fachada, interior, equipe e serviços (o perfil é a principal fonte de cliques locais).
+- Pedir avaliação por link curto após cada atendimento e responder todas as avaliações.
+- Incluir UTM nos botões do site que levam ao perfil para medir o retorno.
+
+**Arquivos e configurações técnicas**
+- `sitemap.xml` e `robots.txt` gerados e enviados no Google Search Console.
+- URLs amigáveis com a palavra-chave (ex.: /servicos/limpeza-de-pele, nunca /?p=123).
+- Canonical em todas as páginas, `lang` correto e `hreflang` apenas se houver versão em outro idioma.
+- Open Graph e Twitter Card configurados para compartilhamento bonito no WhatsApp e no Instagram.
+- HTTPS, redirecionamento de www e de http para a versão canônica.
+- Página 404 com retorno de status correto e links úteis.
+
+## 14. REQUISITOS TÉCNICOS, LGPD E ACESSIBILIDADE
+
+**Requisitos técnicos do site**
+
+**Desempenho (metas objetivas)**
+- Nota mínima de 90 no Lighthouse em Desktop e 80 em Mobile para Performance, Acessibilidade e SEO.
+- LCP abaixo de 2,5s e CLS abaixo de 0,1 em conexão 4G.
+- Lazy loading em imagens/vídeos, compactação de assets e CDN para arquivos estáticos.
+- CSS crítico inline no topo e carregamento assíncrono do restante.
+
+**Acessibilidade (WCAG 2.1 AA)**
+- Contraste mínimo de 4.5:1 em texto e 3:1 em elementos de interface.
+- Todos os campos de formulário com `label` visível e mensagens de erro claras.
+- Navegação completa por teclado, com foco visível e link "pular para o conteúdo".
+- Textos alternativos em todas as imagens informativas e legendas nos vídeos.
+- Não usar cor como único indicador de estado.
+
+**Estrutura técnica recomendada**
+- Site responsivo com breakpoints em 480, 768, 1024 e 1440px.
+- Páginas renderizadas no servidor ou pré-renderizadas (bom para SEO local).
+- CMS simples para o cliente editar textos, serviços, preços, horários, posts e produtos.
+- Formulário com proteção anti-spam (honeypot + reCAPTCHA invisível) e envio por e-mail + WhatsApp.
+- Painel administrativo protegido com 2FA e backups automáticos semanais.
+- Ambiente de homologação separado da produção.
+
+**Conformidade**
+- LGPD: política de privacidade, banner de cookies, consentimento explícito nos formulários e dados sensíveis com tratamento restrito.
+- Termos de uso quando houver venda online ou área do cliente.
+- Rodapé com razão social e CNPJ quando exigido pelo segmento.
+- Conteúdo em conformidade com as regras publicitárias da profissão (ver seção de cuidados).
+
+**Integrações obrigatórias no lançamento**
+- Google Analytics 4 com eventos de conversão
+- Google Search Console
+- Google Meu Negócio
+- Meta Pixel
+- WhatsApp Business (link e resposta rápida configurados)
+
+**Idioma do site:** Português (Brasil)
+
+## 15. CUIDADOS ESPECÍFICOS DO SEGMENTO
+
+**Regras de comunicação e conformidade deste segmento — não violar**
+- Informar o número do CRECI da imobiliária e dos corretores; intermediação sem registro é irregular
+- Anunciar apenas imóveis com autorização escrita do proprietário e dados conferidos (matrícula, ônus, IPTU, condomínio)
+- Nunca expor o endereço exato e dados do proprietário ou do inquilino em imóvel desocupado ou ocupado (LGPD e segurança)
+- Fotos, valores e disponibilidade precisam ser atualizados: anúncio desatualizado gera reclamação e perde confiança
+- Valores de IPTU, condomínio e taxas devem indicar a data de referência e a fonte
+- Simuladores de financiamento são estimativas: exibir aviso de que não representam aprovação de crédito e informar as taxas usadas
+- Comissão, taxa de administração e encargos devem ser informados por escrito antes da contratação (CDC e tabela do CRECI)
+- Dados de leads e de análise de crédito são sensíveis (LGPD): consentimento explícito, finalidade informada e exclusão sob solicitação
+- Se a imobiliária também comercializa lançamentos de terceiros, avaliar o modelo "Empreendimentos Imobiliários" para uma página dedicada
+
+## 16. O QUE EVITAR
+
+**O que NÃO fazer em nenhum caso**
+- Não inventar informações: telefone, endereço, preços, prazos, certificações, prêmios, número de clientes ou depoimentos.
+- Não usar textos genéricos de "empresa séria e comprometida com a qualidade" — escreva o que a empresa realmente faz.
+- Não copiar layout, textos ou imagens de sites de concorrentes.
+- Não usar banco de imagens quando houver material próprio; nunca usar imagem com marca d'água.
+- Não colocar carrossel automático no topo que troca de slide rápido (ruim para conversão e acessibilidade).
+- Não esconder informações essenciais (preço, endereço, horário) atrás de menus distantes.
+- Não usar CAPS LOCK em títulos, nem fontes decorativas no corpo do texto.
+- Não publicar o site com links `href="#"`, formulários não testados ou página 404 genérica do servidor.
+- Não deixar o site dependente de um único canal (só Instagram não basta — o objetivo do site é ser a base própria do negócio).
+- Não exceder duas famílias tipográficas nem mais de 5 cores principais.
+
+## 17. CRITÉRIOS DE ACEITE E MATERIAIS PENDENTES
+
+**Checklist de aceite — o trabalho só é considerado entregue quando todos os itens estiverem marcados**
+- Todas as páginas obrigatórias implementadas e acessíveis pelo menu: Home, Buscar Imóveis, Ficha do Imóvel, Anuncie seu Imóvel, Serviços, Proprietários e Locação, Depoimentos, Perguntas Frequentes (FAQ), Blog / Dicas, Sobre, Contato, Política de Privacidade.
+- Nenhum texto placeholder, "lorem ipsum" ou imagem de exemplo publicada.
+- NAP (nome, endereço, telefone) idêntico em todas as páginas e igual ao Google Meu Negócio.
+- Links de WhatsApp e telefone testados em Android e iPhone.
+- Formulários testados de ponta a ponta, com mensagem de sucesso e de erro.
+- SEO: title, description, H1 único, alt em imagens, sitemap e robots publicados.
+- Dados estruturados validados no Rich Results Test, sem erros.
+- Lighthouse com as notas mínimas definidas na seção técnica.
+- Testado nos navegadores Chrome, Safari e Firefox (últimas 2 versões) e em telas de 360px a 1920px.
+- Política de privacidade publicada e linkada no rodapé e nos formulários.
+- GA4 e Pixel disparando os eventos de conversão configurados.
+- Backup, acesso ao CMS e treinamento de uso entregues ao cliente.
+
+**Materiais a solicitar ao cliente, caso ainda não estejam na pasta**
+- Logo em vetor (SVG/AI/PDF) — se o cliente só tiver PNG, solicitar o vetor.
+- Fotos próprias em alta resolução (mínimo 1600px de largura): fachada, ambiente, equipe e serviços/produtos.
+- Vídeos curtos (opcional), em boa luz e sem áudio obrigatório.
+- Depoimentos reais com nome e autorização de uso.
+- Lista de preços atualizada (ou definição de "consultar valores").
+- Acesso ao perfil do Google Meu Negócio e às redes sociais.
+- Dados para nota fiscal e política de trocas, no caso da loja.
+
+**Entregue junto com o site**
+- Documento de orientação para o cliente (como editar textos, produtos e horários no CMS).
+- Relatório de SEO inicial: palavras-chave, title/description aplicados e checklist do Google Meu Negócio.
+- Acessos e credenciais organizados e entregues em local seguro (nunca por WhatsApp ou e-mail em texto aberto).
+- Recomendação de rotina de manutenção: publicar 1 a 2 conteúdos por mês e revisar preços a cada trimestre.
+
+---
+
+## RESUMO PARA COLAR NO CHAT (versão curta)
+- Crie o site de "Andrade Imóveis" (Maringá, Zona 07) — imobiliária.
+- Descrição: imobiliária com 18 anos de atuação na Zona 07, especializada em apartamentos usados e lançamentos da região central de Maringá, com administração de locação para proprietários e assessoria completa de documentação..
+- Público-alvo: Famílias e casais de 28 a 50 anos comprando o primeiro ou o segundo imóvel, investidores de locação e proprietários que querem alugar sem dor de cabeça; chegam pelo Google e pelos portais, filtram por bairro e faixa de preço e decidem pela clareza das informações e pela agilidade do corretor.
+- Objetivo do site: Captação de orçamentos e leads.
+- Serviços: Compra e venda de apartamentos, Locação residencial com garantia, Administração de aluguéis, Avaliação de imóveis.
+- Páginas: Home, Buscar Imóveis, Ficha do Imóvel, Anuncie seu Imóvel, Serviços, Proprietários e Locação, Depoimentos, Perguntas Frequentes (FAQ), Blog / Dicas, Sobre, Contato, Política de Privacidade.
+- Funcionalidades: Busca avançada com filtros de tipo, bairro, preço, quartos, vagas, área e aceita pet, Página de imóvel com galeria, vídeo, dados completos, mapa e corretor responsável, Agendamento de visita com escolha de dia, horário e corretor, Formulário "anuncie seu imóvel" com upload de fotos e documentos, Botões fixos no celular: WhatsApp, ligar e agendar visita, Dados estruturados RealEstateAgent e RealEstateListing por imóvel.
+- Tom de voz: Confiável e profissional, Ágil e resolutivo, Transparente com valores e taxas, Próximo, sem pressão de venda.
+- Estilo visual: Corporativo confiável (Corporativo confiável, Contemporâneo com fotos grandes, Clássico e sóbrio).
+- Cores: #132B45, #C8A24A.
+- Não há mídias enviadas: use placeholders elegantes e liste o que precisa ser fotografado.
+- SEO local: title "Andrade Imóveis | Imobiliária em Maringá — Venda e Locação de Imóveis", palavras-chave com foco em "imobiliária em Maringá" e dados estruturados RealEstateAgent.
+- Contato: (44) 3222-4455 | contato@andradeimoveis.com.br | https://instagram.com/andradeimoveis.
+- Não invente informações, preços, avaliações ou depoimentos.

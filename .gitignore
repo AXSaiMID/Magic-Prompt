@@ -1,0 +1,13 @@
+# Dados de execução do sistema (projetos, arquivos dos clientes, pastas geradas).
+# Não versionamos dados de clientes: eles ficam apenas na máquina/servidor onde o
+# sistema roda e são exportados em .zip pelo próprio sistema.
+data/
+
+# Logs e temporários
+*.log
+.DS_Store
+tmp/
+
+# Dependências de desenvolvimento (o sistema roda sem dependências)
+node_modules/
+package-lock.json

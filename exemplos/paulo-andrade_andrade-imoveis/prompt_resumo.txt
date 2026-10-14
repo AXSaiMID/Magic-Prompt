@@ -1,0 +1,14 @@
+- Crie o site de "Andrade Imóveis" (Maringá, Zona 07) — imobiliária.
+- Descrição: imobiliária com 18 anos de atuação na Zona 07, especializada em apartamentos usados e lançamentos da região central de Maringá, com administração de locação para proprietários e assessoria completa de documentação..
+- Público-alvo: Famílias e casais de 28 a 50 anos comprando o primeiro ou o segundo imóvel, investidores de locação e proprietários que querem alugar sem dor de cabeça; chegam pelo Google e pelos portais, filtram por bairro e faixa de preço e decidem pela clareza das informações e pela agilidade do corretor.
+- Objetivo do site: Captação de orçamentos e leads.
+- Serviços: Compra e venda de apartamentos, Locação residencial com garantia, Administração de aluguéis, Avaliação de imóveis.
+- Páginas: Home, Buscar Imóveis, Ficha do Imóvel, Anuncie seu Imóvel, Serviços, Proprietários e Locação, Depoimentos, Perguntas Frequentes (FAQ), Blog / Dicas, Sobre, Contato, Política de Privacidade.
+- Funcionalidades: Busca avançada com filtros de tipo, bairro, preço, quartos, vagas, área e aceita pet, Página de imóvel com galeria, vídeo, dados completos, mapa e corretor responsável, Agendamento de visita com escolha de dia, horário e corretor, Formulário "anuncie seu imóvel" com upload de fotos e documentos, Botões fixos no celular: WhatsApp, ligar e agendar visita, Dados estruturados RealEstateAgent e RealEstateListing por imóvel.
+- Tom de voz: Confiável e profissional, Ágil e resolutivo, Transparente com valores e taxas, Próximo, sem pressão de venda.
+- Estilo visual: Corporativo confiável (Corporativo confiável, Contemporâneo com fotos grandes, Clássico e sóbrio).
+- Cores: #132B45, #C8A24A.
+- Não há mídias enviadas: use placeholders elegantes e liste o que precisa ser fotografado.
+- SEO local: title "Andrade Imóveis | Imobiliária em Maringá — Venda e Locação de Imóveis", palavras-chave com foco em "imobiliária em Maringá" e dados estruturados RealEstateAgent.
+- Contato: (44) 3222-4455 | contato@andradeimoveis.com.br | https://instagram.com/andradeimoveis.
+- Não invente informações, preços, avaliações ou depoimentos.

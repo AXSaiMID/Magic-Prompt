@@ -1,0 +1,14 @@
+- Crie o site de "Bella Estética" (São Paulo, Jardim Europa) — centro de estética e beleza.
+- Descrição: centro de estética especializado em tratamentos faciais e corporais, com protocolos personalizados definidos após avaliação individual.
+- Público-alvo: Mulheres de 30 a 50 anos, moradoras do Jardim Europa e região, que buscam prevenção de rugas, tratamento de manchas e autocuidado.
+- Objetivo do site: Agendamento online + e-commerce.
+- Serviços: Limpeza de pele profunda, Peeling de diamante, Drenagem linfática, Microagulhamento.
+- Páginas: Home, Procedimentos, Resultados, Sobre, Equipe, Depoimentos, Agendamento, Perguntas Frequentes (FAQ), Galeria, Blog / Dicas, Contato, Política de Privacidade, Loja.
+- Funcionalidades: Agendamento online com integração de calendário e confirmação automática, Botão flutuante de WhatsApp com mensagem pré-preenchida por página, Formulário de captação com consentimento LGPD, Google Maps incorporado + botão "traçar rota", Galeria de antes/depois com comparador, Feed do Instagram (últimas 6 a 9 publicações), Painel simples de horários e bloqueio de agenda, SEO local + dados estruturados LocalBusiness, carrinho e checkout com Pix, cartão e frete por CEP.
+- Tom de voz: Sofisticado, mas acessível, Seguro e técnico sem ser frio, Acolhedor e empático, Focado em resultado.
+- Estilo visual: Sofisticado e minimalista (Sofisticado, Minimalista clean, Clean-clínico com toques quentes).
+- Cores: #EFE6DD, #C98B8B, #3B3B3B.
+- Use os arquivos da pasta maria-souza_bella-estetica/ (logo em branding/, imagens e vídeos em midias/, textos em conteudo/) — não invente mídias nem dados.
+- SEO local: title "Bella Estética | Clínica de Estética em São Paulo — Agende sua Avaliação", palavras-chave com foco em "clínica de estética em São Paulo" e dados estruturados BeautySalon.
+- Contato: (11) 3456-7890 | contato@bellaestetica.com.br | https://instagram.com/bellaestetica.
+- Não invente informações, preços, avaliações ou depoimentos.
